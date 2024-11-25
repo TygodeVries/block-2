@@ -34,6 +34,7 @@
   },
   "name":"Block2",
   "resources":[
+    {"id":{"name":"banana","path":"objects/banana/banana.yy",},},
     {"id":{"name":"TestLevel","path":"rooms/TestLevel/TestLevel.yy",},},
     {"id":{"name":"TestTilesetSprite","path":"sprites/TestTilesetSprite/TestTilesetSprite.yy",},},
     {"id":{"name":"TestTileset","path":"tilesets/TestTileset/TestTileset.yy",},},
