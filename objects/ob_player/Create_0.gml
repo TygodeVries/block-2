@@ -1,0 +1,6 @@
+our_tilemap = layer_tilemap_get_id("Level"); // Get the tilemap to collide with
+
+velocity_x = 0;
+velocity_y = 0;
+
+on_ground = false;

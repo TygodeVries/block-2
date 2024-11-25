@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Player",
+  "%Name":"ob_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Player",
+  "name":"ob_player",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -32,17 +32,17 @@
   ],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"_gravity","filters":[],"listItems":[],"multiselect":false,"name":"_gravity","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"velocity_y","filters":[],"listItems":[],"multiselect":false,"name":"velocity_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"_jump","filters":[],"listItems":[],"multiselect":false,"name":"_jump","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"gravity_modifier","filters":[],"listItems":[],"multiselect":false,"name":"gravity_modifier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.6","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"move_speed","filters":[],"listItems":[],"multiselect":false,"name":"move_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"jump_power","filters":[],"listItems":[],"multiselect":false,"name":"jump_power","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"14","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"is_player_one","filters":[],"listItems":[],"multiselect":false,"name":"is_player_one","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"PlayerSprite",
-    "path":"sprites/PlayerSprite/PlayerSprite.yy",
+    "name":"sp_player",
+    "path":"sprites/sp_player/sp_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,
