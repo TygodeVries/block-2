@@ -34,12 +34,14 @@
   },
   "name":"Block2",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"TestLevel","path":"rooms/TestLevel/TestLevel.yy",},},
+    {"id":{"name":"TestTilesetSprite","path":"sprites/TestTilesetSprite/TestTilesetSprite.yy",},},
+    {"id":{"name":"TestTileset","path":"tilesets/TestTileset/TestTileset.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"TestLevel","path":"rooms/TestLevel/TestLevel.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
