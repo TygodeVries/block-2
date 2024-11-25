@@ -35,6 +35,7 @@
   "name":"Block2",
   "resources":[
     {"id":{"name":"banana","path":"objects/banana/banana.yy",},},
+    {"id":{"name":"Camera","path":"objects/Camera/Camera.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"TestLevel","path":"rooms/TestLevel/TestLevel.yy",},},
     {"id":{"name":"PlayerSprite","path":"sprites/PlayerSprite/PlayerSprite.yy",},},
