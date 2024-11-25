@@ -5,32 +5,50 @@ var oldX = x;
 var oldY = y;
 var grafity = -0.1;
 
-vY -= grafity;
+velocity_y = velocity_y - grafity;
 
 if(keyboard_check(vk_up))
 {
-	vY = 10;
+	velocity_y = -3;
 	y -= 3;
 }
 
-x += vX;
-y += vY;
+if(keyboard_check(vk_left))
+{
+	x += 3;
+}
+
+if(keyboard_check(vk_right))
+{
+	x -= 3;
+}
+
+
+show_debug_message($"Vel: {velocity_y}");
+y += velocity_y;
 
 // Get the layer
 var lay_id = layer_get_id("Level");
 
 // See if we hit a wall.
-var interect = tilemap_get_at_pixel(lay_id, bbox_left, bbox_top) ||
-	tilemap_get_at_pixel(lay_id, bbox_right, bbox_top) ||
-	tilemap_get_at_pixel(lay_id, bbox_left, y) ||
-	tilemap_get_at_pixel(lay_id, bbox_right, y) ||
+var interect_floor = 
 	tilemap_get_at_pixel(lay_id, bbox_left, bbox_bottom) ||
-	tilemap_get_at_pixel(lay_id, bbox_right, bbox_bottom) ||
-	tilemap_get_at_pixel(lay_id, x, y);
+	tilemap_get_at_pixel(lay_id, bbox_right, bbox_bottom);
 
-if(interect)
+// Check for wall
+var intersect_wall = 
+    tilemap_get_at_pixel(lay_id, bbox_left, bbox_top) ||  // Top-left corner
+    tilemap_get_at_pixel(lay_id, bbox_right, bbox_top) || // Top-right corner
+    tilemap_get_at_pixel(lay_id, bbox_left, bbox_bottom - 1) || // Bottom-left corner
+    tilemap_get_at_pixel(lay_id, bbox_right, bbox_bottom - 1); // Bottom-right corner
+
+if (intersect_wall) {
+    x = oldX;
+}
+
+
+if(interect_floor)
 {
-	x = oldX;
 	y = oldY;
-	vY = 0;
+	velocity_y = 0;
 }

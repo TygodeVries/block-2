@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"TestTilesetSprite",
   "bboxMode":0,
-  "bbox_bottom":17,
-  "bbox_left":15,
-  "bbox_right":35,
+  "bbox_bottom":66,
+  "bbox_left":64,
+  "bbox_right":131,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":640,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"81ba9ed0-f178-4c3d-8145-3d77339a1440","blendMode":0,"displayName":"default","isLocked":false,"name":"81ba9ed0-f178-4c3d-8145-3d77339a1440","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":640,
 }
