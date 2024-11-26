@@ -6,7 +6,6 @@ turn += global.turn_speed;
 // Set camera angle
 camera_set_view_angle(view_camera[0], turn);
 
-
 // Debug rotate controls
 if(keyboard_check(ord("L")))
 {
@@ -18,15 +17,13 @@ if(keyboard_check(ord("J")))
 	global.turn_speed -= 0.01;
 }
 
-if(keyboard_check(ord("O")))
-{
-	camera_x += 3;
-}
 
-if(keyboard_check(ord("U")))
-{
-	camera_x -= 3;
-}
+camera_x = (global.player_one.x + global.player_two.x) / 2;
+camera_x -= camera_get_view_width(view_camera[0]) / 2;
 
+real_x = lerp(real_x, camera_x, 0.1);
+real_y = camera_y;
 
-camera_set_view_pos(view_camera[0], camera_x, camera_y);
+show_debug_message(real_x);
+
+camera_set_view_pos(view_camera[0], round(real_x), round(real_y));

@@ -38,3 +38,12 @@ function try_jump()
 move_on_x();
 try_jump();
 move_on_y();
+
+if(is_player_one)
+{
+	global.player_one = {x: x, y: y};
+}
+else
+{
+	global.player_two = {x: x, y: y};
+}
