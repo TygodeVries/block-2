@@ -17,3 +17,16 @@ if(keyboard_check(ord("J")))
 {
 	global.turn_speed -= 0.01;
 }
+
+if(keyboard_check(ord("O")))
+{
+	camera_x += 3;
+}
+
+if(keyboard_check(ord("U")))
+{
+	camera_x -= 3;
+}
+
+
+camera_set_view_pos(view_camera[0], camera_x, camera_y);
