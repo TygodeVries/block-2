@@ -43,7 +43,7 @@
     {"id":{"name":"sp_tileset","path":"sprites/sp_tileset/sp_tileset.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
-    {"id":{"name":"ts_main","path":"tilesets/ts_main/ts_main.yy",},},
+    {"id":{"name":"main","path":"tilesets/main/main.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

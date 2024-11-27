@@ -2,8 +2,25 @@
 function move_on_x()
 {
 	old_x = x;
-	if(ob_input.do_left(is_player_one)) velocity_x = -move_speed; // Move left
-	else if(ob_input.do_right(is_player_one)) velocity_x = move_speed // Move right
+	if(ob_input.do_left(is_player_one)) {
+		velocity_x = -move_speed; // Move left
+		
+		if(is_player_one)
+			image_xscale = 1; // Flip
+			
+		if(!is_player_one)
+			image_xscale = -1; // Flip
+	}
+	else if(ob_input.do_right(is_player_one))
+	{
+		velocity_x = move_speed // Move right
+		if(is_player_one)
+			image_xscale = -1; // Flip
+			
+		if(!is_player_one)
+			image_xscale = 1; // Flip
+		
+	}
 	else velocity_x = 0; // Don't move
 
 	move_and_collide(velocity_x, 0, [all, our_tilemap]);
