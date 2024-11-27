@@ -28,8 +28,18 @@ function move_on_y()
 			}
 		}
 		
+		show_debug_message(velocity_y * sign(-gravity_modifier) );
+		
+		if(velocity_y * sign(-gravity_modifier) <= 0)
+		{
+			on_ground = true;
+		}
+		else
+		{
+			on_ground = false;
+		}
+		
 		velocity_y = 0;
-		on_ground = true;
 	}
 	else
 	{
