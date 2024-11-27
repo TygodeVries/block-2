@@ -7,3 +7,9 @@ on_ground = false;
 
 global.player_one = {x: x, y: y};
 global.player_two = {x: x, y: y};
+
+old_x = 0;
+old_y = 0;
+
+global.collisions_one = [];
+global.collisions_two = [];

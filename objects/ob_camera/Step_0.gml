@@ -24,6 +24,5 @@ camera_x -= camera_get_view_width(view_camera[0]) / 2;
 real_x = lerp(real_x, camera_x, 0.1);
 real_y = camera_y;
 
-show_debug_message(real_x);
 
 camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
