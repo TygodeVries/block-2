@@ -30,12 +30,11 @@ function do_right(_player_one)
 }
 
 
-
-
+/* System for rebinding controls */
 input_p1_jump = [vk_up];
 input_p1_left = [vk_left];
 input_p1_right = [vk_right];
 
-input_p2_jump = [ord("W")];
+input_p2_jump = [ord("W"), ord("C")];
 input_p2_left = [ord("A")];
 input_p2_right = [ord("D")];
