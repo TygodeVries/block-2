@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Boy",
+  "%Name":"ob_demon1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Boy",
+  "name":"ob_demon1",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite_Down",
-    "path":"sprites/Sprite_Down/Sprite_Down.yy",
+    "name":"sp_demon1_down",
+    "path":"sprites/sp_demon1_down/sp_demon1_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,
