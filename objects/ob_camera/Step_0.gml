@@ -1,3 +1,8 @@
+if(delta_time / 1000000 > 0.1)
+{
+	return;
+}
+
 cooldown_one -= delta_time / 1000000;
 if(cooldown_one > 0.0)
 {
@@ -23,6 +28,7 @@ var bleh = camera_get_view_width(view_camera[0]);
 
 if(global.player_one.x > camera_x + bleh)
 {	
+	
 	teleport_to_checkpoints(0, 0, global.player_two, global.player_one);
 	camera_x += bleh;
 	return;

@@ -15,6 +15,8 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Objects/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Level","folderPath":"folders/Objects/Level.yy","name":"Level","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -41,7 +43,10 @@
     {"id":{"name":"ob_input","path":"objects/ob_input/ob_input.yy",},},
     {"id":{"name":"ob_player","path":"objects/ob_player/ob_player.yy",},},
     {"id":{"name":"ob_wall","path":"objects/ob_wall/ob_wall.yy",},},
+    {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
+    {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},},
     {"id":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
+    {"id":{"name":"rebind","path":"rooms/rebind/rebind.yy",},},
     {"id":{"name":"sp_checkpoint_p1","path":"sprites/sp_checkpoint_p1/sp_checkpoint_p1.yy",},},
     {"id":{"name":"sp_checkpoint_p2","path":"sprites/sp_checkpoint_p2/sp_checkpoint_p2.yy",},},
     {"id":{"name":"sp_demon1_down","path":"sprites/sp_demon1_down/sp_demon1_down.yy",},},
@@ -60,6 +65,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
+    {"roomId":{"name":"rebind","path":"rooms/rebind/rebind.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
