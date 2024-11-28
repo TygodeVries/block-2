@@ -23,15 +23,15 @@ function move_on_x()
 	}
 	else velocity_x = 0; // Don't move
 
-	move_and_collide(velocity_x, 0, [all, our_tilemap]);
+	move_and_collide(velocity_x * delta_time / 1000000 * 50, 0, [our_tilemap]);
 }
 
 // Move on the Y axis
 function move_on_y()
 {
 	old_y = y;
-	velocity_y += gravity_modifier;
-	var _collisions = move_and_collide(0, velocity_y, [all, our_tilemap]);
+	velocity_y += gravity_modifier * delta_time / 1000000 * 50;
+	var _collisions = move_and_collide(0, velocity_y * delta_time / 1000000 * 50, [our_tilemap]);
 	// _collisions is the list of things we are colliding with
 
 	// Check if we are colliding with anything
@@ -68,17 +68,39 @@ function try_jump()
 	}
 }
 
+if(is_getting_dragged)
+{
+	x = lerp(x, goal_x, delta_time / 1000000 * 5);
+	y = lerp(y, goal_y, 0.05);
+	
+	_distance = distance(x, y, goal_x, goal_y);
+	show_debug_message($"goal_x: {goal_x}, goal_y: {goal_y}");
+	if(_distance < 2)
+	{
+		x = goal_x;
+		y = goal_y;
+		
+		is_getting_dragged = false;
+	}
+	
+	return;
+}
+
 // Make sure to move in the right order
 move_on_x();
 try_jump();
 move_on_y();
 
-// Update location for other sprites
-if(is_player_one)
+function my_lerp(a, b, t)
 {
-	global.player_one = {x: x, y: y};
+	return a + (b - a) * t;
 }
-else
+
+function distance(ax, ay, bx, by)
 {
-	global.player_two = {x: x, y: y};
+    var a = abs(ax - bx);
+    var b = abs(ay - by);
+
+
+    return sqrt(a * a + b * b);
 }

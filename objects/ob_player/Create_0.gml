@@ -5,11 +5,22 @@ velocity_y = 0;
 
 on_ground = false;
 
-global.player_one = {x: x, y: y};
-global.player_two = {x: x, y: y};
+if(is_player_one)
+{
+	global.player_one = self;
+}
+else
+{
+	global.player_two = self;
+}
 
 old_x = 0;
 old_y = 0;
 
 global.collisions_one = [];
 global.collisions_two = [];
+
+goal_x = -1;
+goal_y = -1;
+
+is_getting_dragged = false;
