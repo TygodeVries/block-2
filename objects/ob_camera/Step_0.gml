@@ -17,7 +17,6 @@ if(keyboard_check(ord("J")))
 	global.turn_speed -= 0.01;
 }
 
-
 camera_x = (global.player_one.x + global.player_two.x) / 2;
 camera_x -= camera_get_view_width(view_camera[0]) / 2;
 

@@ -34,19 +34,10 @@ function move_on_y()
 	var _collisions = move_and_collide(0, velocity_y, [all, our_tilemap]);
 	// _collisions is the list of things we are colliding with
 
+	// Check if we are colliding with anything
 	if(array_length(_collisions) > 0)
-	{
-		for(_i = 0; _i < array_length(_collisions); _i++)
-		{
-			var obj = _collisions[_i];
-			if(instance_exists(obj) && variable_instance_exists(obj.id, "collide_listener") && obj.collide_listener)
-			{
-				obj.on_collide(self);
-			}
-		}
-		
-		show_debug_message(velocity_y * sign(-gravity_modifier) );
-		
+	{		
+		// Check if we are going up (relative to our world)
 		if(velocity_y * sign(-gravity_modifier) <= 0)
 		{
 			on_ground = true;
@@ -56,26 +47,33 @@ function move_on_y()
 			on_ground = false;
 		}
 		
+		// Set the velocity to 0, because we hit the floor or roof
 		velocity_y = 0;
 	}
 	else
 	{
+		// If we are not colliding with anything, we set onground to false
 		on_ground = false;
 	}
 }
 
+// Make the characher jump if the player wants to
 function try_jump()
 {
+	// Check if we can jump
 	if(ob_input.do_jump(is_player_one) && on_ground)
 	{
+		// Apply upwards force
 		velocity_y = -jump_power;
 	}
 }
 
+// Make sure to move in the right order
 move_on_x();
 try_jump();
 move_on_y();
 
+// Update location for other sprites
 if(is_player_one)
 {
 	global.player_one = {x: x, y: y};
@@ -83,10 +81,4 @@ if(is_player_one)
 else
 {
 	global.player_two = {x: x, y: y};
-}
-
-function go_back()
-{
-	x = old_x;
-	y = old_y;
 }
