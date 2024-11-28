@@ -1,7 +1,20 @@
-global.input_p1_left = keyboard_check(vk_left);
-global.input_p1_right = keyboard_check(vk_right);
-global.input_p1_jump = keyboard_check(vk_up);
+function array_key_down(a)
+{
+	for(i = 0; i < array_length(a); i++)
+	{
+		if(keyboard_check(a[i]))
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}
 
-global.input_p2_left = keyboard_check(ord("A"));
-global.input_p2_right = keyboard_check(ord("D"));
-global.input_p2_jump = keyboard_check(ord("W"));
+global.input_p1_left = array_key_down(input_p1_left);
+global.input_p1_right = array_key_down(input_p1_right);
+global.input_p1_jump = array_key_down(input_p1_jump);
+
+global.input_p2_left = array_key_down(input_p2_left);
+global.input_p2_right = array_key_down(input_p2_right);
+global.input_p2_jump = array_key_down(input_p2_jump);
