@@ -6,8 +6,8 @@ global.turn_speed = 0; // Set default rotation speed to 0
 camera_x = 0;
 real_x = 0;
 
-camera_y = 250;
-real_y = 250;
+camera_y = 100;
+real_y = 100;
 
 cooldown_one = 0;
 
