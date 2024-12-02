@@ -67,9 +67,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rebind","path":"rooms/rebind/rebind.yy",},},
-    {"roomId":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
