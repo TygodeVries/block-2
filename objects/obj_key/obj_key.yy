@@ -28,8 +28,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
-  "spriteId":null,
+  "solid":true,
+  "spriteId":{
+    "name":"Key",
+    "path":"sprites/Key/Key.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

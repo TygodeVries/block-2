@@ -35,9 +35,19 @@ function move_on_x()
 	}
 
 	var _collisions = move_and_collide(velocity_x * delta_time / 1000000 * 50, 0, _colliders);
+	
+	
 	for(_j = 0; _j < array_length(_collisions); _j++)
 	{
-		event_perform_object(_collisions[_j], ev_collision, ob_player);
+		
+		_aobj = _collisions[_j];
+		if (instance_exists(_aobj) && _aobj != noone) {
+				
+				if(variable_instance_exists(_aobj, "collision_defined"))
+				{
+					_aobj.on_collision(self);
+				}
+			}
 	}
 }
 

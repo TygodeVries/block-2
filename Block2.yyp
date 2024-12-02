@@ -48,6 +48,7 @@
     {"id":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
     {"id":{"name":"rebind","path":"rooms/rebind/rebind.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Key","path":"sprites/Key/Key.yy",},},
     {"id":{"name":"sp_checkpoint_p1","path":"sprites/sp_checkpoint_p1/sp_checkpoint_p1.yy",},},
     {"id":{"name":"sp_checkpoint_p2","path":"sprites/sp_checkpoint_p2/sp_checkpoint_p2.yy",},},
     {"id":{"name":"sp_demon1_down","path":"sprites/sp_demon1_down/sp_demon1_down.yy",},},
