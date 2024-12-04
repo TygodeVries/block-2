@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Sprite9",
-    "path":"sprites/Sprite9/Sprite9.yy",
+    "name":"Door",
+    "path":"sprites/Door/Door.yy",
   },
   "spriteMaskId":null,
   "visible":true,

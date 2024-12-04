@@ -24,3 +24,6 @@ goal_x = -1;
 goal_y = -1;
 
 is_getting_dragged = false;
+
+global.player_one_keys = 0;
+global.player_two_keys = 0;

@@ -1,3 +1,18 @@
+
+if(keyboard_check(vk_alt))
+{
+	global.turn_speed += 0.01;
+}
+
+if(keyboard_check(vk_control))
+{
+	global.turn_speed -= 0.01;
+}
+
+turn += global.turn_speed;
+
+camera_set_view_angle(view_camera[0], turn);
+
 if(delta_time / 1000000 > 0.1)
 {
 	return;
