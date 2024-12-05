@@ -1,3 +1,5 @@
+depth = -100; // Draw in front of other objects
+
 our_tilemap = layer_tilemap_get_id("Level"); // Get the tilemap to collide with
 
 velocity_x = 0;
