@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_door",
+  "%Name":"Rebind",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_door",
+  "name":"Rebind",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,11 +28,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"door19",
-    "path":"sprites/door19/door19.yy",
+    "name":"Sprite18",
+    "path":"sprites/Sprite18/Sprite18.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
