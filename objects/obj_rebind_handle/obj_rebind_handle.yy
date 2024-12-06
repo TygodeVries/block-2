@@ -8,8 +8,8 @@
   "name":"obj_rebind_handle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objects/Menu.yy",
+    "name":"Dev",
+    "path":"folders/Objects/Dev.yy",
   },
   "parentObjectId":null,
   "persistent":false,
