@@ -5,6 +5,11 @@ if(delta_time / 1000000 > 0.1)
 	return;
 }
 
+// Move our camera to the center between the two players
+camera_x = (global.player_one.x + global.player_two.x) / 2
+
+// Add an offset to put the camera in the center
+camera_x -= camera_get_view_width(view_camera[0]) / 2;
 
 // We smoothly move to the point we want to reach 
 real_x = lerp(real_x, camera_x, delta_time / 1000000 * 4);
