@@ -5,7 +5,7 @@
 var speed_factor = 0.2;
 
 // Find the nearest ob_player
-var target = instance_nearest(x, y, ob_player);
+var target = instance_nearest(x, y, obj_player);
 
 // Check if target exists
 if (target != noone) {

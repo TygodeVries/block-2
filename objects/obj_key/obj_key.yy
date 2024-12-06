@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Key",
-    "path":"sprites/Key/Key.yy",
+    "name":"spr_key",
+    "path":"sprites/spr_key/spr_key.yy",
   },
   "spriteMaskId":null,
   "visible":true,
