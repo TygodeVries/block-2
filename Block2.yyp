@@ -94,6 +94,7 @@
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},},
     {"id":{"name":"sub","path":"tilesets/sub/sub.yy",},},
     {"id":{"name":"ts_main","path":"tilesets/ts_main/ts_main.yy",},},
+    {"id":{"name":"tst_outside_realworld","path":"tilesets/tst_outside_realworld/tst_outside_realworld.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
