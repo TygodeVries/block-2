@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"ob_demon1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_2",
+  "eventList":[],
   "managed":true,
-  "name":"ob_demon1",
+  "name":"obj_player_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Core",
     "path":"folders/Objects/Core.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_player",
+    "path":"objects/obj_player/obj_player.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sp_demon1_down",
-    "path":"sprites/sp_demon1_down/sp_demon1_down.yy",
+    "name":"Sprite36",
+    "path":"sprites/Sprite36/Sprite36.yy",
   },
   "spriteMaskId":null,
   "visible":true,
