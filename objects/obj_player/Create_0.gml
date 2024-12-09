@@ -40,5 +40,10 @@ function has_in_inventory(item)
 
 function remove_from_inventory(item)
 {
-	array_delete(inventory, array_get_index(inventory, item), 1);
+	array_delete(inventory, get_inventory_index(item), 1);
+}
+
+function get_inventory_index(item)
+{
+	return array_get_index(inventory, item);
 }

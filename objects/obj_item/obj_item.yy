@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_key",
+  "%Name":"obj_item",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_key",
+  "name":"obj_item",
   "overriddenProperties":[],
   "parent":{
     "name":"Level",
@@ -31,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":{
-    "name":"spr_key",
-    "path":"sprites/spr_key/spr_key.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
