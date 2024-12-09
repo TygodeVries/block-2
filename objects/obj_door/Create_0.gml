@@ -10,32 +10,12 @@ collision_defined = true;
 // This code gets run when a player touches us
 function on_collision(player)
 {
-	// If player one touches us
-	if(player.is_player_one)
+	// Check if we have this item
+	if(player.has_in_inventory(item_requirement))
 	{
-		// Check if we have at least one key
-		if(global.player_one_keys > 0)
-		{
-			// Remove one key
-			global.player_one_keys--;
-			
-			// Open the door
-			open();
-		}
-	}
-	
-	// If player two touches us
-	else
-	{
-		// Check if we have at least one key
-		if(global.player_two_keys > 0)
-		{
-			// Remove one key
-			global.player_two_keys--; 
-			
-			// Open the door
-			open(); 
-		}
+		// Remove the key from the inventory
+		player.remove_from_inventory(item_requirement);
+		open();
 	}
 	
 }

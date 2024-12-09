@@ -8,18 +8,7 @@ collision_defined = true;
 function on_collision(player)
 {
 	// If the player is player one
-	if(player.is_player_one)
-	{
-		// Give them a key
-		global.player_one_keys++;
-	}
-	
-	// If its player two
-	else
-	{
-		// give THEM a key
-		global.player_two_keys++;
-	}
+	player.add_to_inventory(item_type)
 	
 	// Thanos snap the key object.
 	instance_destroy(self);

@@ -24,6 +24,21 @@ else
 }
 
 
-// Set the amount of keys we have back to 0. To make sure you cant bring in keys from other levels
-global.player_one_keys = 0;
-global.player_two_keys = 0;
+// Create an inventory
+inventory = [];
+
+
+function add_to_inventory(item)
+{
+	array_push(inventory, item);
+}
+
+function has_in_inventory(item)
+{
+	return array_contains(inventory, item_requirement);
+}
+
+function remove_from_inventory(item)
+{
+	array_delete(inventory, array_get_index(inventory, item), 1);
+}
