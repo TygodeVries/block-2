@@ -1,5 +1,12 @@
-// We run this code every frame
 
+_mod = 0.8;
+if(speedup_time > 0)
+{
+	_mod = 2.5;
+}
+death_cooldown -= (delta_time / 1000000) * _mod;
+speedup_time -= (delta_time / 1000000)
+// We run this code every frame
 function step_and_handle_collide(steps_x, steps_y)
 {
 	// We need to make a list of things the player wants to be able to collide with
@@ -17,7 +24,7 @@ function step_and_handle_collide(steps_x, steps_y)
 	}
 	
 	// We acually move.
-	var _collisions = move_and_collide(steps_x * delta_time / 1000000 * 50, steps_y * delta_time / 1000000 * 50, _colliders);
+	var _collisions = move_and_collide((steps_x * delta_time / 1000000 * 50) + 0.000001, steps_y * delta_time / 1000000 * 50, _colliders);
 	
 	// After we have moved, we notify every objects that wants to know that we collided with it
 	for(_j = 0; _j < array_length(_collisions); _j++)
@@ -162,7 +169,54 @@ if(delta_time / 1000000 > 0.1)
 	return;
 }
 
+
+if(global.player_one.is_dead && global.player_two.is_dead)
+{
+	room_restart();
+}
+		
+
+if(death_cooldown > 0)
+{
+	// Death
+	
+	var _x = cos(((death_cooldown / 5) * 2) * pi);
+	var _y = sin(((death_cooldown / 5) * 2) * pi);
+	
+	x = death_location.x + (_x * 30);
+	y = death_location.y + (_y * 30);
+	
+	var ob = instance_create_layer(x, y, "Instances", obj_trail);
+	array_push(particles, ob);
+	if(speedup_time > 0)
+	{
+		ob.image_index = 1;
+	}
+	
+	if(obj_input.do_jump(is_player_one))
+	{
+		speedup_time = 0.1;
+	}
+	
+	
+}
+else {
+	
+	if(is_dead)
+	{
+		revive();
+		
+		for(_i = 0; _i < array_length(particles); _i++)
+		{
+			instance_destroy(particles[_i]);
+		}
+		
+		particles = [];
+	}
+	
 // Make sure to move in the right order
 move_on_x();
 jump();
 move_on_y();
+
+}

@@ -10,6 +10,11 @@ global.input_p2_left = false;
 global.input_p2_right = false;
 global.input_p2_jump = false;
 
+
+input_p1_jump_last_frame = false;
+input_p2_jump_last_frame = false;
+
+
 function do_jump(_player_one)
 {
 	if(_player_one && global.input_p1_jump) return true;

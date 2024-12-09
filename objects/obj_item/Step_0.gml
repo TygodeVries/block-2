@@ -40,5 +40,13 @@ if(state == ITEM_STATE.FOLLOW)
 		
 		x += _delta_x * (_distance * 0.05);
 		y += _delta_y * (_distance * 0.05);
-;	}
+	}
+}
+
+
+if(state == ITEM_STATE.FOLLOW)
+{
+	if(!owner.has_in_inventory(item_type)){
+		instance_destroy(self);
+	}
 }
