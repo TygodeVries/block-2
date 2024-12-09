@@ -35,7 +35,7 @@ function add_to_inventory(item)
 
 function has_in_inventory(item)
 {
-	return array_contains(inventory, item_requirement);
+	return array_contains(inventory, item);
 }
 
 function remove_from_inventory(item)
