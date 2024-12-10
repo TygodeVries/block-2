@@ -65,6 +65,31 @@ if(global.selected_button == button_id)
 		{
 			room_goto(lv_room1);
 		}
+		
+		if(run_function == "menu_select_character")
+		{
+			room_goto(menu_select_character);
+		}
+		
+		if(run_function == "menu_select_green")
+		{
+			room_goto(menu_main);
+		}
+		
+		if(run_function == "menu_select_purple")
+		{
+			room_goto(menu_main);
+		}
+		
+		if(run_function == "menu_select_blue")
+		{
+			room_goto(menu_main);
+		}
+		
+		if(run_function == "menu_select_red")
+		{
+			room_goto(menu_main);
+		}
 	}
 }
 else
