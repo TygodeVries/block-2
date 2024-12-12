@@ -162,6 +162,13 @@ function jump()
 	}
 }
 
+/// Restart funtion(press R)
+if keyboard_check_pressed(ord("R"))
+{
+    game_restart();
+}
+
+
 // Avoid bug
 if(delta_time / 1000000 > 0.1)
 {
