@@ -52,7 +52,7 @@ function get_inventory_index(item)
 
 death_cooldown = 0;
 speedup_time = 0;
-checkpoint = {x: 0, y: 0}
+checkpoint = {x: x, y: y}
 is_dead = false;
 
 function murder_and_kill()
