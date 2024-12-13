@@ -58,7 +58,7 @@ function step_and_handle_collide(steps_x, steps_y)
 function move_left()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	velocity_x = -move_speed;
+	 velocity_x = -move_speed - (is_player_one ? global.wind_player1 : global.wind_player2);
 	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
@@ -72,7 +72,7 @@ function move_left()
 function move_right()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	velocity_x = move_speed;
+	velocity_x = move_speed + (is_player_one ? global.wind_player1 : global.wind_player2);
 	
 	// Update sprite 
 	
@@ -87,7 +87,7 @@ function move_right()
 function move_stop()
 {
 	// Make us stop moving
-	velocity_x = 0
+	  velocity_x = (is_player_one ? global.wind_player1 : global.wind_player2);
 }
 
 // Move on the X axis

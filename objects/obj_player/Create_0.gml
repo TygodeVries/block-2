@@ -2,7 +2,8 @@
 
 // Set the depth level (for the ordering of the sprites) of the player. -100 meaning always in front.
 depth = -100;
-
+// Wind speed
+global.wind= 0;
 // Get our level tilemap
 level_tilemap = layer_tilemap_get_id("Level"); // Get the tilemap to collide with
 
