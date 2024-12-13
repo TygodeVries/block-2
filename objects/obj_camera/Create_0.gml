@@ -4,3 +4,5 @@ real_x = 0;
 
 camera_y = 100;
 real_y = 100;
+
+window_set_fullscreen(true);
