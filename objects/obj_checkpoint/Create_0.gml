@@ -10,4 +10,5 @@ function on_collision(player)
 	player.checkpoint.y = player.y;
 	
 	solid = false;
+	sprite_index = spr_checkpoint;
 }

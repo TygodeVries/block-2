@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_checkpoint",
+  "%Name":"obj_spike",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_checkpoint",
+  "name":"obj_spike",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Obstacle",
+    "path":"folders/Objects/Level/Obstacle.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_checkpoint_inactive",
-    "path":"sprites/spr_checkpoint_inactive/spr_checkpoint_inactive.yy",
+    "name":"spr_spike",
+    "path":"sprites/spr_spike/spr_spike.yy",
   },
   "spriteMaskId":null,
   "visible":true,
