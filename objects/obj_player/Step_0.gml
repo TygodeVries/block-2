@@ -167,8 +167,9 @@ function move_on_y()
 function jump()
 {
 	// Check if the player is pressing the jump button, and that we are standing on the ground
-	if(obj_input.do_jump(is_player_one) && on_ground)
+	if(obj_input.do_jump(is_player_one) && time_since_ground < 0.1)
 	{
+		time_since_ground = 1000;
 		// This one is pretty simple, we just overwrite the velocity of the player.
 		velocity_y = -jump_power;
 	}
@@ -237,5 +238,15 @@ else {
 move_on_x();
 jump();
 move_on_y();
+
+if(on_ground)
+{
+	time_since_ground = 0;
+}
+
+else
+{
+	time_since_ground += delta_time / 1000000;
+}
 
 }

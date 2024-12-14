@@ -3,6 +3,8 @@ global.wind_player2 = 0;
 
 // This code is ran at the beginning of every level
 
+time_since_ground = 0;
+
 // Set the depth level (for the ordering of the sprites) of the player. -100 meaning always in front.
 depth = -100;
 // Wind speed
@@ -69,6 +71,7 @@ function murder_and_kill()
 }
 
 death_location = {x: 0, y: 0}
+
 
 function revive()
 {
