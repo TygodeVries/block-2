@@ -5,11 +5,12 @@
 global.input_p1_left = false;
 global.input_p1_right = false;
 global.input_p1_jump = false;
+global.input_p1_interact = false;
 
 global.input_p2_left = false;
 global.input_p2_right = false;
 global.input_p2_jump = false;
-
+global.input_p2_interact = false;
 
 input_p1_jump_last_frame = false;
 input_p2_jump_last_frame = false;
@@ -21,6 +22,14 @@ function do_jump(_player_one)
 	if(!_player_one && global.input_p2_jump) return true;
 	return false;
 }
+
+function do_interact(_player_one)
+{
+	if(_player_one && global.input_p1_interact) return true;
+	if(!_player_one && global.input_p2_interact) return true;
+	return false;
+}
+
 
 function do_left(_player_one)
 {
@@ -71,6 +80,9 @@ gamepad_two_left = [];
 gamepad_one_right = [];
 gamepad_two_right = [];
 
+gamepad_one_interact = [];
+gamepad_two_interact = [];
+
 keyboard_one_jump = [];
 keyboard_two_jump = [];
 keyboard_one_left = [];
@@ -78,16 +90,21 @@ keyboard_two_left = [];
 keyboard_one_right = [];
 keyboard_two_right = [];
 
+keyboard_one_interact = [];
+keyboard_two_interact = [];
+
 show_debug_message($"{ord("W")}, {ord("A")}, {ord("D")}");
 
 
 set_data(ini_read_string("keybinds", "player_one_jump", "g_32769, k_38"), keyboard_one_jump, gamepad_one_jump);
 set_data(ini_read_string("keybinds", "player_one_left", "g_32783, k_37"), keyboard_one_left, gamepad_one_left);
 set_data(ini_read_string("keybinds", "player_one_right", "g_32784, k_39"), keyboard_one_right, gamepad_one_right);
+set_data(ini_read_string("keybinds", "player_one_interact", $"g_{gp_face1}, k_{vk_down}"), keyboard_one_interact, gamepad_one_interact);
 
 set_data(ini_read_string("keybinds", "player_twp_jump", "g_32769, k_87"), keyboard_two_jump, gamepad_two_jump);
 set_data(ini_read_string("keybinds", "player_two_left", "g_32783, k_65"), keyboard_two_left, gamepad_two_left);
 set_data(ini_read_string("keybinds", "player_two_right", "g_32784, k_68"), keyboard_two_right, gamepad_two_right);
+set_data(ini_read_string("keybinds", "player_one_interact", $"g_{gp_face1}, k_{ord("S")}"), keyboard_two_interact, gamepad_two_interact);
 
 
 // Close file

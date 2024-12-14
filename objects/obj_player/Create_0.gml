@@ -78,3 +78,18 @@ function revive()
 	
 	sprite_index = spr_player;
 }
+
+swap_time = -1;
+swap_loc = {x: x, y:y};
+
+function swap(lenght, offset)
+{
+	gravity_modifier = -gravity_modifier; // Flip gravity
+	jump_power = -jump_power;
+	swap_time = lenght;
+	
+	swap_loc.x = x;
+	swap_loc.y = y;
+	
+	y = y + offset;
+}

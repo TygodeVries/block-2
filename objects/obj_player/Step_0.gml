@@ -4,6 +4,18 @@ if(speedup_time > 0)
 {
 	_mod = 2.5;
 }
+
+if(swap_time < 0 && swap_time > -1)
+{
+	swap_time = -2;
+	gravity_modifier = -gravity_modifier; 
+	jump_power = -jump_power;
+	
+	x = swap_loc.x;
+	y = swap_loc.y;
+}
+
+swap_time -= (delta_time / 1000000);
 death_cooldown -= (delta_time / 1000000) * _mod;
 speedup_time -= (delta_time / 1000000)
 // We run this code every frame
