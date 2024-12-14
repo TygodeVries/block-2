@@ -1,3 +1,6 @@
+global.wind_player1 = 0;
+global.wind_player2 = 0;
+
 // This code is ran at the beginning of every level
 
 // Set the depth level (for the ordering of the sprites) of the player. -100 meaning always in front.
