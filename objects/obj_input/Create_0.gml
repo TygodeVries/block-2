@@ -96,15 +96,15 @@ keyboard_two_interact = [];
 show_debug_message($"{ord("W")}, {ord("A")}, {ord("D")}");
 
 
-set_data(ini_read_string("keybinds", "player_one_jump", "g_32769, k_38"), keyboard_one_jump, gamepad_one_jump);
+set_data(ini_read_string("keybinds", "player_one_jump", $"g_{gp_face1}, k_38"), keyboard_one_jump, gamepad_one_jump);
 set_data(ini_read_string("keybinds", "player_one_left", "g_32783, k_37"), keyboard_one_left, gamepad_one_left);
 set_data(ini_read_string("keybinds", "player_one_right", "g_32784, k_39"), keyboard_one_right, gamepad_one_right);
-set_data(ini_read_string("keybinds", "player_one_interact", $"g_{gp_face1}, k_{vk_down}"), keyboard_one_interact, gamepad_one_interact);
+set_data(ini_read_string("keybinds", "player_one_interact", $"g_{gp_face2}, k_{vk_down}"), keyboard_one_interact, gamepad_one_interact);
 
-set_data(ini_read_string("keybinds", "player_twp_jump", "g_32769, k_87"), keyboard_two_jump, gamepad_two_jump);
+set_data(ini_read_string("keybinds", "player_two_jump", $"g_{gp_face1}, k_87"), keyboard_two_jump, gamepad_two_jump);
 set_data(ini_read_string("keybinds", "player_two_left", "g_32783, k_65"), keyboard_two_left, gamepad_two_left);
 set_data(ini_read_string("keybinds", "player_two_right", "g_32784, k_68"), keyboard_two_right, gamepad_two_right);
-set_data(ini_read_string("keybinds", "player_one_interact", $"g_{gp_face1}, k_{ord("S")}"), keyboard_two_interact, gamepad_two_interact);
+set_data(ini_read_string("keybinds", "player_two_interact", $"g_{gp_face2}, k_{ord("S")}"), keyboard_two_interact, gamepad_two_interact);
 
 
 // Close file

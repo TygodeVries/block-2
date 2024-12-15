@@ -90,9 +90,19 @@ if(global.selected_button == button_id)
 		{
 			room_goto(menu_main);
 		}
+		
+		if(string_starts_with(run_function, "keybind:"))
+		{
+			args = string_split(run_function, ":");
+			keybind = args[1];
+			
+			obj_press_button.visible = true;
+			obj_press_button.set(keybind);
+		}
 	}
 }
 else
 {
 	sprite_index = spr_button_unpressed;
 }
+

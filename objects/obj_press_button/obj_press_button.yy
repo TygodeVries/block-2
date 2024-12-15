@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rebind_handle",
+  "%Name":"obj_press_button",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rebind_handle",
+  "name":"obj_press_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dev",
-    "path":"folders/Objects/Dev.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dev_rebind_handle",
-    "path":"sprites/spr_dev_rebind_handle/spr_dev_rebind_handle.yy",
+    "name":"spr_button_prompt",
+    "path":"sprites/spr_button_prompt/spr_button_prompt.yy",
   },
   "spriteMaskId":null,
   "visible":false,
