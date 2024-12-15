@@ -28,6 +28,3 @@ real_y = lerp(real_y, camera_y - (camera_get_view_height(view_camera[0]) / 2), d
 
 // Update camera location
 camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
-
-
-// Move along cutscenes

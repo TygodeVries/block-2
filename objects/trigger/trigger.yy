@@ -36,5 +36,5 @@
     "path":"sprites/spr_dev_trigger/spr_dev_trigger.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
