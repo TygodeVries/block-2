@@ -79,7 +79,7 @@ function revive()
 	x = checkpoint.x;
 	y = checkpoint.y;
 	
-	sprite_index = spr_player;
+	sprite_index = spr_placeholder;
 }
 
 swap_time = -1;

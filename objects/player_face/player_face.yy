@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_fallback",
+    "path":"sprites/spr_fallback/spr_fallback.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

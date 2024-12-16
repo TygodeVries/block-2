@@ -15,3 +15,11 @@ if(face_id == "FIRST")
 time = 0;
 
 goal = {x: x, y: y};
+
+
+function damage()
+{
+	
+}
+
+damage_animation = 0;
