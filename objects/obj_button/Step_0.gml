@@ -61,9 +61,14 @@ if(global.selected_button == button_id)
 			room_goto(menu_rebind);
 		}
 		
-		if(run_function == "menu_room1")
+		if(run_function == "menu_boss")
 		{
 			room_goto(lv_boss);
+		}
+		
+		if(run_function == "menu_room1")
+		{
+			room_goto(lv_room1);
 		}
 		
 		if(run_function == "menu_select_character")
