@@ -34,3 +34,27 @@ if(global.boss_stage == BOSS_STAGE.EAT)
 
 x = lerp(x, goal.x, delta_time / 1000000);
 y = lerp(y, goal.y, delta_time / 1000000);
+
+damage_animation -= delta_time / 1000000;
+
+if(damage_animation > 0)
+{
+	x += random(20) - 10;
+	y += random(20) - 10;
+}
+
+if(array_contains(global.signal, "boss_damage"))
+{
+	damage();
+	
+	
+	global.player_one.velocity_y = -global.player_one.jump_power * 2;
+	global.player_two.velocity_y = -global.player_two.jump_power * 2;
+	
+	global.player_one.velocity_x = global.player_one.x;
+	global.player_two.velocity_x = global.player_two.x;
+	
+	
+	
+	damage_animation = 0.5;
+}
