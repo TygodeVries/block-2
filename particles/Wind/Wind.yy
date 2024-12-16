@@ -18,7 +18,7 @@
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",
-  "showBackdrop":true,
+  "showBackdrop":false,
   "showBackdropImage":false,
   "xorigin":0,
   "yorigin":0,

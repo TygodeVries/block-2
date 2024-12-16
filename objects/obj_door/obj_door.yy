@@ -10,8 +10,8 @@
   "name":"obj_door",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Doors",
+    "path":"folders/Objects/Level/Doors.yy",
   },
   "parentObjectId":null,
   "persistent":false,
