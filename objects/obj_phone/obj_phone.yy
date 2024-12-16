@@ -33,9 +33,12 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
+    "name":"spr_phone",
+    "path":"sprites/spr_phone/spr_phone.yy",
+  },
+  "spriteMaskId":{
     "name":"spr_phone_placeholder",
     "path":"sprites/spr_phone_placeholder/spr_phone_placeholder.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }
