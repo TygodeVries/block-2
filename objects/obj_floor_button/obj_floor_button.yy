@@ -9,8 +9,8 @@
   "name":"obj_floor_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Obstacle",
-    "path":"folders/Objects/Level/Obstacle.yy",
+    "name":"Pressure",
+    "path":"folders/Objects/Level/Pressure.yy",
   },
   "parentObjectId":null,
   "persistent":false,

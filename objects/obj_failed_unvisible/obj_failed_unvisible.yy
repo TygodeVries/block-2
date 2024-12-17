@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"spikes",
+  "%Name":"obj_failed_unvisible",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"spikes",
+  "name":"obj_failed_unvisible",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Obstacle",
+    "path":"folders/Objects/Level/Obstacle.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -34,5 +34,5 @@
     "path":"sprites/spr_failed/spr_failed.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

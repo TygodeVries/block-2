@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tileset",
   "bboxMode":0,
-  "bbox_bottom":173,
+  "bbox_bottom":255,
   "bbox_left":0,
   "bbox_right":223,
   "bbox_top":20,
@@ -16,7 +16,7 @@
   ],
   "gridX":32,
   "gridY":32,
-  "height":250,
+  "height":400,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"c9a06188-fc0a-4d3f-b482-8379f2c03a2c","blendMode":0,"displayName":"default","isLocked":false,"name":"c9a06188-fc0a-4d3f-b482-8379f2c03a2c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

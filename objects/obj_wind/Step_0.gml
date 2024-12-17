@@ -1,3 +1,5 @@
+/// @description Insert description here
+// You can write your code in this editor
 // Start with no player on the plate
 var player_on_plate = noone;
 
@@ -32,3 +34,11 @@ if (player_on_plate != noone) {
     global.wind_player1 = lerp(global.wind_player1, 0, 0.1);
     global.wind_player2 = lerp(global.wind_player2, 0, 0.1);
 }
+////////////////////////Wind Movement////////////////////////
+// Check position, change direction
+if (x <= 1066) direction = 0; // Move right
+else if (x >= 1433) direction = 180; // Move left
+
+// Update position
+x += lengthdir_x(windspeed, direction)
+/////////////////////////////////////////////////////////////
