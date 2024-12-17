@@ -36,8 +36,8 @@ if (player_on_plate != noone) {
 }
 ////////////////////////Wind Movement////////////////////////
 // Check position, change direction
-if (x <= 1066) direction = 0; // Move right
-else if (x >= 1433) direction = 180; // Move left
+if (x <= 1000) direction = 0; // Move right
+else if (x >= 1400) direction = 180; // Move left
 
 // Update position
 x += lengthdir_x(windspeed, direction)
