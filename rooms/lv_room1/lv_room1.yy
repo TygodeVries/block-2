@@ -45,6 +45,7 @@
     {"name":"inst_113D2AA5","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_7800BD2E","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_269CA37","path":"rooms/lv_room1/lv_room1.yy",},
+    {"name":"inst_37F6626E","path":"rooms/lv_room1/lv_room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -112,6 +113,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_phone","path":"objects/obj_phone/obj_phone.yy",},"propertyId":{"name":"swap_time_lenght","path":"objects/obj_phone/obj_phone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"7",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_phone","path":"objects/obj_phone/obj_phone.yy",},"propertyId":{"name":"swap_offset","path":"objects/obj_phone/obj_phone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"350",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":360.0,"scaleX":1.0,"scaleY":1.0,"x":912.0,"y":288.0,},
+        {"$GMRInstance":"v1","%Name":"inst_37F6626E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_37F6626E","objectId":{"name":"obj_finish","path":"objects/obj_finish/obj_finish.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":2288.0,"y":400.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Cable","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Cable","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":313,"TileCompressedData":[
           -939,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,

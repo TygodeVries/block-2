@@ -7,6 +7,12 @@ if(cooldown < 0)
 	cooldown = 0.5;
 }
 
+if(face_id == "FIRST")
+	global.boss_loc1 = {x: x, y: y};
+
+else
+	global.boss_loc2 = {x: x, y: y};
+
 cooldown -= delta_time / 1000000;
 
 time += delta_time / 1000000;
@@ -17,7 +23,7 @@ if(global.boss_stage == BOSS_STAGE.IDEL)
 	if(is_face_one)
 		offset = 1;
 	
-	goal.x = (cos(((time / 10) + offset) * pi) * 200) + 256;
+	goal.x = (cos(((time / 10) + offset) * pi) * 200) + 460;
 	goal.y = (sin(((time / 10) + offset) * pi) * 200) + 256;
 }
 
@@ -35,7 +41,14 @@ if(global.boss_stage == BOSS_STAGE.EAT)
 x = lerp(x, goal.x, delta_time / 1000000);
 y = lerp(y, goal.y, delta_time / 1000000);
 
+od = damage_animation;
 damage_animation -= delta_time / 1000000;
+
+if(od > 0 && damage_animation < 0)
+{
+	global.player_one.x = 416;
+	global.player_two.x = 416;
+}
 
 if(damage_animation > 0)
 {
@@ -43,16 +56,14 @@ if(damage_animation > 0)
 	y += random(20) - 10;
 }
 
+
 if(array_contains(global.signal, "boss_damage"))
 {
 	damage();
 	
 	
-	global.player_one.velocity_y = -global.player_one.jump_power * 2;
-	global.player_two.velocity_y = -global.player_two.jump_power * 2;
-	
-	global.player_one.velocity_x = global.player_one.x;
-	global.player_two.velocity_x = global.player_two.x;
+	global.player_one.velocity_y = -global.player_one.jump_power * 3;
+	global.player_two.velocity_y = -global.player_two.jump_power * 3;
 	
 	
 	
