@@ -1,3 +1,5 @@
+// Discord test
+
 global.wind_player1 = 0;
 global.wind_player2 = 0;
 
