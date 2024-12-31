@@ -10,5 +10,4 @@ function start()
 	timeline_speed = 1 / 60;
 	timeline_loop = false;
 	
-	array_delete(global.signal, array_get_index(global.signal, start_signal), 1);
 }

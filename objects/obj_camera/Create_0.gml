@@ -13,6 +13,9 @@ goal_height = normal_height;
 
 in_cutscene_mode = false;
 
+started = 2;
+camera_speed = 2;
+
 function look_at(_x, _y)
 {
 	camera_x = _x;

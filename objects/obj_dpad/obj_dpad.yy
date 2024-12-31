@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
+  "%Name":"obj_dpad",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_dpad",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dev",
-    "path":"folders/Objects/Dev.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dev_camera",
-    "path":"sprites/spr_dev_camera/spr_dev_camera.yy",
+    "name":"spr_dpadr_sheet",
+    "path":"sprites/spr_dpadr_sheet/spr_dpadr_sheet.yy",
   },
   "spriteMaskId":null,
   "visible":false,

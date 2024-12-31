@@ -19,6 +19,7 @@ velocity_y = 0;
 // Flag to check if we are on the ground.
 on_ground = false;
 
+
 particles = [];
 
 // is_player_one is from the inspector. Setting these objects to a global value makes it easier to refrence them later

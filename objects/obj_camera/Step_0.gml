@@ -8,8 +8,8 @@ if(delta_time / 1000000 > 0.1)
 curw = camera_get_view_width(view_camera[0]);
 curh = camera_get_view_height(view_camera[0])
 
-curw = lerp(curw, goal_width, delta_time / 1000000 * 2); 
-curh = lerp(curh, goal_height, delta_time / 1000000 * 2); 
+curw = lerp(curw, goal_width, delta_time / 1000000 * camera_speed); 
+curh = lerp(curh, goal_height, delta_time / 1000000 * camera_speed); 
 
 camera_set_view_size(view_camera[0], curw, curh);
 
@@ -23,8 +23,19 @@ if(!in_cutscene_mode)
 
 
 // We smoothly move to the point we want to reach 
-real_x = lerp(real_x, camera_x - (camera_get_view_width(view_camera[0]) / 2), delta_time / 1000000 * 4);
-real_y = lerp(real_y, camera_y - (camera_get_view_height(view_camera[0]) / 2), delta_time / 1000000 * 4);
+real_x = lerp(real_x, camera_x - (camera_get_view_width(view_camera[0]) / 2), delta_time / 1000000 * camera_speed);
+real_y = lerp(real_y, camera_y - (camera_get_view_height(view_camera[0]) / 2), delta_time / 1000000 * camera_speed);
 
 // Update camera location
 camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
+
+function now()
+{
+	curw = goal_width;
+	curh = goal_height;
+	camera_set_view_size(view_camera[0], goal_width, goal_height);
+	
+	real_x = camera_x - (camera_get_view_width(view_camera[0]) / 2);
+	real_y = camera_y  - (camera_get_view_height(view_camera[0]) / 2);
+	camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
+}

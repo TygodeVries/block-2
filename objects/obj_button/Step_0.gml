@@ -48,7 +48,7 @@ if(global.selected_button == button_id)
 		
 		if(run_function == "menu_main_start")
 		{
-			room_goto(lv_test);
+			room_goto(lv_new_intro);
 		}
 		
 		if(run_function == "menu_main")
