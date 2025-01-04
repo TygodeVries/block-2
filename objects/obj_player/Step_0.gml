@@ -178,6 +178,18 @@ function jump()
 /// Restart funtion(press R)
 if keyboard_check_pressed(ord("R"))
 {
+    with (obj_player) {
+        if (is_player_one) {
+            // Effect to player one
+        } else {
+            // Effect to player two
+        }
+        murder_and_kill(); // Make 2 players both die
+    }
+}
+
+if keyboard_check_pressed(vk_escape)
+ {
     game_restart();
 }
 

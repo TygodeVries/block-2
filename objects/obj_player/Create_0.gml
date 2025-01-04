@@ -99,3 +99,7 @@ function swap(lenght, offset)
 	
 	y = y + offset;
 }
+
+
+restarting = false;
+restart_timer = 0;
