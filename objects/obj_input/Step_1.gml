@@ -41,3 +41,4 @@ global.input_p2_interact = (array_key_down(keyboard_two_interact) || array_gamep
 
 input_p1_jump_last_frame = array_key_down(keyboard_one_jump) || array_gamepad_down(0, gamepad_one_jump);
 input_p2_jump_last_frame = array_key_down(keyboard_two_jump) || array_gamepad_down(1, gamepad_two_jump);
+

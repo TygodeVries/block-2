@@ -109,3 +109,5 @@ set_data(ini_read_string("keybinds", "player_two_interact", $"g_{gp_face2}, k_{o
 
 // Close file
 ini_close();
+
+
