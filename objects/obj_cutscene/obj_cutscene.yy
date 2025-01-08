@@ -9,8 +9,8 @@
   "name":"obj_cutscene",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Cutscene tools",
+    "path":"folders/Objects/Cutscene tools.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,7 +35,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_cutscene",
+    "path":"sprites/spr_cutscene/spr_cutscene.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

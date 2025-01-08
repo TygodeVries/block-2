@@ -8,8 +8,8 @@
   "name":"trigger",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level",
-    "path":"folders/Objects/Level.yy",
+    "name":"Cutscene tools",
+    "path":"folders/Objects/Cutscene tools.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_dev_trigger",
-    "path":"sprites/spr_dev_trigger/spr_dev_trigger.yy",
+    "name":"spr_trigger",
+    "path":"sprites/spr_trigger/spr_trigger.yy",
   },
   "spriteMaskId":null,
   "visible":false,
