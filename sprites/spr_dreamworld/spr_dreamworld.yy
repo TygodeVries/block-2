@@ -3,7 +3,7 @@
   "%Name":"spr_dreamworld",
   "bboxMode":0,
   "bbox_bottom":138,
-  "bbox_left":4,
+  "bbox_left":5,
   "bbox_right":491,
   "bbox_top":0,
   "collisionKind":1,
