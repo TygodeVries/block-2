@@ -188,18 +188,6 @@ if keyboard_check_pressed(ord("R"))
     }
 }
 
-//Press F for fullscreen
-// If we press the "F" key
-if (keyboard_check_pressed(ord("F")))
-{
-        window_set_fullscreen(true);
-}
-
-
-
-
-
-
 
 
 if keyboard_check_pressed(vk_escape)

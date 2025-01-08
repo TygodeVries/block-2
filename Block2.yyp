@@ -84,6 +84,7 @@
     {"id":{"name":"obj_failed","path":"objects/obj_failed/obj_failed.yy",},},
     {"id":{"name":"obj_finish","path":"objects/obj_finish/obj_finish.yy",},},
     {"id":{"name":"obj_floor_button","path":"objects/obj_floor_button/obj_floor_button.yy",},},
+    {"id":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},},
     {"id":{"name":"obj_hint_a","path":"objects/obj_hint_a/obj_hint_a.yy",},},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},

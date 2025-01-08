@@ -39,3 +39,8 @@ function now()
 	real_y = camera_y  - (camera_get_view_height(view_camera[0]) / 2);
 	camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
 }
+
+if (keyboard_check_pressed(ord("F")))
+{
+        window_set_fullscreen(!window_get_fullscreen());
+}
