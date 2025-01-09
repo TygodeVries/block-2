@@ -34,5 +34,5 @@
     "path":"sprites/spr_dev_move_detect/spr_dev_move_detect.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
