@@ -17,7 +17,6 @@ if(swap_time < 0 && swap_time > -1)
 }
 
 
-show_debug_message(swap_time);
 swap_time -= (delta_time / 1000000);
 death_cooldown -= (delta_time / 1000000) * _mod;
 speedup_time -= (delta_time / 1000000)
@@ -73,7 +72,7 @@ function step_and_handle_collide(steps_x, steps_y)
 function move_left()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	 velocity_x = -move_speed - (is_player_one ? global.wind_player1 : global.wind_player2);
+	velocity_x = -move_speed + wind_effect;
 	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
@@ -87,7 +86,7 @@ function move_left()
 function move_right()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	velocity_x = move_speed + (is_player_one ? global.wind_player1 : global.wind_player2);
+	velocity_x = move_speed + wind_effect;
 	
 	// Update sprite 
 	
@@ -102,7 +101,7 @@ function move_right()
 function move_stop()
 {
 	// Make us stop moving
-	  velocity_x = (is_player_one ? global.wind_player1 : global.wind_player2);
+	  velocity_x = wind_effect;
 }
 
 // Move on the X axis
@@ -198,6 +197,25 @@ if keyboard_check_pressed(vk_escape)
     game_restart();
 }
 
+// Handle triggers
+triggerlist = ds_list_create();
+var num = instance_place_list(x, y, all, triggerlist, true);
+for(var _ble = 0; _ble < num; _ble++)
+{
+	var _trigger_object = triggerlist[| _ble];
+	
+	if (instance_exists(_trigger_object) && _trigger_object != noone) {			
+		// Check if they want to know that we collided
+		if(variable_instance_exists(_trigger_object, "trigger_defined"))
+		{
+			// Let them know we collided, and with who.
+			_trigger_object.on_trigger(self);
+		}
+	}
+}
+
+ds_list_destroy(triggerlist);
+	
 
 // Avoid bug
 if(delta_time / 1000000 > 0.1)
