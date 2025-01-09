@@ -107,7 +107,6 @@
     {"id":{"name":"obj_player_overlay","path":"objects/obj_player_overlay/obj_player_overlay.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_press_button","path":"objects/obj_press_button/obj_press_button.yy",},},
-    {"id":{"name":"obj_pressure_plate","path":"objects/obj_pressure_plate/obj_pressure_plate.yy",},},
     {"id":{"name":"obj_program_start","path":"objects/obj_program_start/obj_program_start.yy",},},
     {"id":{"name":"obj_rebind_handle","path":"objects/obj_rebind_handle/obj_rebind_handle.yy",},},
     {"id":{"name":"obJ_setting_button","path":"objects/obJ_setting_button/obJ_setting_button.yy",},},
