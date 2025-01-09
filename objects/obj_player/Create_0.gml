@@ -88,16 +88,19 @@ function revive()
 swap_time = -1;
 swap_loc = {x: x, y:y};
 
-function swap(lenght, offset)
+function swap(length, offset)
 {
 	gravity_modifier = -gravity_modifier; // Flip gravity
 	jump_power = -jump_power;
-	swap_time = lenght;
+	
 	
 	swap_loc.x = x;
 	swap_loc.y = y;
 	
+	swap_time = length;
+	
 	y = y + offset;
+	image_yscale = -image_yscale;
 }
 
 

@@ -9,9 +9,9 @@ collision_defined = true;
 function on_collision(player) {
 	
 	// Check if we have this item
-	if(obj_input.do_interact(player.is_player_one))
+	if(obj_input.do_interact(player.is_player_one) && player.swap_time < 0)
 	{
+		instance_create_layer(x, y, layer, obj_phone_behind);
 		player.swap(swap_time_lenght, swap_offset);
 	}
-	
 }

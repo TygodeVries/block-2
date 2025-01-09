@@ -27,7 +27,7 @@ real_x = lerp(real_x, camera_x - (camera_get_view_width(view_camera[0]) / 2), de
 real_y = lerp(real_y, camera_y - (camera_get_view_height(view_camera[0]) / 2), delta_time / 1000000 * camera_speed);
 
 // Update camera location
-camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
+camera_set_view_pos(view_camera[0], real_x, real_y);
 
 function now()
 {
@@ -37,7 +37,7 @@ function now()
 	
 	real_x = camera_x - (camera_get_view_width(view_camera[0]) / 2);
 	real_y = camera_y  - (camera_get_view_height(view_camera[0]) / 2);
-	camera_set_view_pos(view_camera[0], round(real_x), round(real_y));
+	camera_set_view_pos(view_camera[0], real_x, real_y);
 }
 
 if (keyboard_check_pressed(ord("F")))

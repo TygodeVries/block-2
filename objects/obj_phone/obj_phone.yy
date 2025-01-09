@@ -26,19 +26,16 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"swap_time_lenght","filters":[],"listItems":[],"multiselect":false,"name":"swap_time_lenght","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"swap_time_lenght","filters":[],"listItems":[],"multiselect":false,"name":"swap_time_lenght","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"swap_offset","filters":[],"listItems":[],"multiselect":false,"name":"swap_offset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_phone",
-    "path":"sprites/spr_phone/spr_phone.yy",
+    "name":"spr_tmp_phone",
+    "path":"sprites/spr_tmp_phone/spr_tmp_phone.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_phone_placeholder",
-    "path":"sprites/spr_phone_placeholder/spr_phone_placeholder.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
