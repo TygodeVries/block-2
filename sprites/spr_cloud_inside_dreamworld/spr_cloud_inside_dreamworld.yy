@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_background_happy",
+  "%Name":"spr_cloud_inside_dreamworld",
   "bboxMode":0,
-  "bbox_bottom":567,
+  "bbox_bottom":41,
   "bbox_left":0,
-  "bbox_right":1938,
+  "bbox_right":543,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"47ed5b4e-92ef-4743-bdfa-e3ca99b72856","name":"47ed5b4e-92ef-4743-bdfa-e3ca99b72856","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"59e7e729-ef2e-4a0e-a207-54a9afbf7810","name":"59e7e729-ef2e-4a0e-a207-54a9afbf7810","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":568,
+  "height":160,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1e18bf79-668e-44f8-9f85-0aa2cfc18664","blendMode":0,"displayName":"default","isLocked":false,"name":"1e18bf79-668e-44f8-9f85-0aa2cfc18664","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c2d8b985-7118-4f4c-b0c1-99387ba7b514","blendMode":0,"displayName":"default","isLocked":false,"name":"c2d8b985-7118-4f4c-b0c1-99387ba7b514","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_background_happy",
+  "name":"spr_cloud_inside_dreamworld",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_background_happy",
+    "%Name":"spr_cloud_inside_dreamworld",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_background_happy",
+    "name":"spr_cloud_inside_dreamworld",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"47ed5b4e-92ef-4743-bdfa-e3ca99b72856","path":"sprites/spr_background_happy/spr_background_happy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3e74694a-cb5f-45c7-8ce0-9806c845a5db","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"59e7e729-ef2e-4a0e-a207-54a9afbf7810","path":"sprites/spr_cloud_inside_dreamworld/spr_cloud_inside_dreamworld.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"70974884-c077-4319-80cb-45806b94cc76","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1939,
+  "width":544,
 }

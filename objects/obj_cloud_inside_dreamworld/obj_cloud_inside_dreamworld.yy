@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_background_nice",
+  "%Name":"obj_cloud_inside_dreamworld",
   "eventList":[],
   "managed":true,
-  "name":"obj_background_nice",
+  "name":"obj_cloud_inside_dreamworld",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
     "path":"folders/Objects/Background.yy",
   },
-  "parentObjectId":{
-    "name":"obj_paralex",
-    "path":"objects/obj_paralex/obj_paralex.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_cloud_inside_dreamworld",
+    "path":"sprites/spr_cloud_inside_dreamworld/spr_cloud_inside_dreamworld.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
