@@ -145,6 +145,7 @@
     {"id":{"name":"spr_background_layer_1","path":"sprites/spr_background_layer_1/spr_background_layer_1.yy",},},
     {"id":{"name":"spr_background_layer_2","path":"sprites/spr_background_layer_2/spr_background_layer_2.yy",},},
     {"id":{"name":"spr_background_layer_3","path":"sprites/spr_background_layer_3/spr_background_layer_3.yy",},},
+    {"id":{"name":"spr_background_layer3","path":"sprites/spr_background_layer3/spr_background_layer3.yy",},},
     {"id":{"name":"spr_background_tile","path":"sprites/spr_background_tile/spr_background_tile.yy",},},
     {"id":{"name":"spr_background_tragic","path":"sprites/spr_background_tragic/spr_background_tragic.yy",},},
     {"id":{"name":"spr_button_placeholder","path":"sprites/spr_button_placeholder/spr_button_placeholder.yy",},},
