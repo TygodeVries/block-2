@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Parallax_Control",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_RW_background_1",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Parallax_Control",
+  "name":"obj_RW_background_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_background_layer_1",
+    "path":"sprites/spr_background_layer_1/spr_background_layer_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

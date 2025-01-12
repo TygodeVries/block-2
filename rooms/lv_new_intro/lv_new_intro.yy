@@ -37,6 +37,7 @@
     {"name":"inst_38DF9113","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_58CF11C1","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_6B8FA80D","path":"rooms/lv_new_intro/lv_new_intro.yy",},
+    {"name":"inst_7C37D75B","path":"rooms/lv_new_intro/lv_new_intro.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -132,6 +133,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"propertyId":{"name":"wind_speed","path":"objects/obj_wind/obj_wind.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1.6",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"propertyId":{"name":"move_speed","path":"objects/obj_wind/obj_wind.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":0.75,"x":848.0,"y":272.0,},
+        {"$GMRInstance":"v1","%Name":"inst_7C37D75B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C37D75B","objectId":{"name":"obj_bgm1","path":"objects/obj_bgm1/obj_bgm1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Cable","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Cable","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":313,"TileCompressedData":[
           -939,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,-94,0,-219,-2147483648,

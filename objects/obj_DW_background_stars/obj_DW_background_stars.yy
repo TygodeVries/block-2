@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_background_3",
+  "%Name":"obj_DW_background_stars",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_background_3",
+  "name":"obj_DW_background_stars",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
@@ -26,14 +26,14 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"spd","filters":[],"listItems":[],"multiselect":false,"name":"spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.3","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"spd","filters":[],"listItems":[],"multiselect":false,"name":"spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.4","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_background_layer_3",
-    "path":"sprites/spr_background_layer_3/spr_background_layer_3.yy",
+    "name":"spr_background_stars_dw",
+    "path":"sprites/spr_background_stars_dw/spr_background_stars_dw.yy",
   },
   "spriteMaskId":null,
   "visible":true,

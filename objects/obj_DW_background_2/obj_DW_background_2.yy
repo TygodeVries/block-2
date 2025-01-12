@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_background_2",
+  "%Name":"obj_DW_background_2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_background_2",
+  "name":"obj_DW_background_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_background_layer_2",
-    "path":"sprites/spr_background_layer_2/spr_background_layer_2.yy",
+    "name":"spr_background_layer_2_DW",
+    "path":"sprites/spr_background_layer_2_DW/spr_background_layer_2_DW.yy",
   },
   "spriteMaskId":null,
   "visible":true,

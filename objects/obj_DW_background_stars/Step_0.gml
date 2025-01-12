@@ -1,0 +1,1 @@
+x -= obj_player.velocity_x * spd;
