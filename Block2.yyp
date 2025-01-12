@@ -220,6 +220,7 @@
     {"id":{"name":"spr_trapdoor","path":"sprites/spr_trapdoor/spr_trapdoor.yy",},},
     {"id":{"name":"spr_trigger","path":"sprites/spr_trigger/spr_trigger.yy",},},
     {"id":{"name":"spr_tv","path":"sprites/spr_tv/spr_tv.yy",},},
+    {"id":{"name":"spr_walking_animation","path":"sprites/spr_walking_animation/spr_walking_animation.yy",},},
     {"id":{"name":"spr_wind","path":"sprites/spr_wind/spr_wind.yy",},},
     {"id":{"name":"Sprite27","path":"sprites/Sprite27/Sprite27.yy",},},
     {"id":{"name":"Sprite50","path":"sprites/Sprite50/Sprite50.yy",},},
