@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_background_tragic",
+  "%Name":"obj_background_1",
   "eventList":[],
   "managed":true,
-  "name":"obj_background_tragic",
+  "name":"obj_background_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
     "path":"folders/Objects/Background.yy",
   },
-  "parentObjectId":{
-    "name":"obj_paralex",
-    "path":"objects/obj_paralex/obj_paralex.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_background_layer_1",
+    "path":"sprites/spr_background_layer_1/spr_background_layer_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

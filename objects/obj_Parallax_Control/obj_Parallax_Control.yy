@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_background_tragic",
-  "eventList":[],
+  "%Name":"obj_Parallax_Control",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_background_tragic",
+  "name":"obj_Parallax_Control",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
     "path":"folders/Objects/Background.yy",
   },
-  "parentObjectId":{
-    "name":"obj_paralex",
-    "path":"objects/obj_paralex/obj_paralex.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
