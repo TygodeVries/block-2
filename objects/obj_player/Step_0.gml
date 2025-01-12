@@ -89,6 +89,7 @@ function move_right()
 	velocity_x = move_speed + wind_effect;
 	
 	// Update sprite 
+	sprite_index = spr_player_idle;
 	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
@@ -285,3 +286,7 @@ else
 }
 
 }
+
+//Animations
+//idle
+//if velocity_x == 0 { sprite_index = idleSpr; };
