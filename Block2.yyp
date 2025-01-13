@@ -68,6 +68,7 @@
   "resources":[
     {"id":{"name":"fnt_arial","path":"fonts/fnt_arial/fnt_arial.yy",},},
     {"id":{"name":"boss","path":"objects/boss/boss.yy",},},
+    {"id":{"name":"Nuke","path":"objects/Nuke/Nuke.yy",},},
     {"id":{"name":"ob_demon1","path":"objects/ob_demon1/ob_demon1.yy",},},
     {"id":{"name":"ob_wall","path":"objects/ob_wall/ob_wall.yy",},},
     {"id":{"name":"obj_background_nice","path":"objects/obj_background_nice/obj_background_nice.yy",},},
