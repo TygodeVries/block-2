@@ -74,6 +74,9 @@ function move_left()
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
 	velocity_x = -move_speed + wind_effect;
 	
+	//Update sprite
+	sprite_index = spr_player_walk;
+	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
 			image_xscale = -1; 
