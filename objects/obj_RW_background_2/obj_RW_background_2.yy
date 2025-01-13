@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_RW_background_2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_RW_background_1","path":"objects/obj_RW_background_1/obj_RW_background_1.yy",},"propertyId":{"name":"spd","path":"objects/obj_RW_background_1/obj_RW_background_1.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_RW_background_1","path":"objects/obj_RW_background_1/obj_RW_background_1.yy",},"propertyId":{"name":"spd","path":"objects/obj_RW_background_1/obj_RW_background_1.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.05",},
   ],
   "parent":{
     "name":"Background",
