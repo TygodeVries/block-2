@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Object47",
+  "%Name":"obj_inside_cloud",
   "eventList":[],
   "managed":true,
-  "name":"Object47",
+  "name":"obj_inside_cloud",
   "overriddenProperties":[],
   "parent":{
     "name":"inside funurture",

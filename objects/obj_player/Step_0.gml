@@ -193,7 +193,20 @@ if keyboard_check_pressed(ord("R"))
         murder_and_kill(); // Make 2 players both die
     }
 }
+///Slow effect
+function slow_effect()
+{
+    show_debug_message("Slow the player!");
 
+    if(is_player_one)
+    {
+        move_speed = move_speed - slow_speed;  // Correct the operation to update move_speed
+    }
+    else
+    {
+        move_speed = move_speed - slow_speed;  // Correct the operation to update move_speed
+    }
+}
 
 
 if keyboard_check_pressed(vk_escape)
