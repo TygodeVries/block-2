@@ -7,5 +7,5 @@ function on_trigger(player)
 {
 	last_effected = player;
 	player.slow_effect = slow_speed;
-	show_debug_message("Trigger");
+	show_debug_message("Slow!");
 }
