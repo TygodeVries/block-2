@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"so_bgm1.wav",
   "type":0,
-  "volume":0.61,
+  "volume":0.5,
 }
