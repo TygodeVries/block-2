@@ -140,6 +140,8 @@
     {"id":{"name":"lv_new_intro","path":"rooms/lv_new_intro/lv_new_intro.yy",},},
     {"id":{"name":"lv_room_test_marta","path":"rooms/lv_room_test_marta/lv_room_test_marta.yy",},},
     {"id":{"name":"lv_room1","path":"rooms/lv_room1/lv_room1.yy",},},
+    {"id":{"name":"lv_room2_1","path":"rooms/lv_room2_1/lv_room2_1.yy",},},
+    {"id":{"name":"lv_room2","path":"rooms/lv_room2/lv_room2.yy",},},
     {"id":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
     {"id":{"name":"menu_main","path":"rooms/menu_main/menu_main.yy",},},
     {"id":{"name":"menu_rebind","path":"rooms/menu_rebind/menu_rebind.yy",},},
@@ -256,6 +258,8 @@
     {"roomId":{"name":"menu_select_character","path":"rooms/menu_select_character/menu_select_character.yy",},},
     {"roomId":{"name":"lv_test","path":"rooms/lv_test/lv_test.yy",},},
     {"roomId":{"name":"lv_new_intro","path":"rooms/lv_new_intro/lv_new_intro.yy",},},
+    {"roomId":{"name":"lv_room2","path":"rooms/lv_room2/lv_room2.yy",},},
+    {"roomId":{"name":"lv_room2_1","path":"rooms/lv_room2_1/lv_room2_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
