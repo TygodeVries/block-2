@@ -7,8 +7,8 @@ if(attack_cooldown > 0)
 {
 	return;
 }
-	
-	
+
+
 if(global.boss_stage == BOSS_STAGE.TWITTER)
 {
 	obj_camera.look_at(560, 320);

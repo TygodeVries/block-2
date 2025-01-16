@@ -81,6 +81,11 @@ if(global.selected_button == button_id)
 			room_goto(menu_main);
 		}
 		
+		if(run_function == "menu_sound")
+		{
+			room_goto(menu_sound);
+		}
+		
 		if(run_function == "menu_select_purple")
 		{
 			room_goto(menu_main);

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 goal = {x: x, y: target_y};
-audio_play_sound(so_twitter_notification_sound, 10, false, 0.2);
+audio_play_sound(so_twitter_notification_sound, 10, false, global.sound_master - 0.8);
 
 animation_time = 0;
 

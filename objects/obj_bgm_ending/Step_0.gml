@@ -1,7 +1,7 @@
 // In the game's initialization script or Create event
 //Play ed_bgm
 if (!audio_is_playing(so_ed_bgm)) {
-    audio_play_sound(so_ed_bgm, 0, true);
+    audio_play_sound(so_ed_bgm, 0, true, global.sound_master);
 }
 
 //Stop another bgm

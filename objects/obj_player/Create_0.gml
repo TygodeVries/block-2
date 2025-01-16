@@ -106,7 +106,8 @@ restarting = false;
 restart_timer = 0;
 
 
-
-
-
-
+function game_over()
+{
+	obj_camera.in_cutscene_mode = true;
+	obj_camera.zoom(0.3);
+}
