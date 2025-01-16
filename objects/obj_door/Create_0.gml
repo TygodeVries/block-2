@@ -1,7 +1,7 @@
 // We run this when the door is created.
 
 // Turn off the door animation.
-image_speed = 1.5;
+image_speed = 2;
 
 // Let the players know we want to be notified when they touch us
 collision_defined = true;
@@ -32,7 +32,7 @@ function open()
 	if(is_open) return;
 	is_open_animation = true;
 	// Start the animation
-	image_speed = 1.5;
+	image_speed = 2;
 	
 	// Make it so the player can walk through the door
 	solid = false;
@@ -43,7 +43,7 @@ function close()
 {
 	if(!is_open) return;
 	is_open_animation = false;
-	image_speed = -1.5;
+	image_speed = -2;
 	solid = true;
 	is_open = false;
 }
