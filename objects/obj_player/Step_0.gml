@@ -72,7 +72,7 @@ function step_and_handle_collide(steps_x, steps_y)
 function move_left()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	velocity_x = -move_speed + wind_effect;
+	velocity_x = -move_speed + wind_effect + slow_effect;
 	
 	//Update sprite
 	sprite_index = spr_player_walk;
@@ -89,7 +89,7 @@ function move_left()
 function move_right()
 {
 	// Set the velocity of the player, The velocity is the 'speed' the player moves at.
-	velocity_x = move_speed + wind_effect;
+	velocity_x = move_speed + wind_effect - slow_effect;
 	
 	// Update sprite 
 	sprite_index = spr_player_walk;
@@ -193,7 +193,6 @@ if keyboard_check_pressed(ord("R"))
         murder_and_kill(); // Make 2 players both die
     }
 }
-
 
 
 if keyboard_check_pressed(vk_escape)

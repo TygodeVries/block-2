@@ -81,6 +81,7 @@ function revive()
 }
 
 wind_effect = 0;
+slow_effect = 0;
 
 swap_time = -1;
 swap_loc = {x: x, y:y};

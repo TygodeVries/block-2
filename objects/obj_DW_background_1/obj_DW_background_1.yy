@@ -9,7 +9,10 @@
     "name":"Background",
     "path":"folders/Objects/Background.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_RW_background_1",
+    "path":"objects/obj_RW_background_1/obj_RW_background_1.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
