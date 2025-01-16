@@ -269,8 +269,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"lv_ending","path":"rooms/lv_ending/lv_ending.yy",},},
     {"roomId":{"name":"menu_main","path":"rooms/menu_main/menu_main.yy",},},
+    {"roomId":{"name":"lv_ending","path":"rooms/lv_ending/lv_ending.yy",},},
     {"roomId":{"name":"lv_room_test_marta","path":"rooms/lv_room_test_marta/lv_room_test_marta.yy",},},
     {"roomId":{"name":"lv_boss","path":"rooms/lv_boss/lv_boss.yy",},},
     {"roomId":{"name":"menu_settings","path":"rooms/menu_settings/menu_settings.yy",},},
