@@ -147,6 +147,7 @@
     {"id":{"name":"Voidblock","path":"objects/Voidblock/Voidblock.yy",},},
     {"id":{"name":"Wind","path":"particles/Wind/Wind.yy",},},
     {"id":{"name":"lv_boss","path":"rooms/lv_boss/lv_boss.yy",},},
+    {"id":{"name":"lv_ending","path":"rooms/lv_ending/lv_ending.yy",},},
     {"id":{"name":"lv_new_intro","path":"rooms/lv_new_intro/lv_new_intro.yy",},},
     {"id":{"name":"lv_room_test_marta","path":"rooms/lv_room_test_marta/lv_room_test_marta.yy",},},
     {"id":{"name":"lv_room1","path":"rooms/lv_room1/lv_room1.yy",},},
@@ -268,6 +269,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"lv_ending","path":"rooms/lv_ending/lv_ending.yy",},},
     {"roomId":{"name":"menu_main","path":"rooms/menu_main/menu_main.yy",},},
     {"roomId":{"name":"lv_room_test_marta","path":"rooms/lv_room_test_marta/lv_room_test_marta.yy",},},
     {"roomId":{"name":"lv_boss","path":"rooms/lv_boss/lv_boss.yy",},},
