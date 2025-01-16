@@ -21,6 +21,7 @@
     {"name":"inst_257DC07F","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_7AF5E6F9","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_6DF251AC","path":"rooms/lv_room1/lv_room1.yy",},
+    {"name":"inst_403AAA4D","path":"rooms/lv_room1/lv_room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -77,6 +78,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"propertyId":{"name":"min_x","path":"objects/obj_wind/obj_wind.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1780",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"propertyId":{"name":"max_x","path":"objects/obj_wind/obj_wind.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1920",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1872.0,"y":288.0,},
+        {"$GMRInstance":"v1","%Name":"inst_403AAA4D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_403AAA4D","objectId":{"name":"obj_stairs","path":"objects/obj_stairs/obj_stairs.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1952.0,"y":288.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Cloud","animationFPS":30.0,"animationSpeedType":0,"colour":4281545523,"depth":200,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Cloud","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
