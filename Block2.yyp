@@ -203,6 +203,7 @@
     {"id":{"name":"spr_dpadr_sheet","path":"sprites/spr_dpadr_sheet/spr_dpadr_sheet.yy",},},
     {"id":{"name":"spr_dreamworld_background","path":"sprites/spr_dreamworld_background/spr_dreamworld_background.yy",},},
     {"id":{"name":"spr_dreamworld","path":"sprites/spr_dreamworld/spr_dreamworld.yy",},},
+    {"id":{"name":"spr_DW_player_walk","path":"sprites/spr_DW_player_walk/spr_DW_player_walk.yy",},},
     {"id":{"name":"spr_exit_button","path":"sprites/spr_exit_button/spr_exit_button.yy",},},
     {"id":{"name":"spr_failed","path":"sprites/spr_failed/spr_failed.yy",},},
     {"id":{"name":"spr_fallback","path":"sprites/spr_fallback/spr_fallback.yy",},},
