@@ -1,4 +1,4 @@
-
+global.freezemotion = false;
 
 // This code is ran at the beginning of every level
 time_since_ground = 0;
