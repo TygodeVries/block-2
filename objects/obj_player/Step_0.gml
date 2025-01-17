@@ -273,8 +273,18 @@ else {
 	}
 	
 // Make sure to move in the right order
-move_on_x();
-jump();
+
+if(!global.freezemotion)
+{
+	move_on_x();
+	jump();
+}
+else
+{
+	move_stop();
+}
+
+
 move_on_y();
 
 if(on_ground)
