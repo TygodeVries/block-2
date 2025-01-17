@@ -1,0 +1,2223 @@
+88a495e - Tygo de Vries, 3 hours ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+bcce2ff - Tygo de Vries, 3 hours ago : Added some very early audio options
+ Block2.yyp                                         |   4 ++
+ objects/boss/Step_0.gml                            |   4 +-
+ objects/obj_bgm_ending/Step_0.gml                  |   2 +-
+ objects/obj_bgm_opening/Step_0.gml                 |   2 +-
+ objects/obj_button/Step_0.gml                      |   5 ++
+ objects/obj_camera/Create_0.gml                    |  12 ++++
+ objects/obj_move_detect/Step_0.gml                 |   2 +-
+ objects/obj_notification/Create_0.gml              |   2 +-
+ objects/obj_player/Create_0.gml                    |   9 +--
+ objects/obj_player/Step_0.gml                      |   2 +-
+ objects/obj_sound_manager/Create_0.gml             |   5 ++
+ objects/obj_sound_manager/obj_sound_manager.yy     |  35 ++++++++++
+ objects/obj_sound_setting/Step_0.gml               |  28 ++++++++
+ objects/obj_sound_setting/obj_sound_setting.yy     |  35 ++++++++++
+ rooms/lv_boss/lv_boss.yy                           |  16 ++++-
+ rooms/menu_main/menu_main.yy                       |  12 ++--
+ rooms/menu_settings/menu_settings.yy               |   3 +-
+ rooms/menu_sound/menu_sound.yy                     |  71 +++++++++++++++++++++
+ .../50a1d25d-1e3d-438c-bfbf-720b854742df.png       | Bin 1511 -> 1511 bytes
+ .../6c9a9e39-a136-4eed-9c2d-b179b06cb0f5.png       | Bin 1490 -> 1490 bytes
+ .../93c74f25-004c-4df1-bbbd-65058c07b61a.png       | Bin 1480 -> 1480 bytes
+ .../9ccc621f-57a5-40ee-8232-96366c1649dd.png       | Bin 1525 -> 1525 bytes
+ .../af86dae6-01b3-4ca2-97be-91253af8fb3c.png       | Bin 1619 -> 1619 bytes
+ .../ea685302-3c77-4fe5-8398-d155847ee60d.png       | Bin 1541 -> 1541 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1511 -> 1511 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1490 -> 1490 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1480 -> 1480 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1525 -> 1525 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1619 -> 1619 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 1541 -> 1541 bytes
+ .../024f71d9-fd4c-4b4b-a213-9e95c58be276.png       | Bin 1646 -> 1646 bytes
+ .../0ce01f34-96c8-437b-9e00-6a4b26a15403.png       | Bin 1616 -> 1616 bytes
+ .../0f977412-b76f-453c-a929-82146591addf.png       | Bin 1635 -> 1635 bytes
+ .../23c1323e-dbd7-457a-941a-195b75076916.png       | Bin 1708 -> 1708 bytes
+ .../2e2aefcf-fa3f-48bb-8cfe-a662130ff11b.png       | Bin 1710 -> 1710 bytes
+ .../aecfbc96-9021-47a8-8c32-58e0db684080.png       | Bin 1507 -> 1507 bytes
+ .../d2ce47ae-b82f-41d8-9ef4-d1d5dfaabafb.png       | Bin 1740 -> 1740 bytes
+ .../f16c0240-d3ef-4e29-9f01-6f268cbaef86.png       | Bin 1615 -> 1615 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1646 -> 1646 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1616 -> 1616 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1635 -> 1635 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1708 -> 1708 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1710 -> 1710 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1507 -> 1507 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1740 -> 1740 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 1615 -> 1615 bytes
+ .../2a3f4021-c180-4caf-8559-87ec41de3037.png       | Bin 1434 -> 1434 bytes
+ .../b8078078-8221-4433-82a7-5ccf14da810e.png       | Bin 1434 -> 1434 bytes
+ 48 files changed, 230 insertions(+), 19 deletions(-)
+
+8bc111b - C1oudszs, 3 hours ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+87107e3 - C1oudszs, 3 hours ago : New level 1 intro
+ Block2.yyp                                         |   2 +
+ rooms/lv_new_intro/lv_new_intro.yy                 |  68 +++++++++------
+ .../6a6605e1-607e-43ad-80b4-34211d4f0b25.png       | Bin 13972 -> 13906 bytes
+ .../9ec0507a-2139-446a-a116-7d211b65e871.png       | Bin 13972 -> 13906 bytes
+ sprites/spr_foreground/spr_foreground.yy           |  21 ++++-
+ .../eff628a6-5760-476d-a3ab-885c110d5997.png       | Bin 15228 -> 15196 bytes
+ .../656cd85c-2ddc-4cbb-b07f-e342ddd95522.png       | Bin 0 -> 15196 bytes
+ .../8f1ec510-39c9-43e9-8cd7-d5d8353c84fb.png       | Bin 3504 -> 0 bytes
+ .../98e433ca-e3eb-4c67-89e2-05159895288e.png       | Bin 1018 -> 0 bytes
+ .../c9793783-ffe8-437b-95b3-1f469ed61ba3.png       | Bin 14655 -> 0 bytes
+ .../e9468b3a-e71e-41e7-ad8d-808e6ad67ed1.png       | Bin 1739 -> 0 bytes
+ .../f6570f28-9cfc-42f6-bf09-ff04f17e6fb0.png       | Bin 0 -> 772 bytes
+ .../spr_inside_dreamworld/spr_inside_dreamworld.yy |  14 ++--
+ .../eff628a6-5760-476d-a3ab-885c110d5997.png       | Bin 0 -> 3612 bytes
+ .../656cd85c-2ddc-4cbb-b07f-e342ddd95522.png       | Bin 0 -> 3612 bytes
+ .../96a14650-b8a6-4290-b43b-de7ea753eaf7.png       | Bin 0 -> 767 bytes
+ .../f6570f28-9cfc-42f6-bf09-ff04f17e6fb0.png       | Bin 0 -> 2907 bytes
+ .../spr_inside_dreamworld_1.yy                     |  91 +++++++++++++++++++++
+ .../529ab7e1-2de8-40db-b4c8-202a66ca62e6.png       | Bin 26929 -> 18100 bytes
+ .../11d91818-f270-4b39-ac58-e66bbb930a26.png       | Bin 26929 -> 18100 bytes
+ .../529ab7e1-2de8-40db-b4c8-202a66ca62e6.png       | Bin 0 -> 2808 bytes
+ .../11d91818-f270-4b39-ac58-e66bbb930a26.png       | Bin 0 -> 2808 bytes
+ .../5ddc6437-41d2-4671-812a-352f7cbc128f.png       | Bin 0 -> 764 bytes
+ .../spr_inside_realworld_1.yy                      |  90 ++++++++++++++++++++
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 12259 -> 12339 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 12259 -> 12339 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 13815 -> 13927 bytes
+ 27 files changed, 251 insertions(+), 35 deletions(-)
+
+7f087fc - yunchangzhang, 4 hours ago : Faster
+ objects/obj_door/Create_0.gml      | 6 +++---
+ rooms/lv_new_intro/lv_new_intro.yy | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+3675cf2 - yunchangzhang, 4 hours ago : Changed door speed
+ objects/obj_door/Create_0.gml      | 6 +++---
+ rooms/lv_new_intro/lv_new_intro.yy | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+549aa27 - Tygo de Vries, 4 hours ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+07422c8 - Tygo de Vries, 4 hours ago : Added post processing and fixed darkness
+ rooms/lv_new_intro/lv_new_intro.yy | 18 ++++++++++++++----
+ 1 file changed, 14 insertions(+), 4 deletions(-)
+
+c0173b2 - yunchangzhang, 4 hours ago : Changed Collision mask
+ sprites/spr_player_idle/spr_player_idle.yy |  8 +++----
+ sprites/spr_player_walk/spr_player_walk.yy | 35 +++++++++++++++++++++++-------
+ sprites/spr_side/spr_side.yy               | 10 ++++-----
+ 3 files changed, 36 insertions(+), 17 deletions(-)
+
+f1637cc - Tygo de Vries, 5 hours ago : Fixed player getting stuck
+ objects/obj_notification/Step_0.gml        | 2 +-
+ rooms/lv_boss/lv_boss.yy                   | 4 ++--
+ sprites/spr_player_walk/spr_player_walk.yy | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+82c25ee - Tygo de Vries, 5 hours ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+6ccb510 - Tygo de Vries, 5 hours ago : Started on boss
+ Block2.yyp                                         |   4 +
+ objects/boss/Create_0.gml                          |  20 ++++-
+ objects/boss/Step_0.gml                            |  31 +++++++
+ objects/boss/boss.yy                               |   1 +
+ objects/obj_notification/Create_0.gml              |  13 +++
+ objects/obj_notification/Step_0.gml                |  12 +++
+ objects/obj_notification/obj_notification.yy       |  41 ++++++++++
+ objects/player_face/Step_0.gml                     |  20 -----
+ rooms/lv_boss/lv_boss.yy                           |  51 +++---------
+ rooms/lv_new_intro/lv_new_intro.yy                 |  42 +++++-----
+ .../so_twitter_notification_sound.mp3              | Bin 0 -> 45975 bytes
+ .../so_twitter_notification_sound.yy               |  25 ++++++
+ .../dcedb67a-d094-47ca-bc1b-1890cc965403.png       | Bin 0 -> 868 bytes
+ .../442b9cba-53de-4d06-a849-007bb2395266.png       | Bin 0 -> 868 bytes
+ .../spr_new_notification/spr_new_notification.yy   |  90 +++++++++++++++++++++
+ timelines/cut_boss_intro/moment_5.gml              |   2 -
+ 16 files changed, 268 insertions(+), 84 deletions(-)
+
+7c90d24 - C1oudszs, 6 hours ago : Door sprite
+ .../spr_door/1091f7f6-05e9-4c20-ac38-365263d6cae8.png   | Bin 389 -> 635 bytes
+ .../spr_door/43fbe0d8-dc6e-4882-ae68-60a20448242d.png   | Bin 388 -> 597 bytes
+ .../spr_door/4e55b474-d564-4804-95ad-7bfd31cda201.png   | Bin 377 -> 561 bytes
+ .../spr_door/5466d188-5786-44e8-875e-aaca40eb19d3.png   | Bin 381 -> 704 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png            | Bin 389 -> 635 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png            | Bin 388 -> 597 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png            | Bin 377 -> 561 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png            | Bin 381 -> 704 bytes
+ sprites/spr_door/spr_door.yy                            |   2 +-
+ 9 files changed, 1 insertion(+), 1 deletion(-)
+
+90f5ffe - yunchangzhang, 19 hours ago : Merge
+ Block2.yyp                 |   5 ++
+ rooms/lv_room1/lv_room1.yy | 198 +++++++++++----------------------------------
+ 2 files changed, 54 insertions(+), 149 deletions(-)
+
+4d21e83 - ParkerPage, 2 days ago : level design
+0e233a3 - ParkerPage, 2 days ago : level design of 1 and 2
+ Block2.yyp                     |   4 +
+ rooms/lv_room2/lv_room2.yy     | 133 ++++++++++++++++++++++++++
+ rooms/lv_room2_1/lv_room2_1.yy | 205 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 342 insertions(+)
+
+b83f09f - yunchangzhang, 2 days ago : Added Slow effect
+ Block2.yyp                      |  2 +-
+ objects/obj_player/Create_0.gml |  1 +
+ objects/obj_player/Step_0.gml   | 18 ++----------------
+ objects/obj_river/Create_0.gml  |  2 +-
+ objects/obj_river/Step_0.gml    |  2 +-
+ objects/obj_river/obj_river.yy  |  2 +-
+ 6 files changed, 7 insertions(+), 20 deletions(-)
+
+39693bf - yunchangzhang, 2 days ago : Greybox room 1
+ Block2.yyp                                         |  15 +-
+ objects/obj_button/Step_0.gml                      |   2 +-
+ .../obj_inside_cloud.yy}                           |   4 +-
+ objects/obj_player/Step_0.gml                      |  13 ++
+ objects/obj_river/Create_0.gml                     |  11 ++
+ objects/obj_river/Step_0.gml                       |   6 +
+ objects/obj_river/obj_river.yy                     |  41 +++++
+ objects/obj_spike_invisible/Create_0.gml           |   8 +
+ objects/obj_spike_invisible/obj_spike_invisible.yy |  38 ++++
+ rooms/lv_new_intro/lv_new_intro.yy                 |  52 +++---
+ rooms/lv_room1/lv_room1.yy                         | 198 +++++----------------
+ .../1008935f-659a-4c7a-888e-31353474fd7d.png       | Bin 0 -> 609 bytes
+ .../1d661943-4743-4fea-9831-fd7e6523e40f.png       | Bin 0 -> 609 bytes
+ .../20bfd6c9-b765-4cf7-9914-97676375dabf.png       | Bin 0 -> 608 bytes
+ .../2bcf3a46-bb62-4c1d-a7ee-61c34276c31e.png       | Bin 0 -> 608 bytes
+ .../322a19f0-fe6b-4f6c-9a9c-9cb3be72b9e9.png       | Bin 0 -> 609 bytes
+ .../36b75a19-c4cd-4812-ba17-63c4275f0528.png       | Bin 0 -> 609 bytes
+ .../45c0d2c2-7e43-400b-ae53-13d7c553b79a.png       | Bin 0 -> 609 bytes
+ .../7ea7963c-57d8-4df7-b4f8-08c470b413a2.png       | Bin 0 -> 605 bytes
+ .../8984ecc1-2218-4614-a37f-c1c5f2f77c6a.png       | Bin 0 -> 605 bytes
+ .../969e80ab-ef02-45d6-b493-f61d364eef50.png       | Bin 0 -> 608 bytes
+ .../a9c60b57-3c0b-41b1-b6c7-8363abe1da4d.png       | Bin 0 -> 605 bytes
+ .../b602b9ec-2b61-48cb-b588-c299c6735b17.png       | Bin 0 -> 608 bytes
+ .../bbfd779e-3cfe-49ce-b936-2084cc99eea4.png       | Bin 0 -> 608 bytes
+ .../c4a13078-7c96-4b13-8e25-8f4545ba58d6.png       | Bin 0 -> 609 bytes
+ .../d8a450ba-308c-4d53-953f-5000396667fc.png       | Bin 0 -> 608 bytes
+ .../d8cd1cb9-7351-4fb0-87c2-1c41bcd5d022.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 605 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 605 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 605 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 608 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 609 bytes
+ sprites/spr_river/spr_river.yy                     | 150 ++++++++++++++++
+ .../969e80ab-ef02-45d6-b493-f61d364eef50.png       | Bin 3036 -> 3036 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 3036 -> 3036 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 13815 -> 13815 bytes
+ timelines/cut_intro/cut_intro.yy                   |   2 +-
+ timelines/cut_intro/{moment_5.gml => moment_2.gml} |   0
+ 49 files changed, 357 insertions(+), 183 deletions(-)
+
+a0d64cd - yunchangzhang, 2 days ago : Adjusted the collision masks for the player and the button.
+ rooms/lv_new_intro/lv_new_intro.yy                 | 38 +++++++++++-----------
+ rooms/lv_room1/lv_room1.yy                         |  2 +-
+ sounds/so_bgm1/so_bgm1.yy                          |  2 +-
+ .../spr_button_placeholder.yy                      |  8 ++---
+ sprites/spr_player_idle/spr_player_idle.yy         |  8 ++---
+ sprites/spr_player_walk/spr_player_walk.yy         |  6 ++--
+ sprites/spr_side/spr_side.yy                       |  2 +-
+ 7 files changed, 33 insertions(+), 33 deletions(-)
+
+c5bec74 - TmartaT, 3 days ago : changed background parallax speed to a more chill one :)
+ objects/obj_DW_background_2/obj_DW_background_2.yy |  2 +-
+ objects/obj_RW_background_1/obj_RW_background_1.yy |  2 +-
+ objects/obj_RW_background_2/obj_RW_background_2.yy |  2 +-
+ rooms/lv_room_test_marta/lv_room_test_marta.yy     | 13 +++++++------
+ 4 files changed, 10 insertions(+), 9 deletions(-)
+
+853a690 - TmartaT, 3 days ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+192240b - TmartaT, 3 days ago : Fixed parrallax to the camera + added parent and children objects to clean up code
+ objects/obj_DW_background_1/obj_DW_background_1.yy |  5 ++++-
+ objects/obj_DW_background_2/Step_0.gml             |  1 -
+ objects/obj_DW_background_2/obj_DW_background_2.yy | 17 +++++++++--------
+ objects/obj_DW_background_3/Step_0.gml             |  1 -
+ objects/obj_DW_background_3/obj_DW_background_3.yy |  8 ++------
+ objects/obj_RW_background_1/Create_0.gml           |  1 +
+ objects/obj_RW_background_1/Step_0.gml             | 11 +++++++++++
+ objects/obj_RW_background_1/obj_RW_background_1.yy | 10 ++++++++--
+ objects/obj_RW_background_2/Step_0.gml             |  1 -
+ objects/obj_RW_background_2/obj_RW_background_2.yy | 17 +++++++++--------
+ objects/obj_RW_background_3/Step_0.gml             |  1 -
+ objects/obj_RW_background_3/obj_RW_background_3.yy |  8 ++------
+ rooms/lv_room_test_marta/lv_room_test_marta.yy     | 16 ++++++++--------
+ 13 files changed, 54 insertions(+), 43 deletions(-)
+
+ee1bbfe - C1oudszs, 3 days ago : sharks
+ Block2.yyp                                         |   2 +
+ objects/obj_sharks/obj_sharks.yy                   |  36 ++++
+ rooms/lv_new_intro/lv_new_intro.yy                 |   2 +
+ .../03722733-0b73-4d04-95cb-3fdd05886e15.png       | Bin 0 -> 732 bytes
+ .../0a343276-fad6-4501-b7d0-cfd5968603ff.png       | Bin 0 -> 953 bytes
+ .../10ef2911-1319-4fb2-8f24-8e30b9de531f.png       | Bin 0 -> 967 bytes
+ .../1545aa7f-944f-46cf-a6a8-695d1f9b2b92.png       | Bin 0 -> 936 bytes
+ .../20be4173-4fbd-468d-bbe7-2d60611ac367.png       | Bin 0 -> 948 bytes
+ .../25730e1c-5094-4a0b-b6ae-da628f4314a7.png       | Bin 0 -> 1079 bytes
+ .../335b75cb-ab31-4810-9559-191380eaceb5.png       | Bin 0 -> 1029 bytes
+ .../33631bfe-1af2-407a-adf2-598bee159e91.png       | Bin 0 -> 956 bytes
+ .../3ef4da66-937d-4ef7-8636-6bf2bf1eea09.png       | Bin 0 -> 962 bytes
+ .../422fe2a3-df6b-4f5d-b086-5a882e42c23b.png       | Bin 0 -> 767 bytes
+ .../435e357a-66ba-462c-8c6e-26c169e24c20.png       | Bin 0 -> 1069 bytes
+ .../43843574-373c-4818-92f4-cc3864aca645.png       | Bin 0 -> 850 bytes
+ .../4910c86f-0332-4d0e-8ca7-729339a27973.png       | Bin 0 -> 898 bytes
+ .../5100cc55-8242-46fc-bdb5-d3bea25cdbc9.png       | Bin 0 -> 973 bytes
+ .../5764e9c8-dc97-4362-a6e1-1680d16a9210.png       | Bin 0 -> 782 bytes
+ .../646f072e-5c37-4a85-befb-57f8878e7881.png       | Bin 0 -> 949 bytes
+ .../82787c38-6a37-4dc8-86c1-9066289e0d3b.png       | Bin 0 -> 774 bytes
+ .../8373411a-d839-4b0e-90bc-16f200dbeb70.png       | Bin 0 -> 970 bytes
+ .../8a8137f5-b535-4374-a974-65cac3b5f2e8.png       | Bin 0 -> 953 bytes
+ .../8c403b9d-a198-480b-aafb-ebe20a34401f.png       | Bin 0 -> 762 bytes
+ .../9caa3a29-534a-4637-9ed2-aaffdd5b57ff.png       | Bin 0 -> 821 bytes
+ .../9e00b11a-773c-4d68-9d6a-4916f35fa554.png       | Bin 0 -> 931 bytes
+ .../a81d717c-457b-4fe8-8173-43b616ef5afb.png       | Bin 0 -> 941 bytes
+ .../ac7d086b-0b96-45e4-a0c6-9d9446678ddd.png       | Bin 0 -> 1090 bytes
+ .../b72b305d-1247-4aaa-95c8-b418e4e4ff2b.png       | Bin 0 -> 940 bytes
+ .../b79e19be-1f17-48e8-860f-c5cb3c804598.png       | Bin 0 -> 908 bytes
+ .../c77ffd85-58f0-4009-8e35-d334bad8eac3.png       | Bin 0 -> 730 bytes
+ .../cea4c646-dccf-458f-a0a9-d5ecfc439cef.png       | Bin 0 -> 956 bytes
+ .../d04cd864-21ff-4544-ac79-e11e86225e70.png       | Bin 0 -> 921 bytes
+ .../d22f63cc-d02c-44fd-ab5b-128a1e9727e3.png       | Bin 0 -> 972 bytes
+ .../e4f4a6a2-42d0-4ab7-a8bf-09bcdb8107ce.png       | Bin 0 -> 965 bytes
+ .../eacaddcf-2c9b-47c3-a0ea-64bef61e9039.png       | Bin 0 -> 946 bytes
+ .../eef0d0c8-07bc-4815-acd0-402d4a54d4c6.png       | Bin 0 -> 731 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 732 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 953 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 967 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 936 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 948 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 1079 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 1029 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 956 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 962 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 767 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 1069 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 850 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 898 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 973 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 782 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 949 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 774 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 970 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 953 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 762 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 821 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 931 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 941 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 1090 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 940 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 908 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 730 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 956 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 921 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 972 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 965 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 946 bytes
+ .../38c9a229-5bec-4832-828a-56f5bbb2d054.png       | Bin 0 -> 731 bytes
+ sprites/spr_sharks/spr_sharks.yy                   | 218 +++++++++++++++++++++
+ 70 files changed, 258 insertions(+)
+
+b6a3418 - C1oudszs, 3 days ago : rocky spikes
+ Block2.yyp                                         |   2 +
+ objects/obj_spikes/obj_spikes.yy                   |  36 +++++
+ rooms/lv_new_intro/lv_new_intro.yy                 |   2 +
+ .../1008935f-659a-4c7a-888e-31353474fd7d.png       | Bin 0 -> 2771 bytes
+ .../1d661943-4743-4fea-9831-fd7e6523e40f.png       | Bin 0 -> 3982 bytes
+ .../20bfd6c9-b765-4cf7-9914-97676375dabf.png       | Bin 0 -> 3864 bytes
+ .../2bcf3a46-bb62-4c1d-a7ee-61c34276c31e.png       | Bin 0 -> 2773 bytes
+ .../322a19f0-fe6b-4f6c-9a9c-9cb3be72b9e9.png       | Bin 0 -> 3688 bytes
+ .../36b75a19-c4cd-4812-ba17-63c4275f0528.png       | Bin 0 -> 2771 bytes
+ .../45c0d2c2-7e43-400b-ae53-13d7c553b79a.png       | Bin 0 -> 2771 bytes
+ .../7ea7963c-57d8-4df7-b4f8-08c470b413a2.png       | Bin 0 -> 2768 bytes
+ .../8984ecc1-2218-4614-a37f-c1c5f2f77c6a.png       | Bin 0 -> 3274 bytes
+ .../969e80ab-ef02-45d6-b493-f61d364eef50.png       | Bin 0 -> 3036 bytes
+ .../a9c60b57-3c0b-41b1-b6c7-8363abe1da4d.png       | Bin 0 -> 2768 bytes
+ .../b602b9ec-2b61-48cb-b588-c299c6735b17.png       | Bin 0 -> 4392 bytes
+ .../bbfd779e-3cfe-49ce-b936-2084cc99eea4.png       | Bin 0 -> 2773 bytes
+ .../c4a13078-7c96-4b13-8e25-8f4545ba58d6.png       | Bin 0 -> 2771 bytes
+ .../d8a450ba-308c-4d53-953f-5000396667fc.png       | Bin 0 -> 3408 bytes
+ .../d8cd1cb9-7351-4fb0-87c2-1c41bcd5d022.png       | Bin 0 -> 2771 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2771 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3982 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3864 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2773 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3688 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2771 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2771 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2768 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3274 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3036 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2768 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 4392 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2773 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2771 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 3408 bytes
+ .../ac0dfccf-ab18-44e0-82af-68daa981c22f.png       | Bin 0 -> 2771 bytes
+ sprites/spr_spikes/spr_spikes.yy                   | 150 +++++++++++++++++++++
+ 36 files changed, 190 insertions(+)
+
+c9311ea - Tygo de Vries, 3 days ago : Updated nuke
+ objects/Nuke/Step_0.gml      | 20 ++++++++++++++++++++
+ rooms/menu_main/menu_main.yy |  2 ++
+ 2 files changed, 22 insertions(+)
+
+3aeaab6 - Tygo de Vries, 3 days ago : Added Nuke option
+ Block2.yyp                           |  1 +
+ objects/Nuke/Nuke.yy                 | 35 +++++++++++++++++++++++++++++++++++
+ objects/Nuke/Step_0.gml              |  7 +++++++
+ objects/obj_rebind_handle/Step_0.gml |  2 +-
+ 4 files changed, 44 insertions(+), 1 deletion(-)
+
+eed1131 - Tygo de Vries, 3 days ago : Idk
+ .../024f71d9-fd4c-4b4b-a213-9e95c58be276.png          | Bin 1646 -> 1646 bytes
+ .../0ce01f34-96c8-437b-9e00-6a4b26a15403.png          | Bin 1616 -> 1616 bytes
+ .../0f977412-b76f-453c-a929-82146591addf.png          | Bin 1635 -> 1635 bytes
+ .../23c1323e-dbd7-457a-941a-195b75076916.png          | Bin 1708 -> 1708 bytes
+ .../2e2aefcf-fa3f-48bb-8cfe-a662130ff11b.png          | Bin 1710 -> 1710 bytes
+ .../aecfbc96-9021-47a8-8c32-58e0db684080.png          | Bin 1507 -> 1507 bytes
+ .../d2ce47ae-b82f-41d8-9ef4-d1d5dfaabafb.png          | Bin 1740 -> 1740 bytes
+ .../f16c0240-d3ef-4e29-9f01-6f268cbaef86.png          | Bin 1615 -> 1615 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1646 -> 1646 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1616 -> 1616 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1635 -> 1635 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1708 -> 1708 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1710 -> 1710 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1507 -> 1507 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1740 -> 1740 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png          | Bin 1615 -> 1615 bytes
+ 16 files changed, 0 insertions(+), 0 deletions(-)
+
+9b5f22b - C1oudszs, 3 days ago : Walking Animation
+ objects/obj_player/Step_0.gml              | 3 +++
+ sprites/spr_player_walk/spr_player_walk.yy | 6 +++---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+fc08484 - C1oudszs, 4 days ago : walking animation
+ Block2.yyp                                         |   2 +-
+ objects/obj_player/Step_0.gml                      |   2 +-
+ .../024f71d9-fd4c-4b4b-a213-9e95c58be276.png       | Bin
+ .../0ce01f34-96c8-437b-9e00-6a4b26a15403.png       | Bin
+ .../0f977412-b76f-453c-a929-82146591addf.png       | Bin
+ .../23c1323e-dbd7-457a-941a-195b75076916.png       | Bin
+ .../2e2aefcf-fa3f-48bb-8cfe-a662130ff11b.png       | Bin
+ .../aecfbc96-9021-47a8-8c32-58e0db684080.png       | Bin
+ .../d2ce47ae-b82f-41d8-9ef4-d1d5dfaabafb.png       | Bin
+ .../f16c0240-d3ef-4e29-9f01-6f268cbaef86.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin
+ .../spr_player_walk.yy}                            |  24 ++++++++++-----------
+ 19 files changed, 14 insertions(+), 14 deletions(-)
+
+9c57320 - TmartaT, 4 days ago : Fixed black pixel in idle animation + put the walking animation in the "animation" folder :)
+ .../6c9a9e39-a136-4eed-9c2d-b179b06cb0f5.png          | Bin 1499 -> 1490 bytes
+ .../93c74f25-004c-4df1-bbbd-65058c07b61a.png          | Bin 1481 -> 1480 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png          | Bin 1499 -> 1490 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png          | Bin 1481 -> 1480 bytes
+ .../spr_walking_animation/spr_walking_animation.yy    |   4 ++--
+ 5 files changed, 2 insertions(+), 2 deletions(-)
+
+5f91c0b - TmartaT, 4 days ago : added walking animation sprite
+ Block2.yyp                                         |   1 +
+ .../024f71d9-fd4c-4b4b-a213-9e95c58be276.png       | Bin 0 -> 1646 bytes
+ .../0ce01f34-96c8-437b-9e00-6a4b26a15403.png       | Bin 0 -> 1616 bytes
+ .../0f977412-b76f-453c-a929-82146591addf.png       | Bin 0 -> 1635 bytes
+ .../23c1323e-dbd7-457a-941a-195b75076916.png       | Bin 0 -> 1708 bytes
+ .../2e2aefcf-fa3f-48bb-8cfe-a662130ff11b.png       | Bin 0 -> 1710 bytes
+ .../aecfbc96-9021-47a8-8c32-58e0db684080.png       | Bin 0 -> 1507 bytes
+ .../d2ce47ae-b82f-41d8-9ef4-d1d5dfaabafb.png       | Bin 0 -> 1740 bytes
+ .../f16c0240-d3ef-4e29-9f01-6f268cbaef86.png       | Bin 0 -> 1615 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1646 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1616 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1635 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1708 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1710 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1507 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1740 bytes
+ .../3b647728-227d-4af9-98e4-b32ff337dba6.png       | Bin 0 -> 1615 bytes
+ .../spr_walking_animation/spr_walking_animation.yy | 118 +++++++++++++++++++++
+ 18 files changed, 119 insertions(+)
+
+f34a128 - C1oudszs, 4 days ago : idle animation
+ objects/obj_player/Create_0.gml            | 2 ++
+ objects/obj_player/Step_0.gml              | 4 ++--
+ sprites/spr_player_idle/spr_player_idle.yy | 2 +-
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+636f689 - TmartaT, 4 days ago : Added dreamworld background + parallax
+ Block2.yyp                                         |  17 +++-
+ objects/obj_DW_background_1/obj_DW_background_1.yy |  36 +++++++
+ .../Step_0.gml                                     |   0
+ .../obj_DW_background_2.yy}                        |  14 ++-
+ .../Step_0.gml                                     |   0
+ objects/obj_DW_background_3/obj_DW_background_3.yy |  40 ++++++++
+ objects/obj_DW_background_petals/Step_0.gml        |   1 +
+ .../obj_DW_background_petals.yy                    |  40 ++++++++
+ objects/obj_DW_background_stars/Step_0.gml         |   1 +
+ .../obj_DW_background_stars.yy                     |  40 ++++++++
+ objects/obj_Parallax_Control/Create_0.gml          |   6 --
+ objects/obj_Parallax_Control/Step_0.gml            |  13 ---
+ .../obj_RW_background_1.yy}                        |   4 +-
+ objects/obj_RW_background_2/Step_0.gml             |   1 +
+ .../obj_RW_background_2.yy}                        |   4 +-
+ objects/obj_RW_background_3/Step_0.gml             |   1 +
+ .../obj_RW_background_3.yy}                        |   4 +-
+ rooms/lv_new_intro/lv_new_intro.yy                 |   2 +
+ rooms/lv_room_test_marta/lv_room_test_marta.yy     |  41 ++++----
+ .../d9327f25-c7a3-4595-9ec9-9ca58bf05de4.png       | Bin 0 -> 27638 bytes
+ .../6cfab2b1-440f-497b-a08c-1f34f55ccb5f.png       | Bin 0 -> 27638 bytes
+ .../spr_background_layer_1_DW.yy                   | 109 +++++++++++++++++++++
+ .../83a7221f-029c-4da5-981b-df88ffd05787.png       | Bin 0 -> 23734 bytes
+ .../c8e33117-437d-4bfb-b285-f8168d976bd2.png       | Bin 0 -> 23734 bytes
+ .../spr_background_layer_2_DW.yy                   | 109 +++++++++++++++++++++
+ .../1e27a575-bd99-481b-a96f-ac38421c6537.png       | Bin 0 -> 47280 bytes
+ .../38e21f89-c2e9-4f49-9187-46c4bc4279bb.png       | Bin 0 -> 47280 bytes
+ .../spr_background_layer_3_DW.yy                   | 109 +++++++++++++++++++++
+ .../ced654f0-4a76-475e-8cbf-566a8a6540af.png       | Bin 0 -> 4354 bytes
+ .../e51e8142-bbb2-41a3-999d-b65621a447d0.png       | Bin 0 -> 4354 bytes
+ .../spr_background_petals_DW.yy                    | 109 +++++++++++++++++++++
+ .../01557277-da00-4f12-b192-6c3746f6a0e4.png       | Bin 0 -> 2639 bytes
+ .../0c8226e2-77c8-471c-aa7f-39e713b189dd.png       | Bin 0 -> 2639 bytes
+ .../spr_background_stars_dw.yy                     | 109 +++++++++++++++++++++
+ 34 files changed, 759 insertions(+), 51 deletions(-)
+
+7a4cba5 - TmartaT, 4 days ago : Added parallex to city background
+ Block2.yyp                                         |   9 +-
+ objects/obj_Parallax_Control/Create_0.gml          |   6 ++
+ objects/obj_Parallax_Control/Step_0.gml            |  13 +++
+ .../obj_Parallax_Control/obj_Parallax_Control.yy   |  36 ++++++++
+ objects/obj_background_1/obj_background_1.yy       |  36 ++++++++
+ objects/obj_background_2/Step_0.gml                |   1 +
+ objects/obj_background_2/obj_background_2.yy       |  40 +++++++++
+ objects/obj_background_3/Step_0.gml                |   1 +
+ objects/obj_background_3/obj_background_3.yy       |  40 +++++++++
+ .../obj_background_tragic/obj_background_tragic.yy |   5 +-
+ objects/obj_button/Step_0.gml                      |   2 +-
+ rooms/lv_new_intro/lv_new_intro.yy                 |   2 +-
+ rooms/lv_room_test_marta/lv_room_test_marta.yy     |  92 +++++++++++++++++++++
+ rooms/lv_test/lv_test.yy                           |   2 +-
+ .../spr_background_layer3/spr_background_layer3.yy |  90 --------------------
+ .../05feb7b3-cad3-4f3f-ba3c-6cbb7986b520.png       | Bin 34555 -> 0 bytes
+ .../4c1b84ac-9960-4e11-b1e2-86b3acf0c7da.png       | Bin 34555 -> 0 bytes
+ .../spr_background_layer_0.yy                      |  90 --------------------
+ .../2d13b583-a3ff-4a2c-ba07-fcb25363321b.png       | Bin 16736 -> 0 bytes
+ .../fa160a86-3983-49a9-b93a-dd09fa63046a.png       | Bin 0 -> 17760 bytes
+ .../3094ecac-9b25-4166-b92f-de0af7c72225.png       | Bin 16736 -> 0 bytes
+ .../af9d7824-d9cc-464f-800d-da5a03b5ba62.png       | Bin 0 -> 17760 bytes
+ .../spr_background_layer_1.yy                      |  35 ++++++--
+ .../390c4ac2-efd1-43ed-a112-de24875c7968.png       | Bin 18862 -> 0 bytes
+ .../50d754e0-4b42-4fc4-b0ed-d5e294f282d4.png       | Bin 0 -> 19445 bytes
+ .../164a7c86-c624-45e5-86ea-789151459963.png       | Bin 18862 -> 0 bytes
+ .../704985d9-975a-451e-b43b-663685fc9a2f.png       | Bin 0 -> 19445 bytes
+ .../spr_background_layer_2.yy                      |  35 ++++++--
+ .../cdb1a277-84c4-4d35-a40a-2a887826e477.png       | Bin 6322 -> 0 bytes
+ .../e9abffe6-5a46-438b-9581-26e6817c8716.png}      | Bin 37836 -> 37836 bytes
+ .../799b4227-fac1-42c8-944e-6c5bfc458835.png       | Bin 6322 -> 0 bytes
+ .../fa51164b-06de-4419-82af-e68246bb6642.png}      | Bin 37836 -> 37836 bytes
+ .../spr_background_layer_3.yy                      |  35 ++++++--
+ .../16f1a5c6-5edb-410a-9930-1b6e94d82891.png       | Bin 51241 -> 0 bytes
+ .../dc6b0335-f728-43ce-aae7-4f420c15ba6d.png       | Bin 51241 -> 0 bytes
+ .../spr_background_tragic/spr_background_tragic.yy |  90 --------------------
+ 36 files changed, 356 insertions(+), 304 deletions(-)
+
+89fd9e7 - Tygo de Vries, 4 days ago : Fixed player getting stuck
+ sprites/spr_player_idle/spr_player_idle.yy | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+8c15538 - C1oudszs, 4 days ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+a60de67 - C1oudszs, 4 days ago : coding animation test
+ Block2.yyp                                         |   2 +
+ objects/obj_player/Create_0.gml                    |   6 +-
+ objects/obj_player/Step_0.gml                      |   7 +-
+ rooms/lv_new_intro/lv_new_intro.yy                 |  29 +++---
+ rooms/lv_test/lv_test.yy                           |   2 +-
+ .../50a1d25d-1e3d-438c-bfbf-720b854742df.png       | Bin 0 -> 1511 bytes
+ .../6c9a9e39-a136-4eed-9c2d-b179b06cb0f5.png       | Bin 0 -> 1499 bytes
+ .../93c74f25-004c-4df1-bbbd-65058c07b61a.png       | Bin 0 -> 1481 bytes
+ .../9ccc621f-57a5-40ee-8232-96366c1649dd.png       | Bin 0 -> 1525 bytes
+ .../af86dae6-01b3-4ca2-97be-91253af8fb3c.png       | Bin 0 -> 1619 bytes
+ .../ea685302-3c77-4fe5-8398-d155847ee60d.png       | Bin 0 -> 1541 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1511 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1499 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1481 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1525 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1619 bytes
+ .../79f14320-831d-4d0c-b4d2-dc3715083690.png       | Bin 0 -> 1541 bytes
+ sprites/spr_player_idle/spr_player_idle.yy         | 110 +++++++++++++++++++++
+ 18 files changed, 139 insertions(+), 17 deletions(-)
+
+68a36d7 - yunchangzhang, 4 days ago : Added BGM
+ Block2.yyp                                         |   7 ++
+ objects/obj_bgm1/Step_0.gml                        |  16 ++++
+ objects/obj_bgm1/obj_bgm1.yy                       |  38 +++++++++
+ objects/obj_bgm_ending/Step_0.gml                  |  15 ++++
+ objects/obj_bgm_ending/obj_bgm_ending.yy           |  38 +++++++++
+ objects/obj_bgm_opening/Step_0.gml                 |  16 ++++
+ objects/obj_bgm_opening/obj_bgm_opening.yy         |  38 +++++++++
+ objects/obj_move_detect/Step_0.gml                 |   3 +-
+ rooms/lv_room1/lv_room1.yy                         |  41 +++++-----
+ rooms/lv_test/lv_test.yy                           |   2 +
+ rooms/menu_main/menu_main.yy                       |   4 +-
+ sounds/so_bgm1/so_bgm1.wav                         | Bin 0 -> 16646344 bytes
+ sounds/so_bgm1/so_bgm1.yy                          |  25 ++++++
+ sounds/so_ed_bgm/so_ed_bgm.wav                     | Bin 0 -> 5798392 bytes
+ sounds/so_ed_bgm/so_ed_bgm.yy                      |  25 ++++++
+ sounds/so_op_bgm/so_op_bgm.wav                     | Bin 0 -> 8610912 bytes
+ sounds/so_op_bgm/so_op_bgm.yy                      |  25 ++++++
+ .../5eb86378-1eeb-4317-8f4c-91d975218d2c.png       | Bin 0 -> 1328 bytes
+ .../264917cb-8725-4860-9001-4df9f034ca30.png       | Bin 0 -> 1328 bytes
+ sprites/spr_dev_opening_bgm/spr_dev_opening_bgm.yy |  90 +++++++++++++++++++++
+ sprites/spr_side/spr_side.yy                       |   8 +-
+ 21 files changed, 365 insertions(+), 26 deletions(-)
+
+53edbd1 - yunchangzhang, 5 days ago : Fixed the issue of spr missing
+ Block2.yyp                                         |   1 +
+ .../05feb7b3-cad3-4f3f-ba3c-6cbb7986b520.png       | Bin 0 -> 34555 bytes
+ .../4c1b84ac-9960-4e11-b1e2-86b3acf0c7da.png       | Bin 0 -> 34555 bytes
+ .../spr_background_layer_0.yy                      |  90 +++++++++++++++++++++
+ .../2d13b583-a3ff-4a2c-ba07-fcb25363321b.png       | Bin 0 -> 16736 bytes
+ .../3094ecac-9b25-4166-b92f-de0af7c72225.png       | Bin 0 -> 16736 bytes
+ .../spr_background_layer_1.yy                      |  90 +++++++++++++++++++++
+ .../390c4ac2-efd1-43ed-a112-de24875c7968.png       | Bin 0 -> 18862 bytes
+ .../164a7c86-c624-45e5-86ea-789151459963.png       | Bin 0 -> 18862 bytes
+ .../spr_background_layer_2.yy                      |  90 +++++++++++++++++++++
+ .../cdb1a277-84c4-4d35-a40a-2a887826e477.png       | Bin 0 -> 6322 bytes
+ .../799b4227-fac1-42c8-944e-6c5bfc458835.png       | Bin 0 -> 6322 bytes
+ .../spr_background_layer_3.yy                      |  90 +++++++++++++++++++++
+ 13 files changed, 361 insertions(+)
+
+fd0dfbe - TmartaT, 5 days ago : cleaned up some old version spirtes of the background
+ rooms/lv_city/lv_city.yy                           |  53 ++++++++++++
+ rooms/lv_test/lv_test.yy                           |  16 +---
+ .../59387061-c3d6-4278-9510-22357631de55.png       | Bin 0 -> 37836 bytes
+ .../00f0f5b7-e16d-4a2a-adc2-a7ccbf79b04f.png       | Bin 0 -> 37836 bytes
+ .../spr_background_layer3.yy}                      |  22 ++---
+ .../05feb7b3-cad3-4f3f-ba3c-6cbb7986b520.png       | Bin 34555 -> 0 bytes
+ .../4c1b84ac-9960-4e11-b1e2-86b3acf0c7da.png       | Bin 34555 -> 0 bytes
+ .../spr_background_layer_0.yy                      |  90 ---------------------
+ .../2d13b583-a3ff-4a2c-ba07-fcb25363321b.png       | Bin 16736 -> 0 bytes
+ .../3094ecac-9b25-4166-b92f-de0af7c72225.png       | Bin 16736 -> 0 bytes
+ .../390c4ac2-efd1-43ed-a112-de24875c7968.png       | Bin 18862 -> 0 bytes
+ .../164a7c86-c624-45e5-86ea-789151459963.png       | Bin 18862 -> 0 bytes
+ .../spr_background_layer_2.yy                      |  90 ---------------------
+ .../cdb1a277-84c4-4d35-a40a-2a887826e477.png       | Bin 6322 -> 0 bytes
+ .../799b4227-fac1-42c8-944e-6c5bfc458835.png       | Bin 6322 -> 0 bytes
+ .../spr_background_layer_3.yy                      |  90 ---------------------
+ 16 files changed, 67 insertions(+), 294 deletions(-)
+
+33f6f7d - C1oudszs, 6 days ago : made a small mistake
+ .../98bb6a5d-47bd-4e88-af3d-b97baa745c6f.png          | Bin 2840 -> 2317 bytes
+ .../becc6938-b1f7-4454-b82d-feb2b818c569.png          | Bin 2840 -> 2317 bytes
+ .../spr_net_inside_realworld.yy                       |   2 +-
+ 3 files changed, 1 insertion(+), 1 deletion(-)
+
+9dc7fdd - C1oudszs, 6 days ago : 1st level decorations
+ Block2.yyp                                         |   4 +
+ objects/Voidblock/Voidblock.yy                     |  36 ++++++++
+ .../obj_realworld_foreground.yy                    |  36 ++++++++
+ rooms/lv_new_intro/lv_new_intro.yy                 |  50 ++++++-----
+ sprites/Sprite72/Sprite72.yy                       |  93 +++++++++++++++++++++
+ .../a3904ba8-b6cf-4731-96d7-619812c2ca98.png       | Bin 0 -> 16105 bytes
+ .../281f737c-ba47-494b-9193-267166b96999.png       | Bin 0 -> 5611 bytes
+ .../2ce4a159-bd7d-479a-bad6-05dab18da88d.png       | Bin 0 -> 9424 bytes
+ .../3670970c-c87c-4fcc-a97f-39141cb5b2a6.png       | Bin 0 -> 6417 bytes
+ .../d6a7a7fc-dedb-4eb6-be78-af50e3f15fe8.png       | Bin 0 -> 2011 bytes
+ .../59e7e729-ef2e-4a0e-a207-54a9afbf7810.png       | Bin 7237 -> 2329 bytes
+ .../c2d8b985-7118-4f4c-b0c1-99387ba7b514.png       | Bin 7237 -> 2329 bytes
+ .../spr_cloud_inside_dreamworld.yy                 |   4 +-
+ .../eff628a6-5760-476d-a3ab-885c110d5997.png       | Bin 14254 -> 15228 bytes
+ .../8f1ec510-39c9-43e9-8cd7-d5d8353c84fb.png       | Bin 0 -> 3504 bytes
+ .../96a14650-b8a6-4290-b43b-de7ea753eaf7.png       | Bin 0 -> 767 bytes
+ .../98e433ca-e3eb-4c67-89e2-05159895288e.png       | Bin 0 -> 1018 bytes
+ .../c9793783-ffe8-437b-95b3-1f469ed61ba3.png       | Bin 14254 -> 14655 bytes
+ .../e9468b3a-e71e-41e7-ad8d-808e6ad67ed1.png       | Bin 0 -> 1739 bytes
+ .../spr_inside_dreamworld/spr_inside_dreamworld.yy |   7 +-
+ .../529ab7e1-2de8-40db-b4c8-202a66ca62e6.png       | Bin 26486 -> 26929 bytes
+ .../11d91818-f270-4b39-ac58-e66bbb930a26.png       | Bin 26486 -> 26929 bytes
+ .../5ddc6437-41d2-4671-812a-352f7cbc128f.png       | Bin 0 -> 764 bytes
+ .../spr_inside_realworld/spr_inside_realworld.yy   |   4 +-
+ .../59e7e729-ef2e-4a0e-a207-54a9afbf7810.png       | Bin 0 -> 7237 bytes
+ .../c2d8b985-7118-4f4c-b0c1-99387ba7b514.png       | Bin 0 -> 7237 bytes
+ .../spr_realworld_foreground.yy                    |  90 ++++++++++++++++++++
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 12229 -> 12259 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 12229 -> 12259 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 13793 -> 13815 bytes
+ 30 files changed, 296 insertions(+), 28 deletions(-)
+
+e71ccf6 - yunchangzhang, 7 days ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+00aed51 - yunchangzhang, 7 days ago : Intro tile change
+ objects/obj_move_detect/obj_move_detect.yy | 2 +-
+ rooms/lv_new_intro/lv_new_intro.yy         | 6 +++++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+ac694ff - Tygo de Vries, 7 days ago : Updated wind
+ objects/obj_wind/Create_0.gml      |  3 +++
+ objects/obj_wind/Step_0.gml        | 18 +++++++++++++++++-
+ objects/obj_wind/obj_wind.yy       |  3 +++
+ rooms/lv_new_intro/lv_new_intro.yy | 11 +++++++----
+ 4 files changed, 30 insertions(+), 5 deletions(-)
+
+67b5087 - Tygo de Vries, 7 days ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+f51b8c3 - Tygo de Vries, 7 days ago : Added trigger code
+ Block2.yyp                                       |  1 -
+ objects/obj_player/Create_0.gml                  |  9 ++---
+ objects/obj_player/Step_0.gml                    | 26 +++++++++++--
+ objects/obj_pressure_plate/Create_0.gml          |  2 -
+ objects/obj_pressure_plate/Step_0.gml            | 34 ----------------
+ objects/obj_pressure_plate/obj_pressure_plate.yy | 39 -------------------
+ objects/obj_wind/Create_0.gml                    |  9 +++++
+ objects/obj_wind/Step_0.gml                      | 49 +++---------------------
+ objects/obj_wind/obj_wind.yy                     |  3 +-
+ rooms/lv_new_intro/lv_new_intro.yy               |  4 +-
+ rooms/lv_room1/lv_room1.yy                       | 12 ------
+ sprites/spr_wind/spr_wind.yy                     |  6 +--
+ 12 files changed, 47 insertions(+), 147 deletions(-)
+
+522b9f5 - yunchangzhang, 7 days ago : Indoor wallpaper
+ Block2.yyp                                         |   6 +-
+ objects/obj_background_nice/obj_background_nice.yy |   5 +-
+ .../obj_cloud_inside_dreamworld.yy                 |  36 +++++++++
+ objects/obj_move_detect/Step_0.gml                 |  19 -----
+ rooms/lv_new_intro/lv_new_intro.yy                 |  15 ++--
+ sounds/so_jump/so_jump.yy                          |   4 +-
+ .../47ed5b4e-92ef-4743-bdfa-e3ca99b72856.png       | Bin 22990 -> 0 bytes
+ .../1e18bf79-668e-44f8-9f85-0aa2cfc18664.png       | Bin 22990 -> 0 bytes
+ .../59e7e729-ef2e-4a0e-a207-54a9afbf7810.png       | Bin 0 -> 7237 bytes
+ .../c2d8b985-7118-4f4c-b0c1-99387ba7b514.png       | Bin 0 -> 7237 bytes
+ .../spr_cloud_inside_dreamworld.yy                 |  90 +++++++++++++++++++++
+ .../eff628a6-5760-476d-a3ab-885c110d5997.png       | Bin 0 -> 14254 bytes
+ .../c9793783-ffe8-437b-95b3-1f469ed61ba3.png       | Bin 0 -> 14254 bytes
+ .../spr_inside_dreamworld/spr_inside_dreamworld.yy |  90 +++++++++++++++++++++
+ .../529ab7e1-2de8-40db-b4c8-202a66ca62e6.png       | Bin 0 -> 26486 bytes
+ .../11d91818-f270-4b39-ac58-e66bbb930a26.png       | Bin 0 -> 26486 bytes
+ .../spr_inside_realworld.yy}                       |  24 +++---
+ .../98bb6a5d-47bd-4e88-af3d-b97baa745c6f.png       | Bin 0 -> 2840 bytes
+ .../becc6938-b1f7-4454-b82d-feb2b818c569.png       | Bin 0 -> 2840 bytes
+ .../spr_net_inside_realworld.yy                    |  90 +++++++++++++++++++++
+ 20 files changed, 335 insertions(+), 44 deletions(-)
+
+e2d622a - Tygo de Vries, 7 days ago : Worked on lvl 1
+ Block2.yyp                                         |   5 +-
+ objects/obj_camera/Step_0.gml                      |   4 +-
+ objects/obj_phone/Create_0.gml                     |   4 +-
+ objects/obj_phone/obj_phone.yy                     |  11 +--
+ objects/obj_phone_behind/Create_0.gml              |   4 +
+ objects/obj_phone_behind/Draw_0.gml                |   4 +
+ objects/obj_phone_behind/Step_0.gml                |   7 ++
+ objects/obj_phone_behind/obj_phone_behind.yy       |  40 +++++++++
+ objects/obj_player/Create_0.gml                    |   7 +-
+ objects/obj_player/Step_0.gml                      |   3 +
+ objects/obj_player/obj_player.yy                   |   4 +-
+ rooms/lv_new_intro/lv_new_intro.yy                 |  96 +++++++++++++++------
+ .../3510bdeb-b8d9-4d17-b95b-b383460c1f39.png       | Bin 441 -> 0 bytes
+ .../fbb0afea-5634-4011-b133-e81e2794d98b.png       | Bin 441 -> 0 bytes
+ .../2a3f4021-c180-4caf-8559-87ec41de3037.png       | Bin 0 -> 1434 bytes
+ .../b8078078-8221-4433-82a7-5ccf14da810e.png       | Bin 0 -> 1434 bytes
+ .../spr_phone.yy => spr_side/spr_side.yy}          |  38 ++++----
+ .../5c0a951b-b3c3-4424-8547-bc9f749ab7be.png       | Bin 0 -> 845 bytes
+ .../49588626-eb98-407e-9003-dda989c6eb0d.png       | Bin 0 -> 845 bytes
+ sprites/spr_tmp_phone/spr_tmp_phone.yy             |  90 +++++++++++++++++++
+ .../ed360242-8280-47d9-bcd2-eccc571c807a.png       | Bin 0 -> 738 bytes
+ .../d003a47c-e984-473e-839f-886de293c454.png       | Bin 0 -> 738 bytes
+ sprites/tmp_onphone/tmp_onphone.yy                 |  90 +++++++++++++++++++
+ timelines/cut_door_button/moment_0.gml             |   2 +-
+ timelines/cut_player_woke_up/moment_0.gml          |   2 +-
+ 25 files changed, 348 insertions(+), 63 deletions(-)
+
+7d5d066 - yunchangzhang, 8 days ago : Added step sound and jump sound functionality
+ Block2.yyp                                         |   5 +
+ objects/obj_finish/obj_finish.yy                   |   4 +-
+ objects/obj_move_detect/Step_0.gml                 |  37 +++++
+ objects/obj_move_detect/obj_move_detect.yy         |  38 +++++
+ rooms/lv_room1/lv_room1.yy                         |  14 +-
+ sounds/so_footstep/so_footstep.wav                 | Bin 0 -> 1539692 bytes
+ sounds/so_footstep/so_footstep.yy                  |  25 ++++
+ sounds/so_jump/so_jump.wav                         | Bin 0 -> 262344 bytes
+ sounds/so_jump/so_jump.yy                          |  25 ++++
+ .../spr_character_button/spr_character_button.yy   |   4 +-
+ .../83995b09-ac41-451d-a3ec-c8e173206a21.png       | Bin 0 -> 2339 bytes
+ .../3651c436-0fd2-4e4f-918a-e05c3546520f.png       | Bin 0 -> 2339 bytes
+ sprites/spr_dev_move_detect/spr_dev_move_detect.yy |  90 +++++++++++
+ sprites/spr_exit_button/spr_exit_button.yy         |   4 +-
+ sprites/spr_menu_button/spr_menu_button.yy         |   4 +-
+ .../04927f4a-f4aa-431a-8d14-39b856744fec.png       | Bin 1302 -> 0 bytes
+ .../0d458dfd-5345-47b2-a9e0-1d47b4dbcd84.png       | Bin 2814 -> 0 bytes
+ .../40a9adf0-a921-4fc4-bb54-fcfbd4fc1ab3.png       | Bin 1301 -> 360 bytes
+ .../479de11c-5dff-44ad-9a3d-d3917f307564.png       | Bin 0 -> 363 bytes
+ .../56919109-d2bc-47b6-888d-b2456bfdab22.png       | Bin 4627 -> 0 bytes
+ .../58109858-60d9-4f1c-9bcf-b3ef6a4cf0a2.png       | Bin 4670 -> 0 bytes
+ .../5cf4f8e8-797e-4358-a802-0e85c90f6037.png       | Bin 2109 -> 0 bytes
+ .../612f4d24-ddb5-46e5-b286-53f616174b65.png       | Bin 2823 -> 0 bytes
+ .../6dae3571-08de-41c1-b560-0a8fa9f5079a.png       | Bin 4670 -> 0 bytes
+ .../7899f5a8-8e51-4eed-9345-76e063181ec1.png       | Bin 2109 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 1302 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 2814 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 1301 -> 360 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 363 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 4627 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 4670 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 2109 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 2823 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 4670 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 2109 -> 0 bytes
+ sprites/spr_particle/spr_particle.yy               |  44 +-----
+ sprites/spr_play_button/spr_play_button.yy         |   4 +-
+ .../00c404b7-815b-4e60-be70-f65614c8563b.png       | Bin 0 -> 4437 bytes
+ .../0e195ea4-e9ac-4352-b5c2-a6b919f302a8.png       | Bin 0 -> 4087 bytes
+ .../2eda426b-3ace-4a6a-80de-1ed41b523b1d.png       | Bin 0 -> 4077 bytes
+ .../51c367d4-1275-4c27-bf6f-ea7046588e1a.png       | Bin 0 -> 4138 bytes
+ .../5bbce302-8b0c-4766-8ae0-7db1921f6e8c.png       | Bin 0 -> 4129 bytes
+ .../70d04cf4-df70-44b6-bd38-f395aa7be137.png       | Bin 0 -> 4481 bytes
+ .../739aba65-fb82-4abb-a7ca-05e3ca032af5.png       | Bin 0 -> 2089 bytes
+ .../791d1223-94c7-4488-956e-f61dee5b3435.png       | Bin 0 -> 1238 bytes
+ .../81d57f9b-2361-4004-a53b-a3b9098f54b9.png       | Bin 0 -> 4056 bytes
+ .../86c6ae63-6215-4dd1-a77c-7c17274f5787.png       | Bin 0 -> 4386 bytes
+ .../883c0240-4bfc-419e-875c-c7a175041843.png       | Bin 0 -> 4304 bytes
+ .../8fbba82a-eaf0-4ed5-b257-9e2edca4df19.png       | Bin 0 -> 4611 bytes
+ .../9eb3509e-1bf9-461d-a20c-27d467e13927.png       | Bin 0 -> 4339 bytes
+ .../a6a666d2-3eb4-4b59-abd3-0a556ef055c8.png       | Bin 0 -> 4203 bytes
+ .../db9c7459-7fbf-4f34-9353-96b7612c2386.png       | Bin 0 -> 2779 bytes
+ .../e65c0c61-aca2-4b48-aba7-1444c6b048bb.png       | Bin 0 -> 4078 bytes
+ .../e7ee7db5-26aa-41c3-809b-a8bdce24df3f.png       | Bin 0 -> 4272 bytes
+ .../f7f2b00c-68d6-48d5-be37-32c71cc45823.png       | Bin 0 -> 4196 bytes
+ .../f8623256-aa9b-4a06-aaf3-dc707aa5a440.png       | Bin 0 -> 4056 bytes
+ .../ffb3ca99-c75e-41de-a7a5-68c5454e6a36.png       | Bin 0 -> 4056 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4437 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4087 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4077 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4138 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4129 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4481 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 2089 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 1238 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4056 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4386 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4304 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4611 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4339 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4203 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 2779 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4078 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4272 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4196 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4056 bytes
+ .../91b552de-0cbe-4a68-a796-c1e52414f025.png       | Bin 0 -> 4056 bytes
+ sprites/spr_portal/spr_portal.yy                   | 166 +++++++++++++++++++++
+ sprites/spr_setting_button/spr_setting_button.yy   |   4 +-
+ 79 files changed, 414 insertions(+), 54 deletions(-)
+
+21d9b81 - yunchangzhang, 8 days ago : Portal update
+ Block2.yyp                                         |   5 +-
+ objects/obj_cutscene/obj_cutscene.yy               |  11 ++-
+ objects/trigger/trigger.yy                         |   8 +-
+ rooms/lv_room1/lv_room1.yy                         |  26 +++---
+ .../0562dbef-b006-408c-8a0e-2a785bae53ac.png       | Bin 0 -> 551 bytes
+ .../f06af729-ec73-48bd-a56a-9c02b7ca7722.png       | Bin 0 -> 551 bytes
+ sprites/spr_cutscene/spr_cutscene.yy               |  90 +++++++++++++++++++++
+ .../04927f4a-f4aa-431a-8d14-39b856744fec.png       | Bin 0 -> 1302 bytes
+ .../0d458dfd-5345-47b2-a9e0-1d47b4dbcd84.png       | Bin 0 -> 2814 bytes
+ .../18635a93-b7d1-4d44-b457-b04509b00772.png       | Bin 316 -> 0 bytes
+ .../40a9adf0-a921-4fc4-bb54-fcfbd4fc1ab3.png       | Bin 0 -> 1301 bytes
+ .../56919109-d2bc-47b6-888d-b2456bfdab22.png       | Bin 0 -> 4627 bytes
+ .../58109858-60d9-4f1c-9bcf-b3ef6a4cf0a2.png       | Bin 0 -> 4670 bytes
+ .../5cf4f8e8-797e-4358-a802-0e85c90f6037.png       | Bin 0 -> 2109 bytes
+ .../612f4d24-ddb5-46e5-b286-53f616174b65.png       | Bin 0 -> 2823 bytes
+ .../6dae3571-08de-41c1-b560-0a8fa9f5079a.png       | Bin 0 -> 4670 bytes
+ .../7172de0c-2fe0-4d6d-9c72-075fa64d075c.png       | Bin 312 -> 0 bytes
+ .../7899f5a8-8e51-4eed-9345-76e063181ec1.png       | Bin 0 -> 2109 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 1302 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 2814 bytes
+ .../66bbf59f-9b21-4ca0-8279-edc287bf4450.png       | Bin 316 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 1301 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 4627 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 4670 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 2109 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 2823 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 4670 bytes
+ .../66bbf59f-9b21-4ca0-8279-edc287bf4450.png       | Bin 312 -> 0 bytes
+ .../3c13283a-23b9-488b-8650-988cbbd8d706.png       | Bin 0 -> 2109 bytes
+ sprites/spr_particle/spr_particle.yy               |  56 +++++++++----
+ .../56874fdd-4610-4389-a9e2-7eb2ae9a3329.png       | Bin
+ .../777f84bf-8f86-47a6-92a7-0b47aee42d29.png       | Bin
+ .../spr_trigger.yy}                                |  14 ++--
+ 33 files changed, 168 insertions(+), 42 deletions(-)
+
+23a21b1 - yunchangzhang, 8 days ago : Added flower and room1 cutscene
+ Block2.yyp                                         |   3 +
+ objects/obj_flower/Step_0.gml                      |  20 ++
+ objects/obj_flower/obj_flower.yy                   |  38 +++
+ rooms/lv_room1/lv_room1.yy                         |  43 ++--
+ .../0d852cea-f106-4480-bb58-073853bb669f.png       | Bin 0 -> 737 bytes
+ .../129c5043-a090-4eda-94ce-b6812a6baa31.png       | Bin 0 -> 698 bytes
+ .../1360c2ba-ddf3-4fb5-a410-8bb172bf01b2.png       | Bin 0 -> 567 bytes
+ .../1470c8de-530c-41f6-a6da-5f843efc3653.png       | Bin 0 -> 812 bytes
+ .../1b967247-ec0c-4747-8f59-9253c0a305fb.png       | Bin 0 -> 1037 bytes
+ .../220c5f7a-2aef-4de2-bb36-b93caab2045c.png       | Bin 0 -> 1015 bytes
+ .../2392fb27-64f0-4781-a464-3e5f76015285.png       | Bin 0 -> 756 bytes
+ .../26ae091d-a81a-4de3-a490-e2c19be0f59d.png       | Bin 0 -> 582 bytes
+ .../28524ead-78ff-4354-9332-4430906fe36f.png       | Bin 0 -> 588 bytes
+ .../35657755-b3e5-474f-9698-d2717fbb428e.png       | Bin 0 -> 963 bytes
+ .../36446c0c-6ea2-41bc-8a82-836dcd8bd64a.png       | Bin 0 -> 989 bytes
+ .../3caaf1f7-7956-4895-89c0-de1dab039bd5.png       | Bin 0 -> 831 bytes
+ .../3cdbd0d2-7196-4457-892d-570a48ead267.png       | Bin 0 -> 831 bytes
+ .../41d9a2c2-1114-433a-a134-7c3fafbe5fe8.png       | Bin 0 -> 841 bytes
+ .../48b41361-8a4b-47a7-aca7-9f1cea34fb64.png       | Bin 0 -> 971 bytes
+ .../48f595f9-6cac-4649-bf64-752637bc7d47.png       | Bin 0 -> 974 bytes
+ .../4c32b50b-67c9-4a9c-ae60-b63132fb7af9.png       | Bin 0 -> 567 bytes
+ .../545e1008-8e09-4f55-b7d7-0ec5a2d7aaa8.png       | Bin 0 -> 963 bytes
+ .../5ac217d8-37aa-44ac-8d4d-37691ad23c57.png       | Bin 0 -> 737 bytes
+ .../5b479986-4a9c-483c-9030-fe5a2e907020.png       | Bin 0 -> 841 bytes
+ .../61da0c6d-2df4-4b1c-b4cf-9e60da951923.png       | Bin 0 -> 644 bytes
+ .../6fc7c926-f4cf-46b3-8601-620c111d44cb.png       | Bin 0 -> 974 bytes
+ .../73aab117-1ec4-4f8b-a0e6-6434dc3d4d94.png       | Bin 0 -> 928 bytes
+ .../7572e637-6e7e-4909-b8c9-484e29e9dee1.png       | Bin 0 -> 1004 bytes
+ .../7828305a-175b-478f-996d-b894b98bc6f4.png       | Bin 0 -> 582 bytes
+ .../79225b84-b1bc-48f8-8905-7e490c7478a2.png       | Bin 0 -> 846 bytes
+ .../792b436d-263f-4a63-b6df-7928d403c6b9.png       | Bin 0 -> 756 bytes
+ .../809a7ce7-166f-402b-b2de-293ec8a6becd.png       | Bin 0 -> 928 bytes
+ .../95b4bf42-0d7d-4a34-b0f1-201ae725b006.png       | Bin 0 -> 928 bytes
+ .../9d9f7ba0-7a45-4628-9aab-bf6a4de6b698.png       | Bin 0 -> 567 bytes
+ .../a29ad112-0867-41e5-9430-0c513f66a590.png       | Bin 0 -> 1015 bytes
+ .../a87eba26-d188-4ecf-afea-8a65147efd15.png       | Bin 0 -> 1037 bytes
+ .../b452a14c-6612-403b-9f59-93380953c557.png       | Bin 0 -> 928 bytes
+ .../b4f429ad-321d-4509-a1fe-5684ca734815.png       | Bin 0 -> 698 bytes
+ .../c1945444-cc60-4293-bff6-a73eba29a3d5.png       | Bin 0 -> 1037 bytes
+ .../cda1948a-3f1f-48ca-97f8-beb49682b51c.png       | Bin 0 -> 588 bytes
+ .../d2aeeac4-4a50-4e91-adc1-e8a73c4beca1.png       | Bin 0 -> 567 bytes
+ .../d4f96610-8335-4fd2-93c5-7c5165a199db.png       | Bin 0 -> 846 bytes
+ .../dfb795bf-0321-4e1d-a921-32c276aa8753.png       | Bin 0 -> 1004 bytes
+ .../e1d39186-8567-44b6-8965-5aef0f7346d6.png       | Bin 0 -> 989 bytes
+ .../ed8a6a7f-3339-4560-8bd6-3cbb76bbf6ae.png       | Bin 0 -> 644 bytes
+ .../f58e6c9c-59ea-449d-a21c-989a20b8c08b.png       | Bin 0 -> 971 bytes
+ .../f9b21160-dd64-455f-9b08-a499f9a0c63b.png       | Bin 0 -> 812 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 737 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 698 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 567 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 812 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1037 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1015 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 756 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 582 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 588 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 963 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 989 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 831 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 831 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 841 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 971 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 974 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 567 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 963 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 737 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 841 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 644 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 974 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 928 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1004 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 582 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 846 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 756 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 928 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 928 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 567 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1015 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1037 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 928 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 698 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1037 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 588 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 567 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 846 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 1004 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 989 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 644 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 971 bytes
+ .../951ca7f7-2f7e-42ce-b1a1-579db04180fa.png       | Bin 0 -> 812 bytes
+ sprites/spr_Flower/spr_Flower.yy                   | 258 +++++++++++++++++++++
+ sprites/spr_particle/spr_particle.yy               |   2 +-
+ timelines/cut_room1/cut_room1.yy                   |  17 ++
+ timelines/cut_room1/moment_0.gml                   |   3 +
+ timelines/cut_room1/moment_1.gml                   |   0
+ timelines/cut_room1/moment_3.gml                   |   2 +
+ 96 files changed, 370 insertions(+), 16 deletions(-)
+
+5499d0c - C1oudszs, 8 days ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+cf8d9e4 - C1oudszs, 8 days ago : Dream world assets
+ rooms/lv_test/lv_test.yy                           |  37 ++++++++++++++-------
+ .../16f1a5c6-5edb-410a-9930-1b6e94d82891.png       | Bin 51241 -> 51241 bytes
+ .../dc6b0335-f728-43ce-aae7-4f420c15ba6d.png       | Bin 51241 -> 51241 bytes
+ .../75491213-1858-44ff-b6c1-f8c959cc9055.png       | Bin 15255 -> 15567 bytes
+ .../aeaec1b6-f341-448e-bf70-e25f09d19c0b.png       | Bin 15255 -> 15567 bytes
+ sprites/spr_dreamworld/spr_dreamworld.yy           |   2 +-
+ .../6607e613-f967-47ac-ab25-26186f8fc858.png       | Bin 1355 -> 1355 bytes
+ .../6e777faa-4151-4051-9bd8-f9d5996a95bb.png       | Bin 1355 -> 1355 bytes
+ tilesets/ts_cable/output_tileset.png               | Bin 545 -> 545 bytes
+ tilesets/ts_dreamworld/output_tileset.png          | Bin 15241 -> 15505 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 13793 -> 13793 bytes
+ 11 files changed, 26 insertions(+), 13 deletions(-)
+
+ca4e628 - yunchangzhang, 9 days ago : Fullscreen code update
+ Block2.yyp                                         |  1 +
+ objects/obj_camera/Step_0.gml                      |  5 +++
+ objects/obj_fullscreen/Step_0.gml                  |  6 ++++
+ objects/obj_fullscreen/obj_fullscreen.yy           | 38 ++++++++++++++++++++++
+ objects/obj_player/Step_0.gml                      | 12 -------
+ rooms/lv_new_intro/lv_new_intro.yy                 | 13 ++++----
+ rooms/menu_main/menu_main.yy                       |  4 +--
+ rooms/menu_rebind/menu_rebind.yy                   |  2 ++
+ .../menu_select_character/menu_select_character.yy |  2 ++
+ rooms/menu_settings/menu_settings.yy               |  2 ++
+ 10 files changed, 64 insertions(+), 21 deletions(-)
+
+59b29b0 - yunchangzhang, 10 days ago : Added dreamworld object, added press F for fullscreen function.
+ Block2.yyp                                         |   9 +++
+ objects/Object47/Object47.yy                       |  36 +++++++++
+ objects/Object48/Object48.yy                       |  36 +++++++++
+ objects/obj_input/Create_0.gml                     |   4 +-
+ objects/obj_input/Step_1.gml                       |   3 +-
+ objects/obj_player/Step_0.gml                      |  14 ++++
+ rooms/lv_room1/lv_room1.yy                         |  31 ++++---
+ .../75491213-1858-44ff-b6c1-f8c959cc9055.png       | Bin 0 -> 15255 bytes
+ .../aeaec1b6-f341-448e-bf70-e25f09d19c0b.png       | Bin 0 -> 15255 bytes
+ sprites/spr_dreamworld/spr_dreamworld.yy           |  90 +++++++++++++++++++++
+ .../6607e613-f967-47ac-ab25-26186f8fc858.png       | Bin 0 -> 1355 bytes
+ .../6e777faa-4151-4051-9bd8-f9d5996a95bb.png       | Bin 0 -> 1355 bytes
+ .../spr_dreamworld_background.yy                   |  90 +++++++++++++++++++++
+ .../35a780dd-8531-4b24-9edc-8e3577c2c73e.png       | Bin 0 -> 780 bytes
+ .../b8fe99be-2c5f-4c20-a671-83e89fb2cb01.png       | Bin 0 -> 780 bytes
+ sprites/spr_floor/spr_floor.yy                     |  90 +++++++++++++++++++++
+ .../6a6605e1-607e-43ad-80b4-34211d4f0b25.png       | Bin 0 -> 13972 bytes
+ .../9ec0507a-2139-446a-a116-7d211b65e871.png       | Bin 0 -> 13972 bytes
+ sprites/spr_foreground/spr_foreground.yy           |  90 +++++++++++++++++++++
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 12045 -> 12229 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 12045 -> 12229 bytes
+ sprites/spr_tileset/spr_tileset.yy                 |  25 +++++-
+ tilesets/ts_dreamworld/output_tileset.png          | Bin 0 -> 15241 bytes
+ tilesets/ts_dreamworld/ts_dreamworld.yy            |  38 +++++++++
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 13645 -> 13793 bytes
+ 25 files changed, 535 insertions(+), 21 deletions(-)
+
+c46958f - yunchangzhang, 12 days ago : Correct the collision volume of the spike.
+ sprites/spr_spike/spr_spike.yy | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+2453d67 - yunchangzhang, 12 days ago : Menu Interface with icon, Added press "ESC" to restart whole game function
+ Block2.yyp                                         |  10 +++
+ objects/obJ_exit_button/obJ_exit_button.yy         |  36 +++++++++
+ objects/obJ_menu_button/obJ_menu_button.yy         |  36 +++++++++
+ objects/obJ_play_button/obJ_play_button.yy         |  36 +++++++++
+ objects/obJ_setting_button/obJ_setting_button.yy   |  36 +++++++++
+ .../obj_character_button/obj_character_button.yy   |  36 +++++++++
+ objects/obj_player/Create_0.gml                    |   6 +-
+ objects/obj_player/Step_0.gml                      |  12 +++
+ rooms/menu_main/menu_main.yy                       |  12 ++-
+ rooms/menu_settings/menu_settings.yy               |  14 +++-
+ .../4e13ca4f-2bd5-4617-87b2-7fd4a0b54cd4.png       | Bin 0 -> 550 bytes
+ .../3b365b06-5efe-4e07-8b21-632cd50a82be.png       | Bin 0 -> 550 bytes
+ .../spr_character_button/spr_character_button.yy   |  90 +++++++++++++++++++++
+ .../1ce8c003-d334-4330-862f-3fa716b87e86.png       | Bin 0 -> 562 bytes
+ .../22f5ca96-5392-41da-aa2c-8181893f98e3.png       | Bin 0 -> 562 bytes
+ sprites/spr_exit_button/spr_exit_button.yy         |  90 +++++++++++++++++++++
+ .../67b8c18f-4b10-45f2-b71e-6e6aadb7dd5f.png       | Bin 0 -> 559 bytes
+ .../08cad39f-1982-4895-bead-edf00865d28c.png       | Bin 0 -> 559 bytes
+ sprites/spr_menu_button/spr_menu_button.yy         |  90 +++++++++++++++++++++
+ .../baf438f5-f453-4483-8b63-ca868e4086d0.png       | Bin 0 -> 541 bytes
+ .../fd63c57e-dfab-45a8-8959-df55491467aa.png       | Bin 0 -> 541 bytes
+ sprites/spr_play_button/spr_play_button.yy         |  90 +++++++++++++++++++++
+ .../e4cbc18d-df32-4bde-8aa8-20ece99bb1f5.png       | Bin 0 -> 585 bytes
+ .../c0d01420-f29e-4ee9-a227-8ee4655034d1.png       | Bin 0 -> 585 bytes
+ sprites/spr_setting_button/spr_setting_button.yy   |  90 +++++++++++++++++++++
+ 25 files changed, 677 insertions(+), 7 deletions(-)
+
+d4b5247 - Tygo de Vries, 2 weeks ago : Discord Github Test
+ objects/obj_player/Create_0.gml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+3bd8615 - Tygo de Vries, 2 weeks ago : Added some level comments
+ rooms/lv_new_intro/lv_new_intro.yy | 21 ++++++++++++++-------
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+
+891b141 - Tygo de Vries, 2 weeks ago : Fixed signal bugs, worked on level 1
+ Block2.yyp                                         |  12 +-
+ objects/obj_button/Step_0.gml                      |   2 +-
+ objects/obj_camera/Create_0.gml                    |   3 +
+ objects/obj_camera/Step_0.gml                      |  21 ++-
+ objects/obj_camera/Step_1.gml                      |  13 ++
+ objects/obj_camera/obj_camera.yy                   |   1 +
+ objects/obj_cutscene/Create_0.gml                  |   1 -
+ objects/obj_cutscene/Step_2.gml                    |   3 +-
+ objects/obj_dpad/Create_0.gml                      |   3 +
+ objects/obj_dpad/obj_dpad.yy                       |  38 +++++
+ objects/obj_fade/Create_0.gml                      |   4 +
+ objects/obj_fade/Draw_0.gml                        |   5 +
+ objects/obj_fade/Step_0.gml                        |   4 +
+ objects/obj_fade/Step_2.gml                        |   6 +
+ objects/obj_fade/obj_fade.yy                       |  40 +++++
+ objects/obj_floor_button/Create_0.gml              |   2 +-
+ objects/obj_floor_button/Step_1.gml                |   3 +-
+ objects/obj_hint_a/obj_hint_a.yy                   |  36 +++++
+ objects/obj_player/Create_0.gml                    |   1 +
+ objects/obj_player/obj_player.yy                   |   2 +-
+ rooms/lv_new_intro/lv_new_intro.yy                 | 171 +++++++++++++++++++++
+ .../3841aa21-d9e4-4a98-9ec7-88398b3565ee.png       | Bin 0 -> 755 bytes
+ .../3730f752-81ae-43ef-aa48-f7932fbc9406.png       | Bin 0 -> 755 bytes
+ sprites/spr_a_button54/spr_a_button54.yy           |  90 +++++++++++
+ .../7b3d0874-516a-4191-9006-3599d7fccdb8.png       | Bin 476 -> 460 bytes
+ .../16c82b59-a9df-4149-8ef1-df165b314d67.png       | Bin 0 -> 582 bytes
+ .../2f66bc17-0b89-461d-8912-d6145093d285.png       | Bin 0 -> 580 bytes
+ .../3dab799a-d98f-4480-bda0-7f0158a4a696.png       | Bin 0 -> 582 bytes
+ .../3dab799a-d98f-4480-bda0-7f0158a4a696.png       | Bin 0 -> 580 bytes
+ sprites/spr_dpadr_sheet/spr_dpadr_sheet.yy         |  94 +++++++++++
+ tilesets/ts_cable/output_tileset.png               | Bin 560 -> 545 bytes
+ timelines/cut_door_button/cut_door_button.yy       |  16 ++
+ timelines/cut_door_button/moment_0.gml             |   3 +
+ timelines/cut_door_button/moment_3.gml             |   1 +
+ timelines/cut_door_button/moment_5.gml             |   2 +
+ timelines/cut_intro/cut_intro.yy                   |  15 ++
+ timelines/cut_intro/moment_0.gml                   |   6 +
+ timelines/cut_intro/moment_5.gml                   |   1 +
+ timelines/cut_player_woke_up/cut_player_woke_up.yy |  14 ++
+ timelines/cut_player_woke_up/moment_0.gml          |   3 +
+ 40 files changed, 602 insertions(+), 14 deletions(-)
+
+e19b988 - Tygo de Vries, 4 weeks ago : Bossfight work
+ Block2.yyp                                         |   8 +-
+ objects/boss/Create_0.gml                          |   3 +-
+ objects/obj_finish/Create_0.gml                    |  10 +++
+ objects/obj_finish/obj_finish.yy                   |  38 +++++++++
+ objects/obj_paralex/Step_0.gml                     |   1 +
+ objects/obj_player_overlay/Step_0.gml              |  13 +++
+ objects/obj_player_overlay/obj_player_overlay.yy   |  40 +++++++++
+ objects/player_face/Create_0.gml                   |  11 ++-
+ objects/player_face/Step_0.gml                     |  23 ++++--
+ options/main/options_main.yy                       |   6 +-
+ rooms/lv_boss/lv_boss.yy                           |  55 +++++++++----
+ rooms/lv_room1/lv_room1.yy                         |   2 +
+ rooms/lv_test/lv_test.yy                           |   2 +-
+ .../2773b1a2-c5f8-4844-8b08-23ab219411d6.png       | Bin 0 -> 308 bytes
+ sprites/Sprite50/Sprite50.yy                       |  90 +++++++++++++++++++++
+ .../8738c54d-96f6-4e2f-b537-596168cd7f8f.png       | Bin 0 -> 308 bytes
+ .../730a9810-df5f-45a2-95f8-c6fc8756c397.png       | Bin 0 -> 9810 bytes
+ .../c45ea492-d33f-4ce4-9f6a-966db49ebb60.png       | Bin 0 -> 9810 bytes
+ sprites/spr_tv/spr_tv.yy                           |  90 +++++++++++++++++++++
+ timelines/cut_boss_intro/cut_boss_intro.yy         |  15 ++++
+ timelines/cut_boss_intro/moment_0.gml              |   3 +
+ timelines/cut_boss_intro/moment_5.gml              |   4 +
+ timelines/cut_test/moment_0.gml                    |   2 +-
+ 23 files changed, 388 insertions(+), 28 deletions(-)
+
+cbf78b8 - yunchangzhang, 4 weeks ago : Fixed the player position bug
+ objects/obj_wind/Step_0.gml | 2 +-
+ rooms/lv_room1/lv_room1.yy  | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+85636e9 - yunchangzhang, 4 weeks ago : Level for Unicorn Lair v1.1
+ objects/obj_wind/Step_0.gml |  4 ++--
+ rooms/lv_room1/lv_room1.yy  | 46 ++++++++++++++++++++++-----------------------
+ 2 files changed, 24 insertions(+), 26 deletions(-)
+
+429ee8a - yunchangzhang, 4 weeks ago : Level for Unicorn Lair
+ Block2.yyp                                         |  11 +-
+ .../{spikes => obj_failed_unvisible}/Create_0.gml  |   0
+ .../obj_failed_unvisible.yy}                       |  10 +-
+ objects/obj_floor_button/obj_floor_button.yy       |   4 +-
+ objects/obj_pressure_plate/Step_0.gml              |  12 ++
+ objects/obj_trapdoor/Create_0.gml                  |  49 ++++++
+ objects/obj_trapdoor/Other_7.gml                   |  16 ++
+ objects/obj_trapdoor/Step_2.gml                    |  14 ++
+ objects/obj_trapdoor/obj_trapdoor.yy               |  46 ++++++
+ objects/obj_wind/Step_0.gml                        |  44 ++++++
+ objects/obj_wind/obj_wind.yy                       |  40 +++++
+ rooms/lv_room1/lv_room1.yy                         | 175 ++++++++++++++++-----
+ .../5590f37d-03cc-4a68-96ea-e09f4cf73d52.png       | Bin 308 -> 0 bytes
+ sprites/Sprite35/Sprite35.yy                       |  90 -----------
+ .../f2d9642d-6fe3-4f7a-bbc9-65e86af4a017.png       | Bin 308 -> 0 bytes
+ .../7adab132-229b-4fb7-a983-54124f8cdeb1.png       | Bin 308 -> 0 bytes
+ sprites/Sprite39/Sprite39.yy                       |  90 -----------
+ .../86ddbdfa-84ae-448e-934f-caa767cc0fc9.png       | Bin 308 -> 0 bytes
+ .../46a07dd8-1494-4eae-a024-cc7d51a4f602.png       | Bin 308 -> 0 bytes
+ sprites/Sprite40/Sprite40.yy                       |  90 -----------
+ .../b056c62e-b5a8-4f3e-ae5a-603018477f20.png       | Bin 308 -> 0 bytes
+ .../151eea35-7788-4720-83e4-fa2604634302.png       | Bin 1297 -> 0 bytes
+ .../ded38f5b-eddd-46e1-9f04-fda6900f6522.png       | Bin 1297 -> 0 bytes
+ .../0ee59212-998c-4839-b5f9-0097796ffaa6.png       | Bin 1297 -> 0 bytes
+ sprites/Sprite54/Sprite54.yy                       |  90 -----------
+ .../ed4e3f47-49c3-4d09-a5ac-553972e6c270.png       | Bin 1297 -> 0 bytes
+ .../ad101324-f787-470a-8145-1c7d6939237c.png       | Bin 60531 -> 62012 bytes
+ .../background_city___tragic.yy                    |   4 +-
+ .../85fdce91-dad3-4371-aefe-b7844d0fa137.png       | Bin 60531 -> 62012 bytes
+ .../e838afb5-896b-480c-ba54-56b75ac1c454.png       | Bin 0 -> 20193 bytes
+ .../3e8fe741-b410-4aa6-94b0-f5404fb07253.png       | Bin 0 -> 20193 bytes
+ .../Sprite53.yy => obj_border/obj_border.yy}       |  28 ++--
+ .../1091f7f6-05e9-4c20-ac38-365263d6cae8.png       | Bin 399 -> 389 bytes
+ .../43fbe0d8-dc6e-4882-ae68-60a20448242d.png       | Bin 397 -> 388 bytes
+ .../4e55b474-d564-4804-95ad-7bfd31cda201.png       | Bin 386 -> 377 bytes
+ .../5466d188-5786-44e8-875e-aaca40eb19d3.png       | Bin 386 -> 381 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 399 -> 389 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 397 -> 388 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 386 -> 377 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 386 -> 381 bytes
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 8255 -> 12045 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 8255 -> 12045 bytes
+ sprites/spr_tileset/spr_tileset.yy                 |   4 +-
+ .../1091f7f6-05e9-4c20-ac38-365263d6cae8.png       | Bin 0 -> 400 bytes
+ .../43fbe0d8-dc6e-4882-ae68-60a20448242d.png       | Bin 0 -> 398 bytes
+ .../4e55b474-d564-4804-95ad-7bfd31cda201.png       | Bin 0 -> 385 bytes
+ .../5466d188-5786-44e8-875e-aaca40eb19d3.png       | Bin 0 -> 388 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 400 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 398 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 385 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 388 bytes
+ sprites/spr_trapdoor/spr_trapdoor.yy               | 102 ++++++++++++
+ sprites/spr_wind/spr_wind.yy                       |   4 +-
+ tilesets/ts_cable/output_tileset.png               | Bin 560 -> 560 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 8737 -> 13645 bytes
+ .../tst_outside_realworld/tst_outside_realworld.yy |   4 +-
+ 56 files changed, 494 insertions(+), 433 deletions(-)
+
+6e729a5 - yunchangzhang, 4 weeks ago : Added a button to the menu.
+ Block2.yyp                                         |   3 +-
+ objects/obj_button/Step_0.gml                      |   7 +-
+ rooms/lv_room1/lv_room1.yy                         |   6 +-
+ rooms/menu_main/menu_main.yy                       |  26 +++---
+ .../ed694740-fcce-4e66-b84c-a74146823924.png       | Bin 1891 -> 0 bytes
+ .../1e91279d-1d91-41e1-876c-60b0afba1bee.png       | Bin 1891 -> 0 bytes
+ .../151eea35-7788-4720-83e4-fa2604634302.png       | Bin 0 -> 1297 bytes
+ sprites/Sprite53/Sprite53.yy                       |  90 +++++++++++++++++++++
+ .../ded38f5b-eddd-46e1-9f04-fda6900f6522.png       | Bin 0 -> 1297 bytes
+ .../0ee59212-998c-4839-b5f9-0097796ffaa6.png       | Bin 0 -> 1297 bytes
+ .../{Sprite41/Sprite41.yy => Sprite54/Sprite54.yy} |  24 +++---
+ .../ed4e3f47-49c3-4d09-a5ac-553972e6c270.png       | Bin 0 -> 1297 bytes
+ .../ad101324-f787-470a-8145-1c7d6939237c.png       | Bin 51241 -> 60531 bytes
+ .../background_city___tragic.yy                    |   4 +-
+ .../85fdce91-dad3-4371-aefe-b7844d0fa137.png       | Bin 51241 -> 60531 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 8737 -> 8737 bytes
+ 16 files changed, 132 insertions(+), 28 deletions(-)
+
+0b0f098 - yunchangzhang, 4 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+28b8979 - yunchangzhang, 4 weeks ago : Added background
+ Block2.yyp                                         |   4 +
+ objects/obj_door/obj_door.yy                       |   4 +-
+ particles/Wind/Wind.yy                             |   2 +-
+ rooms/lv_room1/lv_room1.yy                         |  68 ++++++++++------
+ .../menu_select_character/menu_select_character.yy |   6 +-
+ .../7adab132-229b-4fb7-a983-54124f8cdeb1.png       | Bin 0 -> 308 bytes
+ sprites/Sprite39/Sprite39.yy                       |  90 +++++++++++++++++++++
+ .../86ddbdfa-84ae-448e-934f-caa767cc0fc9.png       | Bin 0 -> 308 bytes
+ .../46a07dd8-1494-4eae-a024-cc7d51a4f602.png       | Bin 0 -> 308 bytes
+ sprites/Sprite40/Sprite40.yy                       |  90 +++++++++++++++++++++
+ .../b056c62e-b5a8-4f3e-ae5a-603018477f20.png       | Bin 0 -> 308 bytes
+ sprites/Sprite41/Sprite41.yy                       |  90 +++++++++++++++++++++
+ .../ed694740-fcce-4e66-b84c-a74146823924.png       | Bin 0 -> 1891 bytes
+ .../1e91279d-1d91-41e1-876c-60b0afba1bee.png       | Bin 0 -> 1891 bytes
+ .../ad101324-f787-470a-8145-1c7d6939237c.png       | Bin 0 -> 51241 bytes
+ .../background_city___tragic.yy                    |  90 +++++++++++++++++++++
+ .../85fdce91-dad3-4371-aefe-b7844d0fa137.png       | Bin 0 -> 51241 bytes
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 4357 -> 8255 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 4357 -> 8255 bytes
+ sprites/spr_tileset/spr_tileset.yy                 |   4 +-
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 5126 -> 8737 bytes
+ .../tst_outside_realworld/tst_outside_realworld.yy |   4 +-
+ 22 files changed, 417 insertions(+), 35 deletions(-)
+
+ad21e0e - Tygo de Vries, 4 weeks ago : Updated camera, dont toch pls yay
+ Block2.yyp                                         |   4 +-
+ objects/obj_background/obj_background.yy           |  36 +++++++
+ objects/obj_paralex/Step_0.gml                     |   1 +
+ objects/obj_paralex/obj_paralex.yy                 |   4 +-
+ objects/obj_player/Create_0.gml                    |   2 +-
+ objects/player_face/Create_0.gml                   |  10 +-
+ objects/player_face/Step_0.gml                     |  26 ++++-
+ rooms/lv_boss/lv_boss.yy                           |  22 +++--
+ rooms/lv_room1/lv_room1.yy                         |   2 +-
+ rooms/lv_test/lv_test.yy                           |  18 ++--
+ .../849f57ef-a2d7-479c-a330-30c32b919929.png       | Bin 0 -> 480 bytes
+ .../0112bb52-dc9c-4c81-8f93-818f88eddda1.png       | Bin 0 -> 480 bytes
+ sprites/spr_background_tile/spr_background_tile.yy | 109 +++++++++++++++++++++
+ sprites/spr_placeholder/spr_placeholder.yy         |   6 +-
+ 14 files changed, 215 insertions(+), 25 deletions(-)
+
+8f4069f - Tygo de Vries, 4 weeks ago : Updated Background
+ Block2.yyp                                         |  15 ++++
+ objects/obj_background_nice/obj_background_nice.yy |  39 +++++++++
+ .../obj_background_tragic/obj_background_tragic.yy |  39 +++++++++
+ objects/obj_button/Step_0.gml                      |   2 +-
+ objects/obj_paralex/Step_0.gml                     |   2 +
+ objects/obj_paralex/obj_paralex.yy                 |  35 ++++++++
+ objects/obj_phone/obj_phone.yy                     |   5 +-
+ objects/obj_player/obj_player.yy                   |   4 +-
+ objects/player_face/player_face.yy                 |   5 +-
+ rooms/lv_boss/lv_boss.yy                           |   2 +-
+ rooms/lv_test/lv_test.yy                           |  17 ++--
+ shaders/Glitch/Glitch.fsh                          |   5 +-
+ .../47ed5b4e-92ef-4743-bdfa-e3ca99b72856.png       | Bin 0 -> 22990 bytes
+ .../1e18bf79-668e-44f8-9f85-0aa2cfc18664.png       | Bin 0 -> 22990 bytes
+ .../spr_background_happy/spr_background_happy.yy   |  90 +++++++++++++++++++++
+ .../05feb7b3-cad3-4f3f-ba3c-6cbb7986b520.png       | Bin 0 -> 34555 bytes
+ .../4c1b84ac-9960-4e11-b1e2-86b3acf0c7da.png       | Bin 0 -> 34555 bytes
+ .../spr_background_layer_0.yy                      |  90 +++++++++++++++++++++
+ .../2d13b583-a3ff-4a2c-ba07-fcb25363321b.png       | Bin 0 -> 16736 bytes
+ .../3094ecac-9b25-4166-b92f-de0af7c72225.png       | Bin 0 -> 16736 bytes
+ .../spr_background_layer_1.yy                      |  90 +++++++++++++++++++++
+ .../390c4ac2-efd1-43ed-a112-de24875c7968.png       | Bin 0 -> 18862 bytes
+ .../164a7c86-c624-45e5-86ea-789151459963.png       | Bin 0 -> 18862 bytes
+ .../spr_background_layer_2.yy                      |  90 +++++++++++++++++++++
+ .../cdb1a277-84c4-4d35-a40a-2a887826e477.png       | Bin 0 -> 6322 bytes
+ .../799b4227-fac1-42c8-944e-6c5bfc458835.png       | Bin 0 -> 6322 bytes
+ .../spr_background_layer_3.yy                      |  90 +++++++++++++++++++++
+ .../16f1a5c6-5edb-410a-9930-1b6e94d82891.png       | Bin 0 -> 51241 bytes
+ .../dc6b0335-f728-43ce-aae7-4f420c15ba6d.png       | Bin 0 -> 51241 bytes
+ .../spr_background_tragic/spr_background_tragic.yy |  90 +++++++++++++++++++++
+ .../dec5dbde-c449-49eb-9a5d-ab7334d8c933.png       | Bin 0 -> 1001 bytes
+ .../ac452d08-0361-44d2-919c-a5ac58627710.png       | Bin 0 -> 1001 bytes
+ sprites/spr_fallback/spr_fallback.yy               |  90 +++++++++++++++++++++
+ .../3510bdeb-b8d9-4d17-b95b-b383460c1f39.png       | Bin 0 -> 441 bytes
+ .../fbb0afea-5634-4011-b133-e81e2794d98b.png       | Bin 0 -> 441 bytes
+ sprites/spr_phone/spr_phone.yy                     |  90 +++++++++++++++++++++
+ .../3828ef41-fd28-4afb-83d0-3f611cf39228.png       | Bin 0 -> 1581 bytes
+ .../5dd5c3f3-9f8b-4a68-a33f-7409f48c9cb2.png       | Bin 0 -> 1581 bytes
+ sprites/spr_placeholder/spr_placeholder.yy         |  90 +++++++++++++++++++++
+ 39 files changed, 964 insertions(+), 16 deletions(-)
+
+a53b4cc - Tygo de Vries, 5 weeks ago : Updated wind effect
+ particles/Wind/Wind.yy   | 2 +-
+ rooms/lv_test/lv_test.yy | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+6f56eaa - Tygo de Vries, 5 weeks ago : Added wind particles
+ Block2.yyp                                         |   2 +
+ particles/Wind/Wind.yy                             |  25 ++++++
+ rooms/lv_test/lv_test.yy                           |  11 ++-
+ .../d72f5e47-c9b9-4590-aa33-a7a81f34c156.png       | Bin 0 -> 4211 bytes
+ .../a09e57da-271f-499b-a5ae-175a65da450c.png       | Bin 0 -> 4211 bytes
+ sprites/spr_wind/spr_wind.yy                       |  90 +++++++++++++++++++++
+ 6 files changed, 124 insertions(+), 4 deletions(-)
+
+cfc2206 - Tygo de Vries, 5 weeks ago : Added gamepad support
+ objects/obj_press_button/Create_0.gml |  1 +
+ objects/obj_press_button/Step_0.gml   | 49 +++++++++++++++++++++++++----------
+ 2 files changed, 36 insertions(+), 14 deletions(-)
+
+03fc4b9 - Tygo de Vries, 5 weeks ago : Rebinding controlls
+ Block2.yyp                                         |   2 +
+ objects/obj_button/Create_0.gml                    |  88 +++++++++++++++++++-
+ objects/obj_button/Draw_0.gml                      |  52 ++++++++++++
+ objects/obj_button/Step_0.gml                      |  12 ++-
+ objects/obj_button/obj_button.yy                   |   1 +
+ objects/obj_input/Create_0.gml                     |   8 +-
+ objects/obj_press_button/Create_0.gml              |   9 +++
+ objects/obj_press_button/Step_0.gml                |  20 +++++
+ objects/obj_press_button/obj_press_button.yy       |  39 +++++++++
+ objects/obj_rebind_handle/Create_0.gml             |  37 ++++++---
+ objects/obj_rebind_handle/Step_0.gml               |   7 ++
+ objects/obj_rebind_handle/obj_rebind_handle.yy     |   1 +
+ rooms/menu_rebind/menu_rebind.yy                   |  65 ++++++++++-----
+ .../4b1bd9aa-3a6c-46a1-a45f-c88178dc577e.png       | Bin 0 -> 934 bytes
+ .../049d4a88-71b8-4d38-9cd8-4b18633362f7.png       | Bin 0 -> 934 bytes
+ sprites/spr_button_prompt/spr_button_prompt.yy     |  90 +++++++++++++++++++++
+ 16 files changed, 395 insertions(+), 36 deletions(-)
+
+5b0bb2c - Tygo de Vries, 5 weeks ago : Small fix
+ objects/obj_camera/Step_0.gml | 5 +----
+ objects/trigger/trigger.yy    | 2 +-
+ 2 files changed, 2 insertions(+), 5 deletions(-)
+
+c0230f0 - Tygo de Vries, 5 weeks ago : Added cutscenes
+ Block2.yyp                                         |   7 ++
+ objects/obj_camera/Create_0.gml                    |  20 +++-
+ objects/obj_camera/Step_0.gml                      |  28 ++++--
+ objects/obj_cutscene/Create_0.gml                  |  14 +++
+ objects/obj_cutscene/Step_2.gml                    |   9 ++
+ objects/obj_cutscene/obj_cutscene.yy               |  41 ++++++++
+ objects/obj_program_start/Create_0.gml             |   2 +
+ objects/obj_program_start/obj_program_start.yy     |  35 +++++++
+ objects/trigger/Create_0.gml                       |  11 +++
+ objects/trigger/trigger.yy                         |  40 ++++++++
+ options/extensions/Extension1.json                 |   4 +
+ options/extensions/Gamemaker.json                  |   4 +
+ rooms/lv_test/lv_test.yy                           |  13 ++-
+ rooms/menu_main/menu_main.yy                       |  10 +-
+ .../5590f37d-03cc-4a68-96ea-e09f4cf73d52.png       | Bin 0 -> 308 bytes
+ sprites/Sprite35/Sprite35.yy                       |  90 +++++++++++++++++
+ .../f2d9642d-6fe3-4f7a-bbc9-65e86af4a017.png       | Bin 0 -> 308 bytes
+ .../56874fdd-4610-4389-a9e2-7eb2ae9a3329.png       | Bin 0 -> 366 bytes
+ .../777f84bf-8f86-47a6-92a7-0b47aee42d29.png       | Bin 0 -> 366 bytes
+ sprites/spr_dev_trigger/spr_dev_trigger.yy         | 109 +++++++++++++++++++++
+ timelines/cut_test/cut_test.yy                     |  15 +++
+ timelines/cut_test/moment_0.gml                    |   3 +
+ timelines/cut_test/moment_3.gml                    |   2 +
+ 23 files changed, 444 insertions(+), 13 deletions(-)
+
+8f582a3 - Tygo de Vries, 5 weeks ago : Added coyote time
+ objects/obj_player/Create_0.gml |  3 +++
+ objects/obj_player/Step_0.gml   | 13 ++++++++++++-
+ rooms/lv_test/lv_test.yy        | 23 ++++++++++++-----------
+ 3 files changed, 27 insertions(+), 12 deletions(-)
+
+98bca6c - Tygo de Vries, 5 weeks ago : Added Spikes (And updated test leve)
+ Block2.yyp                                         |   6 ++
+ objects/obj_checkpoint/Create_0.gml                |   1 +
+ objects/obj_checkpoint/obj_checkpoint.yy           |   4 +-
+ objects/obj_spike/Create_0.gml                     |   8 ++
+ objects/obj_spike/obj_spike.yy                     |  38 +++++++
+ rooms/lv_boss/lv_boss.yy                           |   2 +-
+ rooms/lv_test/lv_test.yy                           |  62 +++++++-----
+ .../7b3d0874-516a-4191-9006-3599d7fccdb8.png       | Bin 0 -> 476 bytes
+ .../894cbfcb-7dc2-45fe-87ad-d7a60757c05a.png       | Bin 0 -> 476 bytes
+ sprites/spr_cables/spr_cables.yy                   |  90 +++++++++++++++++
+ .../50f3c7ef-b3c2-43f3-9e8a-06fbd14e8f14.png       | Bin 0 -> 396 bytes
+ .../24a3bf81-99a9-41cd-9e3c-f910a077ccb5.png       | Bin 0 -> 396 bytes
+ sprites/spr_checkpoint/spr_checkpoint.yy           |  90 +++++++++++++++++
+ .../ed030f91-3f73-42af-bfaa-5eb326ef7254.png       | Bin 0 -> 377 bytes
+ .../e7717288-bdf1-466e-8db2-1918db750d9a.png       | Bin 0 -> 377 bytes
+ .../spr_checkpoint_inactive.yy                     |  90 +++++++++++++++++
+ .../678c6c30-9f79-4d1c-94a1-a8c3e780112f.png       | Bin 0 -> 350 bytes
+ .../89d3c732-be12-4e25-92db-81aa8df3f9e7.png       | Bin 0 -> 350 bytes
+ sprites/spr_spike/spr_spike.yy                     | 109 +++++++++++++++++++++
+ tilesets/ts_cable/output_tileset.png               | Bin 0 -> 560 bytes
+ tilesets/ts_cable/ts_cable.yy                      |  38 +++++++
+ 21 files changed, 513 insertions(+), 25 deletions(-)
+
+dfee951 - Tygo de Vries, 5 weeks ago : Added phone and buttons
+ Block2.yyp                                         |   4 +
+ objects/obj_button/Step_0.gml                      |   2 +-
+ objects/obj_door/Create_0.gml                      |  32 ++++++--
+ objects/obj_door/Other_7.gml                       |  13 ++-
+ objects/obj_door/Step_2.gml                        |  14 ++++
+ objects/obj_door/obj_door.yy                       |   4 +-
+ objects/obj_floor_button/Create_0.gml              |  15 ++++
+ objects/obj_floor_button/Step_1.gml                |   3 +
+ objects/obj_floor_button/obj_floor_button.yy       |  41 ++++++++++
+ objects/obj_input/Create_0.gml                     |  19 ++++-
+ objects/obj_input/Step_1.gml                       |   3 +
+ objects/obj_phone/Create_0.gml                     |  17 ++++
+ objects/obj_phone/obj_phone.yy                     |  41 ++++++++++
+ objects/obj_player/Create_0.gml                    |  15 ++++
+ objects/obj_player/Step_0.gml                      |  12 +++
+ objects/obj_pressure_plate/Create_0.gml            |   1 -
+ rooms/lv_test/lv_test.yy                           |  55 +++++++------
+ shaders/Glitch/Glitch.fsh                          |   1 -
+ .../8af4311e-c9b3-448d-adb0-d3d1e03b4d37.png       | Bin 0 -> 332 bytes
+ .../de5f0f56-478a-4df0-a558-a74e61c8977c.png       | Bin 0 -> 332 bytes
+ .../spr_button_placeholder.yy                      |  90 +++++++++++++++++++++
+ sprites/spr_door/spr_door.yy                       |   6 +-
+ .../45418a24-91a1-43fd-a83b-ed1a40fecaa3.png       | Bin 0 -> 459 bytes
+ .../2fa90ccb-14c8-4bcb-9df0-255661fc8e31.png       | Bin 0 -> 459 bytes
+ .../spr_phone_placeholder/spr_phone_placeholder.yy |  90 +++++++++++++++++++++
+ 25 files changed, 435 insertions(+), 43 deletions(-)
+
+64eac24 - Tygo de Vries, 5 weeks ago : Fixed wind related crash
+ Block2.yyp                              | 2 +-
+ objects/obj_player/Create_0.gml         | 3 +++
+ objects/obj_pressure_plate/Create_0.gml | 2 --
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+
+b53c4f0 - Tygo de Vries, 5 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+769576d - Tygo de Vries, 5 weeks ago : Started on boss
+ Block2.yyp                         |  8 +++-
+ objects/boss/Create_0.gml          |  9 ++++
+ objects/boss/boss.yy               | 35 +++++++++++++++
+ objects/obj_button/Step_0.gml      |  2 +-
+ objects/obj_camera/Create_0.gml    |  4 +-
+ objects/player_face/Create_0.gml   | 17 ++++++++
+ objects/player_face/Draw_0.gml     |  8 ++++
+ objects/player_face/Other_60.gml   |  9 ++++
+ objects/player_face/Step_0.gml     | 36 ++++++++++++++++
+ objects/player_face/player_face.yy | 40 +++++++++++++++++
+ rooms/lv_boss/lv_boss.yy           | 88 ++++++++++++++++++++++++++++++++++++++
+ rooms/lv_test/lv_test.yy           | 60 +++++++++++++-------------
+ shaders/Glitch/Glitch.fsh          | 15 +++++++
+ shaders/Glitch/Glitch.vsh          | 19 ++++++++
+ shaders/Glitch/Glitch.yy           | 12 ++++++
+ 15 files changed, 329 insertions(+), 33 deletions(-)
+
+2a149fe - yunchangzhang, 5 weeks ago : Added wind!
+ Block2.yyp                                         |   9 ++-
+ objects/obj_player/Create_0.gml                    |   3 +-
+ objects/obj_player/Step_0.gml                      |   6 +-
+ objects/obj_player_2/obj_player_2.yy               |   4 +-
+ objects/obj_player_3/obj_player_3.yy               |   4 +-
+ objects/obj_pressure_plate/Create_0.gml            |   5 ++
+ objects/obj_pressure_plate/Step_0.gml              |  22 +++++
+ objects/obj_pressure_plate/obj_pressure_plate.yy   |  39 +++++++++
+ rooms/lv_room1/lv_room1.yy                         |  25 +++---
+ .../menu_select_character/menu_select_character.yy |   6 +-
+ .../5090c134-340d-40d5-9f6a-768b316ab735.png       | Bin 0 -> 313 bytes
+ sprites/Sprite27/Sprite27.yy                       |  90 +++++++++++++++++++++
+ .../74eb6fd4-70ed-4032-999b-2b9330442c6c.png       | Bin 0 -> 313 bytes
+ .../b40d643c-0c62-472e-844a-dea72ecbe6e7.png       | Bin
+ .../6c589fec-0e54-4aaf-9217-32beecbcbc90.png       | Bin
+ .../Sprite32.yy => spr_player2/spr_player2.yy}     |  20 ++---
+ .../b40d643c-0c62-472e-844a-dea72ecbe6e7.png       | Bin
+ .../6c589fec-0e54-4aaf-9217-32beecbcbc90.png       | Bin
+ .../Sprite33.yy => spr_player3/spr_player3.yy}     |  20 ++---
+ .../11d11240-dbdb-4332-b0e0-2cf1bd42d91f.png       | Bin
+ .../adbb17f5-cbb6-409b-a9e3-b6633da9a44a.png       | Bin
+ .../Sprite36.yy => spr_player4/spr_player4.yy}     |  20 ++---
+ 22 files changed, 219 insertions(+), 54 deletions(-)
+
+7af80cc - Tygo de Vries, 5 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+8c0aa7d - Tygo de Vries, 5 weeks ago : fixed dissapearing players
+ objects/obj_player/Create_0.gml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+87d0349 - yunchangzhang, 5 weeks ago : Press R to restart
+ objects/obj_player/Step_0.gml | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+c3b2817 - Tygo de Vries, 5 weeks ago : Added some jiggle to the particles
+ objects/obj_trail/Step_0.gml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+72b7787 - yunchangzhang, 5 weeks ago : Added select character interface
+ Block2.yyp                                         |  2 +
+ objects/obj_button/Step_0.gml                      | 25 ++++++
+ rooms/menu_main/menu_main.yy                       | 20 +++--
+ .../menu_select_character/menu_select_character.yy | 96 ++++++++++++++++++++++
+ 4 files changed, 137 insertions(+), 6 deletions(-)
+
+116461a - Tygo de Vries, 5 weeks ago : Made player not stuck
+ Block2.yyp               | 2 +-
+ rooms/lv_test/lv_test.yy | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+3008237 - Tygo de Vries, 5 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+37aec2c - Tygo de Vries, 5 weeks ago : Added death
+ Block2.yyp                                         |  10 +++
+ objects/obj_checkpoint/Create_0.gml                |  13 +++
+ objects/obj_checkpoint/obj_checkpoint.yy           |  38 ++++++++
+ objects/obj_failed/Create_0.gml                    |  15 ++++
+ objects/obj_failed/Step_0.gml                      |  41 +++++++++
+ objects/obj_failed/obj_failed.yy                   |  39 ++++++++
+ objects/obj_input/Create_0.gml                     |   5 ++
+ objects/obj_input/Step_1.gml                       |  11 ++-
+ objects/obj_item/Step_0.gml                        |  10 ++-
+ objects/obj_player/Create_0.gml                    |  27 ++++++
+ objects/obj_player/Step_0.gml                      |  58 +++++++++++-
+ objects/obj_trail/Create_0.gml                     |   3 +
+ objects/obj_trail/Step_0.gml                       |   2 +
+ objects/obj_trail/obj_trail.yy                     |  39 ++++++++
+ objects/spikes/Create_0.gml                        |  10 +++
+ objects/spikes/spikes.yy                           |  38 ++++++++
+ rooms/lv_test/lv_test.yy                           |  18 +++-
+ .../332eb59a-44c9-4145-993f-d5378fb7b3ff.png       | Bin 0 -> 471 bytes
+ .../799a4068-16aa-4e2b-b9c4-a74a2e04671d.png       | Bin 0 -> 356 bytes
+ .../a7948000-2454-4243-95b8-bd7870f59c64.png       | Bin 0 -> 389 bytes
+ .../cef0f63a-5487-43d3-a880-c9bcfbbfab19.png       | Bin 0 -> 471 bytes
+ .../cef0f63a-5487-43d3-a880-c9bcfbbfab19.png       | Bin 0 -> 356 bytes
+ .../cef0f63a-5487-43d3-a880-c9bcfbbfab19.png       | Bin 0 -> 389 bytes
+ sprites/spr_failed/spr_failed.yy                   |  98 +++++++++++++++++++++
+ .../18635a93-b7d1-4d44-b457-b04509b00772.png       | Bin 0 -> 316 bytes
+ .../7172de0c-2fe0-4d6d-9c72-075fa64d075c.png       | Bin 0 -> 312 bytes
+ .../66bbf59f-9b21-4ca0-8279-edc287bf4450.png       | Bin 0 -> 316 bytes
+ .../66bbf59f-9b21-4ca0-8279-edc287bf4450.png       | Bin 0 -> 312 bytes
+ sprites/spr_particle/spr_particle.yy               |  94 ++++++++++++++++++++
+ .../cba9ccdd-5668-4f85-9c8c-14541ccb20ae.png       | Bin 0 -> 665 bytes
+ .../4c93eb2c-fd79-4108-96dd-e60930b346ea.png       | Bin 0 -> 665 bytes
+ sprites/spr_player_death/spr_player_death.yy       |  90 +++++++++++++++++++
+ 32 files changed, 651 insertions(+), 8 deletions(-)
+
+7ce32fe - yunchangzhang, 5 weeks ago : Added room1
+ Block2.yyp                                         |   4 +-
+ objects/obj_button/Step_0.gml                      |   5 +
+ rooms/Room1/Room1.yy                               | 236 ---------------------
+ rooms/lv_room1/lv_room1.yy                         |  93 ++++++++
+ rooms/lv_test/lv_test.yy                           |  22 +-
+ rooms/menu_main/menu_main.yy                       |  16 +-
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 3295 -> 4357 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 3108 -> 4357 bytes
+ sprites/spr_tileset/spr_tileset.yy                 |   2 +-
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 3839 -> 5126 bytes
+ 10 files changed, 124 insertions(+), 254 deletions(-)
+
+5b96542 - yunchangzhang, 5 weeks ago : Font issue fixed
+ rooms/menu_main/menu_main.yy                       |   2 +-
+ rooms/menu_rebind/menu_rebind.yy                   |  21 +++++++++------------
+ rooms/menu_settings/menu_settings.yy               |  11 ++++++++---
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 3198 -> 3295 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 3198 -> 3108 bytes
+ sprites/spr_tileset/spr_tileset.yy                 |   4 ++--
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 3706 -> 3839 bytes
+ 7 files changed, 20 insertions(+), 18 deletions(-)
+
+16785a1 - Tygo de Vries, 5 weeks ago : Main Menu Text fix
+ Block2.yyp                           |  16 +---------------
+ rooms/lv_test/lv_test.yy             |  10 +++++-----
+ rooms/menu_main/menu_main.yy         |   6 +++---
+ rooms/menu_rebind/menu_rebind.yy     |  18 +++++++++---------
+ rooms/menu_settings/menu_settings.yy |   6 +++---
+ tilesets/ts_main/output_tileset.png  | Bin 870 -> 870 bytes
+ 6 files changed, 21 insertions(+), 35 deletions(-)
+
+927c9d1 - yunchangzhang, 5 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+f9370ff - yunchangzhang, 5 weeks ago : Added 3 characters
+ Block2.yyp                                         |  16 ++--
+ objects/ob_demon1/ob_demon1.yy                     |   4 +-
+ objects/obj_player_2/obj_player_2.yy               |  39 +++++++++
+ objects/obj_player_3/obj_player_3.yy               |  39 +++++++++
+ objects/obj_player_4/obj_player_4.yy               |  33 ++++++++
+ rooms/Room1/Room1.yy                               |   4 +-
+ .../2eec0064-a14b-4de6-99f1-108257c9d998.png       | Bin 351 -> 0 bytes
+ .../125e641f-d0bd-4c67-9c27-0d15a983b283.png       | Bin 351 -> 0 bytes
+ .../{Sprite13/Sprite13.yy => Sprite32/Sprite32.yy} |  26 +++---
+ .../b40d643c-0c62-472e-844a-dea72ecbe6e7.png       | Bin 0 -> 347 bytes
+ .../6c589fec-0e54-4aaf-9217-32beecbcbc90.png       | Bin 0 -> 347 bytes
+ sprites/Sprite33/Sprite33.yy                       |  90 +++++++++++++++++++++
+ .../b40d643c-0c62-472e-844a-dea72ecbe6e7.png       | Bin 0 -> 344 bytes
+ .../6c589fec-0e54-4aaf-9217-32beecbcbc90.png       | Bin 0 -> 344 bytes
+ .../11d11240-dbdb-4332-b0e0-2cf1bd42d91f.png       | Bin 0 -> 349 bytes
+ sprites/Sprite36/Sprite36.yy                       |  90 +++++++++++++++++++++
+ .../adbb17f5-cbb6-409b-a9e3-b6633da9a44a.png       | Bin 0 -> 349 bytes
+ sprites/sp_demon1_down/sp_demon1_down.yy           |   4 +-
+ sprites/sp_demon1_left/sp_demon1_left.yy           |   4 +-
+ sprites/sp_demon1_right/sp_demon1_right.yy         |   4 +-
+ sprites/sp_demon1_up/sp_demon1_up.yy               |   4 +-
+ .../83c864b2-251e-4baa-a380-e5c4dfa0a6fe.png       | Bin 342 -> 342 bytes
+ .../452d50d7-e57b-42f4-87e9-846c4503483b.png       | Bin 342 -> 342 bytes
+ tilesets/sub/output_tileset.png                    | Bin 370 -> 0 bytes
+ tilesets/sub/sub.yy                                |   5 +-
+ 25 files changed, 328 insertions(+), 34 deletions(-)
+
+8414998 - Tygo de Vries, 5 weeks ago : Setup Tileset
+ Block2.yyp                                         |   1 +
+ rooms/lv_test/lv_test.yy                           |  40 +++++++++------------
+ tilesets/ts_main/output_tileset.png                | Bin 870 -> 870 bytes
+ tilesets/tst_outside_realworld/output_tileset.png  | Bin 0 -> 3706 bytes
+ .../tst_outside_realworld/tst_outside_realworld.yy |  38 ++++++++++++++++++++
+ 5 files changed, 55 insertions(+), 24 deletions(-)
+
+0791f3b - TmartaT, 5 weeks ago : Deleted single sprites for Tileset and added a single png file
+ Block2.yyp                                         |  18 +----
+ .../c5e5aaa6-8ac7-4100-abd4-d2eba32a09eb.png       | Bin 445 -> 0 bytes
+ .../70834530-33a2-4c69-bde7-35e839c85a01.png       | Bin 445 -> 0 bytes
+ .../b998f317-332a-4edc-a030-b398d77fa48d.png       | Bin 0 -> 3198 bytes
+ .../c9a06188-fc0a-4d3f-b482-8379f2c03a2c.png       | Bin 0 -> 3198 bytes
+ .../spr_tileset.yy}                                |  26 +++---
+ .../9363524f-7b14-4aca-9288-3f881c992e63.png       | Bin 514 -> 0 bytes
+ .../e92dc207-397d-42b2-86b2-f2b84e96aa52.png       | Bin 514 -> 0 bytes
+ .../spr_tileset_deep_empty.yy                      |  90 ---------------------
+ .../ca5b8660-f407-4e95-a064-40c855c93183.png       | Bin 560 -> 0 bytes
+ .../0b109f39-67cb-4b17-8b63-7c2de647dae0.png       | Bin 560 -> 0 bytes
+ .../spr_tileset_deep_pipe1.yy                      |  90 ---------------------
+ .../187ec81b-5d6d-472e-a16e-9206ab1f1e18.png       | Bin 612 -> 0 bytes
+ .../9f9113ca-98ad-4d78-b5d9-bb09e9954688.png       | Bin 612 -> 0 bytes
+ .../spr_tileset_deep_pipe2.yy                      |  90 ---------------------
+ .../577795bd-a9d8-45bf-9495-1cc21247414b.png       | Bin 735 -> 0 bytes
+ .../d0b677d2-09a6-4132-ae05-1e2d2181feb1.png       | Bin 735 -> 0 bytes
+ .../spr_tileset_deep_pipe3.yy                      |  90 ---------------------
+ .../d6ba104f-9c43-4ed9-b5ee-c9c5714e521c.png       | Bin 569 -> 0 bytes
+ .../c7f7fe9c-4f07-4416-8d0c-84811675ba06.png       | Bin 569 -> 0 bytes
+ .../spr_tileset_deep_pipe4.yy                      |  90 ---------------------
+ .../1e10afcb-250b-4a13-86b1-411b677abb28.png       | Bin 918 -> 0 bytes
+ .../512fd25f-ab56-47b8-ad17-3ec3d50061d8.png       | Bin 918 -> 0 bytes
+ sprites/spr_tileset_road/spr_tileset_road.yy       |  90 ---------------------
+ .../df852231-ded1-4859-ba2c-c36a6771d4aa.png       | Bin 1058 -> 0 bytes
+ .../432b79ec-55ab-4ed2-bdd0-d0b8690ac5cf.png       | Bin 1058 -> 0 bytes
+ .../spr_tileset_road_manhole.yy                    |  90 ---------------------
+ .../f2227132-ebe1-4d0f-adfa-cac6d5d21371.png       | Bin 1036 -> 0 bytes
+ .../90ef2211-01ff-4e25-8704-d3cddd8e9d9e.png       | Bin 1036 -> 0 bytes
+ .../spr_tileset_road_pipe1.yy                      |  90 ---------------------
+ .../3a5260e0-4a65-49d6-a0a0-0efb4d5ec7c4.png       | Bin 994 -> 0 bytes
+ .../f3a943ff-4da9-4761-9541-4cfc7b563201.png       | Bin 994 -> 0 bytes
+ .../spr_tileset_road_pipe2.yy                      |  90 ---------------------
+ .../9de7296f-8373-4839-91fe-6e1cc43333ec.png       | Bin 1062 -> 0 bytes
+ .../179939dc-0ac7-4d7c-97a7-70902cac1dd5.png       | Bin 1062 -> 0 bytes
+ .../spr_tileset_road_pipe3.yy                      |  90 ---------------------
+ 36 files changed, 17 insertions(+), 927 deletions(-)
+
+a8f0052 - Tygo de Vries, 5 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+54d7f79 - Tygo de Vries, 5 weeks ago : Added multiple keys
+ Block2.yyp                                         |  14 ++-
+ objects/obj_door_purple/obj_door_purple.yy         |  41 ++++++++
+ objects/obj_item/Create_0.gml                      |   4 +
+ objects/obj_item/Step_0.gml                        |  44 +++++++++
+ .../{obj_key/obj_key.yy => obj_item/obj_item.yy}   |  10 +-
+ objects/obj_key/Step_0.gml                         |  15 ---
+ objects/obj_key_music/obj_key_music.yy             |  41 ++++++++
+ objects/obj_key_purple/obj_key_purple.yy           |  41 ++++++++
+ objects/obj_key_red/obj_key_red.yy                 |  41 ++++++++
+ objects/obj_player/Create_0.gml                    |   7 +-
+ rooms/lv_test/lv_test.yy                           |  26 ++---
+ .../2883d195-0a37-460c-8bfc-3f88e2347c0b.png       | Bin 0 -> 844 bytes
+ .../93ac3d41-3af8-45cf-8466-5ae6c0355029.png       | Bin 0 -> 629 bytes
+ .../9d3db1b1-0bed-449d-965e-338edf554635.png       | Bin 0 -> 647 bytes
+ .../a6972814-f675-423f-9087-56df67f3f33b.png       | Bin 0 -> 969 bytes
+ .../01f80aff-fb96-4a9f-afa8-439021e80fba.png       | Bin 0 -> 844 bytes
+ .../01f80aff-fb96-4a9f-afa8-439021e80fba.png       | Bin 0 -> 629 bytes
+ .../01f80aff-fb96-4a9f-afa8-439021e80fba.png       | Bin 0 -> 647 bytes
+ .../01f80aff-fb96-4a9f-afa8-439021e80fba.png       | Bin 0 -> 969 bytes
+ sprites/spr_door_purple/spr_door_purple.yy         | 102 +++++++++++++++++++
+ .../ab7056f2-93a7-40de-8a21-ab5b81f9b13e.png       | Bin 0 -> 684 bytes
+ .../8fdf1074-0107-4676-91be-3898924b9d72.png       | Bin 0 -> 684 bytes
+ sprites/spr_key_music/spr_key_music.yy             | 109 +++++++++++++++++++++
+ .../8bffc6ac-224c-4f18-ba1a-c0c74c5eb778.png       | Bin 0 -> 403 bytes
+ .../6c94e340-3b24-49e0-b425-671d01b95bca.png       | Bin 0 -> 403 bytes
+ sprites/spr_key_purple/spr_key_purple.yy           |  90 +++++++++++++++++
+ .../df7f5947-7978-403c-acdb-df4dc055fca9.png       | Bin 0 -> 397 bytes
+ .../d66ede45-f156-42f2-b468-2c5def465a48.png       | Bin 0 -> 397 bytes
+ sprites/spr_red_key/spr_red_key.yy                 |  90 +++++++++++++++++
+ 29 files changed, 635 insertions(+), 40 deletions(-)
+
+ab43179 - TmartaT, 5 weeks ago : Added tileset for outside real world
+ Block2.yyp                                         |  12 +++
+ .../c5e5aaa6-8ac7-4100-abd4-d2eba32a09eb.png       | Bin 0 -> 445 bytes
+ .../70834530-33a2-4c69-bde7-35e839c85a01.png       | Bin 0 -> 445 bytes
+ sprites/spr_firehydrant/spr_firehydrant.yy         |  90 +++++++++++++++++++++
+ .../9363524f-7b14-4aca-9288-3f881c992e63.png       | Bin 0 -> 514 bytes
+ .../e92dc207-397d-42b2-86b2-f2b84e96aa52.png       | Bin 0 -> 514 bytes
+ .../spr_tileset_deep_empty.yy                      |  90 +++++++++++++++++++++
+ .../ca5b8660-f407-4e95-a064-40c855c93183.png       | Bin 0 -> 560 bytes
+ .../0b109f39-67cb-4b17-8b63-7c2de647dae0.png       | Bin 0 -> 560 bytes
+ .../spr_tileset_deep_pipe1.yy                      |  90 +++++++++++++++++++++
+ .../187ec81b-5d6d-472e-a16e-9206ab1f1e18.png       | Bin 0 -> 612 bytes
+ .../9f9113ca-98ad-4d78-b5d9-bb09e9954688.png       | Bin 0 -> 612 bytes
+ .../spr_tileset_deep_pipe2.yy                      |  90 +++++++++++++++++++++
+ .../577795bd-a9d8-45bf-9495-1cc21247414b.png       | Bin 0 -> 735 bytes
+ .../d0b677d2-09a6-4132-ae05-1e2d2181feb1.png       | Bin 0 -> 735 bytes
+ .../spr_tileset_deep_pipe3.yy                      |  90 +++++++++++++++++++++
+ .../d6ba104f-9c43-4ed9-b5ee-c9c5714e521c.png       | Bin 0 -> 569 bytes
+ .../c7f7fe9c-4f07-4416-8d0c-84811675ba06.png       | Bin 0 -> 569 bytes
+ .../spr_tileset_deep_pipe4.yy                      |  90 +++++++++++++++++++++
+ .../1e10afcb-250b-4a13-86b1-411b677abb28.png       | Bin 0 -> 918 bytes
+ .../512fd25f-ab56-47b8-ad17-3ec3d50061d8.png       | Bin 0 -> 918 bytes
+ sprites/spr_tileset_road/spr_tileset_road.yy       |  90 +++++++++++++++++++++
+ .../df852231-ded1-4859-ba2c-c36a6771d4aa.png       | Bin 0 -> 1058 bytes
+ .../432b79ec-55ab-4ed2-bdd0-d0b8690ac5cf.png       | Bin 0 -> 1058 bytes
+ .../spr_tileset_road_manhole.yy                    |  90 +++++++++++++++++++++
+ .../f2227132-ebe1-4d0f-adfa-cac6d5d21371.png       | Bin 0 -> 1036 bytes
+ .../90ef2211-01ff-4e25-8704-d3cddd8e9d9e.png       | Bin 0 -> 1036 bytes
+ .../spr_tileset_road_pipe1.yy                      |  90 +++++++++++++++++++++
+ .../3a5260e0-4a65-49d6-a0a0-0efb4d5ec7c4.png       | Bin 0 -> 994 bytes
+ .../f3a943ff-4da9-4761-9541-4cfc7b563201.png       | Bin 0 -> 994 bytes
+ .../spr_tileset_road_pipe2.yy                      |  90 +++++++++++++++++++++
+ .../9de7296f-8373-4839-91fe-6e1cc43333ec.png       | Bin 0 -> 1062 bytes
+ .../179939dc-0ac7-4d7c-97a7-70902cac1dd5.png       | Bin 0 -> 1062 bytes
+ .../spr_tileset_road_pipe3.yy                      |  90 +++++++++++++++++++++
+ 34 files changed, 1002 insertions(+)
+
+1ac6922 - Tygo de Vries, 5 weeks ago : Fixed inventory bug
+ objects/obj_player/Create_0.gml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+312ad5b - Tygo de Vries, 5 weeks ago : Redid inventory
+ objects/obj_door/Create_0.gml   | 30 +++++-------------------------
+ objects/obj_door/obj_door.yy    |  4 +++-
+ objects/obj_key/Step_0.gml      | 13 +------------
+ objects/obj_key/obj_key.yy      |  4 +++-
+ objects/obj_player/Create_0.gml | 21 ++++++++++++++++++---
+ rooms/lv_test/lv_test.yy        | 20 ++++++++++++++++----
+ 6 files changed, 46 insertions(+), 46 deletions(-)
+
+8417ae5 - Tygo de Vries, 6 weeks ago : Update lv_test.yy
+ rooms/lv_test/lv_test.yy | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+cbb855a - Tygo de Vries, 6 weeks ago : Made camera follow players
+ objects/obj_camera/Step_0.gml |  5 +++++
+ rooms/lv_test/lv_test.yy      | 14 ++------------
+ 2 files changed, 7 insertions(+), 12 deletions(-)
+
+14531b5 - Tygo de Vries, 6 weeks ago : Fixed small issue
+ objects/obj_camera/Step_0.gml                           |   2 +-
+ objects/obj_rebind_handle/obj_rebind_handle.yy          |   4 ++--
+ .../spr_player/83c864b2-251e-4baa-a380-e5c4dfa0a6fe.png | Bin 471 -> 342 bytes
+ .../452d50d7-e57b-42f4-87e9-846c4503483b.png            | Bin 471 -> 342 bytes
+ sprites/spr_player/spr_player.yy                        |   4 ++--
+ 5 files changed, 5 insertions(+), 5 deletions(-)
+
+69c3976 - Tygo de Vries, 6 weeks ago : Cleaned up and added comments
+ Block2.yyp                                         |  45 +++---
+ fonts/{Arial/Arial.png => fnt_arial/fnt_arial.png} | Bin
+ fonts/{Arial/Arial.yy => fnt_arial/fnt_arial.yy}   |   4 +-
+ objects/ob_camera/Create_0.gml                     |  29 ----
+ objects/ob_camera/Step_0.gml                       | 102 -------------
+ objects/ob_checkpoint_p1/ob_checkpoint_p1.yy       |  36 -----
+ objects/ob_checkpoint_p2/ob_checkpoint_p2.yy       |  36 -----
+ objects/ob_demon1/Step_0.gml                       |   2 +-
+ objects/ob_player/Create_0.gml                     |  31 ----
+ objects/ob_player/Step_0.gml                       | 162 --------------------
+ objects/{Keybind => obj_button}/Create_0.gml       |   4 +-
+ objects/{Keybind => obj_button}/Step_0.gml         |   7 +-
+ .../Keybind.yy => obj_button/obj_button.yy}        |   8 +-
+ objects/obj_camera/Create_0.gml                    |   6 +
+ objects/obj_camera/Step_0.gml                      |  14 ++
+ .../ob_camera.yy => obj_camera/obj_camera.yy}      |  12 +-
+ objects/obj_door/Create_0.gml                      |  25 ++-
+ objects/obj_door/Other_7.gml                       |   7 +-
+ objects/obj_door/obj_door.yy                       |   4 +-
+ objects/{ob_input => obj_input}/Create_0.gml       |   6 +-
+ objects/{ob_input => obj_input}/Step_1.gml         |   0
+ .../ob_input.yy => obj_input/obj_input.yy}         |  12 +-
+ objects/obj_key/Step_0.gml                         |  13 +-
+ objects/obj_key/obj_key.yy                         |   4 +-
+ objects/obj_player/Create_0.gml                    |  29 ++++
+ objects/obj_player/Step_0.gml                      | 168 +++++++++++++++++++++
+ .../ob_player.yy => obj_player/obj_player.yy}      |  12 +-
+ objects/{Rebind => obj_rebind_handle}/Create_0.gml |   3 +-
+ .../obj_rebind_handle.yy}                          |   8 +-
+ rooms/Room1/Room1.yy                               |  16 +-
+ rooms/lv_test/lv_test.yy                           |  22 +--
+ rooms/menu_main/menu_main.yy                       |  42 +++---
+ rooms/menu_rebind/menu_rebind.yy                   |  92 +++++------
+ rooms/menu_settings/menu_settings.yy               |  40 ++---
+ sprites/Door/Door.yy                               |  90 -----------
+ .../Door/d5b17497-c4f2-4a81-8578-425720145097.png  | Bin 364 -> 0 bytes
+ .../91212ab1-cdac-4a3b-a070-8a8fe1700b1b.png       | Bin 364 -> 0 bytes
+ .../10a83a23-4f37-4595-bdd7-1ec1cd085272.png       | Bin 327 -> 0 bytes
+ .../889cad2f-2b3c-4f75-9aa3-0deeaf374afc.png       | Bin 287 -> 0 bytes
+ sprites/sp_checkpoint_p1/sp_checkpoint_p1.yy       |  90 -----------
+ .../10a83a23-4f37-4595-bdd7-1ec1cd085272.png       | Bin 355 -> 0 bytes
+ .../889cad2f-2b3c-4f75-9aa3-0deeaf374afc.png       | Bin 287 -> 0 bytes
+ sprites/sp_checkpoint_p2/sp_checkpoint_p2.yy       |  90 -----------
+ .../9042e79f-eaca-44c5-bc16-657d4fa0b236.png       | Bin
+ .../758d4a45-e214-443d-a05c-c6c8599de106.png       | Bin
+ .../spr_button_pressed.yy}                         |  14 +-
+ .../a08e3876-16f2-47e4-abc0-9dc9e2b18d32.png       | Bin
+ .../1aef62b6-d847-426a-9343-6fb66165428e.png       | Bin
+ .../spr_button_unpressed.yy}                       |  14 +-
+ .../fdc48a98-a6e0-437e-99f0-8e4a9f87162d.png       | Bin
+ .../ac59e819-7b47-44f6-9c73-5d1e42452029.png       | Bin
+ .../spr_dev_camera.yy}                             |  14 +-
+ .../736e0f44-c667-40d1-8ca3-142fee68e79e.png       | Bin
+ .../a319832f-fb0f-4b8e-9d83-5a46fc99133d.png       | Bin
+ .../Sprite4.yy => spr_dev_input/spr_dev_input.yy}  |  14 +-
+ .../cae302af-35cd-4891-9da7-087327475d9a.png       | Bin
+ .../1202bf5c-09bf-490d-82c2-17c0c687fde2.png       | Bin
+ .../spr_dev_rebind_handle.yy}                      |  14 +-
+ .../1091f7f6-05e9-4c20-ac38-365263d6cae8.png       | Bin
+ .../43fbe0d8-dc6e-4882-ae68-60a20448242d.png       | Bin
+ .../4e55b474-d564-4804-95ad-7bfd31cda201.png       | Bin
+ .../5466d188-5786-44e8-875e-aaca40eb19d3.png       | Bin
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin
+ sprites/{door19/door19.yy => spr_door/spr_door.yy} |  16 +-
+ .../85a0b7e1-fe5b-431c-aa55-000c94b0ec80.png       | Bin
+ .../2a21d307-e9df-48a4-ad22-2fceff7583b7.png       | Bin
+ sprites/{Key/Key.yy => spr_key/spr_key.yy}         |  14 +-
+ .../83c864b2-251e-4baa-a380-e5c4dfa0a6fe.png       | Bin
+ .../452d50d7-e57b-42f4-87e9-846c4503483b.png       | Bin
+ .../{Player/Player.yy => spr_player/spr_player.yy} |  14 +-
+ tilesets/{main => ts_main}/output_tileset.png      | Bin 870 -> 870 bytes
+ tilesets/{main/main.yy => ts_main/ts_main.yy}      |   4 +-
+ 75 files changed, 485 insertions(+), 904 deletions(-)
+
+3efc1a0 - Tygo de Vries, 6 weeks ago : Better buttons
+ objects/Keybind/Create_0.gml         |  3 ++-
+ objects/Keybind/Keybind.yy           |  1 +
+ objects/ob_player/Create_0.gml       |  2 ++
+ rooms/lv_test/lv_test.yy             | 38 ++++++++++++++++--------------------
+ rooms/menu_main/menu_main.yy         |  1 +
+ rooms/menu_rebind/menu_rebind.yy     |  1 +
+ rooms/menu_settings/menu_settings.yy |  1 +
+ sprites/Player/Player.yy             | 27 +++++++++++++++++++++----
+ 8 files changed, 48 insertions(+), 26 deletions(-)
+
+fc69fbf - Tygo de Vries, 6 weeks ago : Started on door animation, Started on rebind menu
+ Block2.yyp                                         |   5 +
+ objects/Keybind/Step_0.gml                         |  16 +--
+ objects/Rebind/Create_0.gml                        |  25 +++++
+ objects/Rebind/Rebind.yy                           |  38 +++++++
+ objects/ob_input/Create_0.gml                      |  61 +++++++++--
+ objects/ob_input/Step_1.gml                        |  25 +++--
+ objects/obj_door/Create_0.gml                      |  12 ++-
+ objects/obj_door/Other_7.gml                       |   4 +
+ objects/obj_door/obj_door.yy                       |   5 +-
+ rooms/menu_rebind/menu_rebind.yy                   | 116 +++++++++++++++++++++
+ rooms/menu_settings/menu_settings.yy               |   1 +
+ sprites/Sprite18/Sprite18.yy                       |  90 ++++++++++++++++
+ .../cae302af-35cd-4891-9da7-087327475d9a.png       | Bin 0 -> 714 bytes
+ .../1202bf5c-09bf-490d-82c2-17c0c687fde2.png       | Bin 0 -> 714 bytes
+ .../1091f7f6-05e9-4c20-ac38-365263d6cae8.png       | Bin 0 -> 399 bytes
+ .../43fbe0d8-dc6e-4882-ae68-60a20448242d.png       | Bin 0 -> 397 bytes
+ .../4e55b474-d564-4804-95ad-7bfd31cda201.png       | Bin 0 -> 386 bytes
+ .../5466d188-5786-44e8-875e-aaca40eb19d3.png       | Bin 0 -> 386 bytes
+ sprites/door19/door19.yy                           | 102 ++++++++++++++++++
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 399 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 397 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 386 bytes
+ .../a3bd7094-32c4-4473-a628-21fb56bb9402.png       | Bin 0 -> 386 bytes
+ 23 files changed, 476 insertions(+), 24 deletions(-)
+
+bb739b3 - Tygo de Vries, 6 weeks ago : Started on menus
+ Block2.yyp                                         |  16 +-
+ fonts/Arial/Arial.png                              | Bin 0 -> 10139 bytes
+ fonts/Arial/Arial.yy                               | 215 +++++++++++++++++++++
+ objects/Keybind/Create_0.gml                       |   5 +
+ objects/Keybind/Keybind.yy                         |  44 +++++
+ objects/Keybind/Step_0.gml                         |  67 +++++++
+ objects/ob_camera/Create_0.gml                     |   2 +
+ objects/ob_camera/Step_0.gml                       |  15 ++
+ objects/ob_checkpoint_p1/ob_checkpoint_p1.yy       |   2 +-
+ objects/ob_player/Create_0.gml                     |   5 +-
+ objects/ob_player/ob_player.yy                     |   4 +-
+ objects/obj_door/Create_0.gml                      |  22 ++-
+ objects/obj_door/obj_door.yy                       |   4 +-
+ objects/obj_key/Step_0.gml                         |  14 +-
+ rooms/lv_test/lv_test.yy                           |  38 ++--
+ rooms/menu_main/menu_main.yy                       |  81 ++++++++
+ rooms/menu_settings/menu_settings.yy               |  79 ++++++++
+ rooms/rebind/rebind.yy                             |  53 -----
+ sprites/Door/Door.yy                               |  90 +++++++++
+ .../Door/d5b17497-c4f2-4a81-8578-425720145097.png  | Bin 0 -> 364 bytes
+ .../91212ab1-cdac-4a3b-a070-8a8fe1700b1b.png       | Bin 0 -> 364 bytes
+ sprites/Key/Key.yy                                 |  21 +-
+ .../83c864b2-251e-4baa-a380-e5c4dfa0a6fe.png       | Bin 0 -> 471 bytes
+ sprites/Player/Player.yy                           |  90 +++++++++
+ .../452d50d7-e57b-42f4-87e9-846c4503483b.png       | Bin 0 -> 471 bytes
+ sprites/Sprite9/Sprite9.yy                         |   4 +-
+ .../9042e79f-eaca-44c5-bc16-657d4fa0b236.png       | Bin 0 -> 381 bytes
+ .../button_pressed.yy}                             |  53 ++---
+ .../758d4a45-e214-443d-a05c-c6c8599de106.png       | Bin 0 -> 381 bytes
+ .../a08e3876-16f2-47e4-abc0-9dc9e2b18d32.png       | Bin 0 -> 375 bytes
+ sprites/button_unpressed/button_unpressed.yy       |  90 +++++++++
+ .../1aef62b6-d847-426a-9343-6fb66165428e.png       | Bin 0 -> 375 bytes
+ sprites/sp_checkpoint_p1/sp_checkpoint_p1.yy       |   4 +-
+ .../08cec23d-7ceb-4801-bc27-de3da1c56f5d.png       | Bin 422 -> 0 bytes
+ .../fc4761f5-67d1-4085-8028-cc93daba38f2.png       | Bin 422 -> 0 bytes
+ 35 files changed, 891 insertions(+), 127 deletions(-)
+
+0c82194 - yunchangzhang, 6 weeks ago : Greybox v1.1
+ rooms/Room1/Room1.yy | 244 ++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 163 insertions(+), 81 deletions(-)
+
+661aa04 - Tygo de Vries, 6 weeks ago : Fixed side trigger collision
+ Block2.yyp                                         |   1 +
+ objects/ob_player/Step_0.gml                       |  12 ++-
+ objects/obj_key/Step_0.gml                         |   5 ++
+ objects/obj_key/obj_key.yy                         |   7 +-
+ rooms/lv_test/lv_test.yy                           |  38 ++++-----
+ .../Key/85a0b7e1-fe5b-431c-aa55-000c94b0ec80.png   | Bin 0 -> 329 bytes
+ sprites/Key/Key.yy                                 |  90 +++++++++++++++++++++
+ .../2a21d307-e9df-48a4-ad22-2fceff7583b7.png       | Bin 0 -> 329 bytes
+ 8 files changed, 132 insertions(+), 21 deletions(-)
+
+0eda1b8 - Tygo de Vries, 6 weeks ago : Fixed other room
+ Block2.yyp               |  2 +-
+ rooms/lv_test/lv_test.yy | 26 ++++++++++++++------------
+ 2 files changed, 15 insertions(+), 13 deletions(-)
+
+590ce21 - Tygo de Vries, 6 weeks ago : Fixed Camera
+ Block2.yyp                     |  2 +-
+ objects/ob_camera/Create_0.gml |  4 ++--
+ rooms/Room1/Room1.yy           | 25 ++++++++++++++++++-------
+ 3 files changed, 21 insertions(+), 10 deletions(-)
+
+e1ae6c6 - yunchangzhang, 7 weeks ago : Added greybox
+ Block2.yyp                                         |   6 +-
+ rooms/Room1/Room1.yy                               | 143 +++++++++++++++++++++
+ .../2eec0064-a14b-4de6-99f1-108257c9d998.png       | Bin 0 -> 351 bytes
+ sprites/Sprite13/Sprite13.yy                       |  90 +++++++++++++
+ .../125e641f-d0bd-4c67-9c27-0d15a983b283.png       | Bin 0 -> 351 bytes
+ tilesets/main/output_tileset.png                   | Bin 870 -> 870 bytes
+ tilesets/sub/output_tileset.png                    | Bin 0 -> 370 bytes
+ tilesets/sub/sub.yy                                |  38 ++++++
+ 8 files changed, 276 insertions(+), 1 deletion(-)
+
+f18580b - Tygo de Vries, 7 weeks ago : Added collision function
+ Block2.yyp                    |  6 +++++
+ objects/ob_camera/Step_0.gml  |  6 +++++
+ objects/ob_player/Step_0.gml  | 50 ++++++++++++++++++++++++++++++++++++++--
+ objects/obj_door/Create_0.gml |  8 +++++++
+ objects/obj_door/obj_door.yy  | 38 +++++++++++++++++++++++++++++++
+ objects/obj_key/Step_0.gml    |  2 ++
+ objects/obj_key/obj_key.yy    | 35 ++++++++++++++++++++++++++++
+ rooms/lv_test/lv_test.yy      | 40 ++++++++++++++++++--------------
+ rooms/rebind/rebind.yy        | 53 +++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 219 insertions(+), 19 deletions(-)
+
+17b2210 - Tygo de Vries, 7 weeks ago : Updated camera system
+ Block2.yyp                                         |   5 ++
+ objects/ob_camera/Create_0.gml                     |  17 +++-
+ objects/ob_camera/Step_0.gml                       |  84 +++++++++++++++----
+ objects/ob_checkpoint_p1/ob_checkpoint_p1.yy       |  36 +++++++++
+ objects/ob_checkpoint_p2/ob_checkpoint_p2.yy       |  36 +++++++++
+ objects/ob_player/Create_0.gml                     |  17 +++-
+ objects/ob_player/Step_0.gml                       |  40 ++++++---
+ objects/ob_player/ob_player.yy                     |   6 +-
+ rooms/lv_test/lv_test.yy                           |  40 ++++++---
+ .../10a83a23-4f37-4595-bdd7-1ec1cd085272.png       | Bin 0 -> 327 bytes
+ .../889cad2f-2b3c-4f75-9aa3-0deeaf374afc.png       | Bin 0 -> 287 bytes
+ sprites/sp_checkpoint_p1/sp_checkpoint_p1.yy       |  90 +++++++++++++++++++++
+ .../10a83a23-4f37-4595-bdd7-1ec1cd085272.png       | Bin 0 -> 355 bytes
+ .../889cad2f-2b3c-4f75-9aa3-0deeaf374afc.png       | Bin 0 -> 287 bytes
+ sprites/sp_checkpoint_p2/sp_checkpoint_p2.yy       |  90 +++++++++++++++++++++
+ .../e435651e-99b0-4418-b2b6-8892e5af57b9.png       | Bin 0 -> 402 bytes
+ .../91caa063-c59e-4376-857a-bf2d8542e0a3.png       | Bin 0 -> 402 bytes
+ sprites/sp_example/sp_example.yy                   |  90 +++++++++++++++++++++
+ .../08cec23d-7ceb-4801-bc27-de3da1c56f5d.png       | Bin 831 -> 422 bytes
+ .../fc4761f5-67d1-4085-8028-cc93daba38f2.png       | Bin 831 -> 422 bytes
+ sprites/sp_player/sp_player.yy                     |  37 ++++++---
+ .../45dd950c-ab17-4643-8062-52a12ff76129.png       | Bin 909 -> 754 bytes
+ tilesets/main/main.yy                              |   4 +-
+ tilesets/main/output_tileset.png                   | Bin 1001 -> 870 bytes
+ 24 files changed, 536 insertions(+), 56 deletions(-)
+
+60ec1bf - Tygo de Vries, 7 weeks ago : Added code comments
+ Block2.yyp                   |  1 -
+ objects/banana/banana.yy     | 33 ---------------------------------
+ objects/ob_camera/Step_0.gml |  1 -
+ objects/ob_player/Step_0.gml | 28 ++++++++++------------------
+ 4 files changed, 10 insertions(+), 53 deletions(-)
+
+5fef293 - Tygo de Vries, 7 weeks ago : Worked on input system
+ objects/ob_demon1/Step_0.gml  | 2 ++
+ objects/ob_input/Create_0.gml | 5 ++---
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+18b1a3d - Tygo de Vries, 7 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+f2108c0 - Tygo de Vries, 7 weeks ago : Worked on input system
+ objects/ob_input/Create_0.gml | 13 ++++++++++++-
+ objects/ob_input/Step_1.gml   | 25 +++++++++++++++++++------
+ rooms/lv_test/lv_test.yy      |  5 +++--
+ 3 files changed, 34 insertions(+), 9 deletions(-)
+
+b1f115f - yunchangzhang, 7 weeks ago : Adding attack behaviors
+ Block2.yyp                                         |  10 +-
+ objects/{obj_Boy => ob_demon1}/Create_0.gml        |   0
+ objects/ob_demon1/Step_0.gml                       |  21 ++++
+ .../{obj_Boy/obj_Boy.yy => ob_demon1/ob_demon1.yy} |   8 +-
+ objects/obj_Boy/Step_0.gml                         |  36 -------
+ rooms/lv_test/lv_test.yy                           |   2 +-
+ .../26d0c4b1-a215-4fa9-9b7c-13ca2aad2283.png       | Bin 785 -> 0 bytes
+ sprites/Sprite_Down/Sprite_Down.yy                 | 110 ---------------------
+ .../b7b087b3-969f-4200-a40c-49cd765e86f1.png       | Bin 813 -> 0 bytes
+ .../c63f560f-7ddf-4e19-bdb4-1234151b63ec.png       | Bin 800 -> 0 bytes
+ .../cd0c0071-e2ea-4f03-86f1-d0b8cf8f7572.png       | Bin 768 -> 0 bytes
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 826 -> 0 bytes
+ .../f3effc2b-e001-447d-870a-b7d7cb4174ac.png       | Bin 815 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 785 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 813 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 800 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 768 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 826 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 815 -> 0 bytes
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 796 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 796 -> 0 bytes
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 815 -> 0 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 815 -> 0 bytes
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 828 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 828 bytes
+ .../sp_demon1_down.yy}                             |  10 +-
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 798 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 798 bytes
+ sprites/sp_demon1_left/sp_demon1_left.yy           |  90 +++++++++++++++++
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 821 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 821 bytes
+ .../sp_demon1_right.yy}                            |  10 +-
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin
+ .../Sprite_Up.yy => sp_demon1_up/sp_demon1_up.yy}  |  10 +-
+ 35 files changed, 136 insertions(+), 171 deletions(-)
+
+2a74916 - yunchangzhang, 7 weeks ago : Added Superfast boy
+ Block2.yyp                                         |   4 +-
+ objects/ob_wall/ob_wall.yy                         |  36 +++++++++
+ rooms/lv_test/lv_test.yy                           |  18 ++++-
+ .../4c1fcc61-95c5-458a-a2e5-64bd8c7000f6.png       | Bin 0 -> 10127 bytes
+ sprites/Sprite9/Sprite9.yy                         |  90 +++++++++++++++++++++
+ .../3337467f-fd1e-4d71-8375-f636554a1da5.png       | Bin 0 -> 10127 bytes
+ 6 files changed, 145 insertions(+), 3 deletions(-)
+
+314716f - yunchangzhang, 7 weeks ago : Add right file location
+ Block2.yyp                   | 5 +++++
+ options/main/options_main.yy | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+5a24d31 - yunchangzhang, 7 weeks ago : Add movement motion
+ objects/obj_Boy/Create_0.gml                       |   5 +
+ objects/obj_Boy/Step_0.gml                         |  36 +++++++
+ objects/obj_Boy/obj_Boy.yy                         |  39 ++++++++
+ .../26d0c4b1-a215-4fa9-9b7c-13ca2aad2283.png       | Bin 0 -> 785 bytes
+ sprites/Sprite_Down/Sprite_Down.yy                 | 110 +++++++++++++++++++++
+ .../b7b087b3-969f-4200-a40c-49cd765e86f1.png       | Bin 0 -> 813 bytes
+ .../c63f560f-7ddf-4e19-bdb4-1234151b63ec.png       | Bin 0 -> 800 bytes
+ .../cd0c0071-e2ea-4f03-86f1-d0b8cf8f7572.png       | Bin 0 -> 768 bytes
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 826 bytes
+ .../f3effc2b-e001-447d-870a-b7d7cb4174ac.png       | Bin 0 -> 815 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 785 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 813 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 800 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 768 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 826 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 815 bytes
+ sprites/Sprite_Left/Sprite_Left.yy                 |  90 +++++++++++++++++
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 796 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 796 bytes
+ sprites/Sprite_Right/Sprite_Right.yy               |  90 +++++++++++++++++
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 815 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 815 bytes
+ sprites/Sprite_Up/Sprite_Up.yy                     |  90 +++++++++++++++++
+ .../ed43ad47-11d0-4a89-bd9e-fd61cf232555.png       | Bin 0 -> 724 bytes
+ .../d7842d13-7581-4217-b22d-7db50adaa2ac.png       | Bin 0 -> 724 bytes
+ 25 files changed, 460 insertions(+)
+
+8b6a9de - Tygo de Vries, 7 weeks ago : Added ART
+ Block2.yyp                                         |   2 +-
+ objects/ob_player/Step_0.gml                       |  21 ++++++++-
+ rooms/lv_test/lv_test.yy                           |  13 ++----
+ .../08cec23d-7ceb-4801-bc27-de3da1c56f5d.png       | Bin 729 -> 831 bytes
+ .../fc4761f5-67d1-4085-8028-cc93daba38f2.png       | Bin 729 -> 831 bytes
+ sprites/sp_player/sp_player.yy                     |  12 ++---
+ .../45dd950c-ab17-4643-8062-52a12ff76129.png       | Bin 0 -> 909 bytes
+ .../dca3201f-7bfc-4583-bb84-b903a8719700.png       | Bin 2271 -> 0 bytes
+ .../fbf6a259-a746-449c-b57f-271d10f4a4fc.png       | Bin 0 -> 832 bytes
+ .../81ba9ed0-f178-4c3d-8145-3d77339a1440.png       | Bin 2271 -> 0 bytes
+ sprites/sp_tileset/sp_tileset.yy                   |  51 ++++++++++++++-------
+ tilesets/{ts_main/ts_main.yy => main/main.yy}      |  14 ++++--
+ tilesets/main/output_tileset.png                   | Bin 0 -> 1001 bytes
+ tilesets/ts_main/output_tileset.png                | Bin 2570 -> 0 bytes
+ 14 files changed, 73 insertions(+), 40 deletions(-)
+
+ab5489d - Tygo de Vries, 7 weeks ago : Added MATH to prevent head-jumping
+ objects/ob_player/Step_0.gml | 12 +++++++++++-
+ rooms/lv_test/lv_test.yy     | 15 ++++++++-------
+ 2 files changed, 19 insertions(+), 8 deletions(-)
+
+bd2b5cb - Tygo de Vries, 7 weeks ago : Messed around with collision
+ objects/ob_camera/Create_0.gml |  4 ++--
+ objects/ob_camera/Step_0.gml   |  1 -
+ objects/ob_player/Create_0.gml |  8 +++++++-
+ objects/ob_player/Step_0.gml   | 24 ++++++++++++++++++++----
+ objects/ob_player/ob_player.yy |  4 ++--
+ rooms/lv_test/lv_test.yy       | 24 ++++++++++++------------
+ 6 files changed, 43 insertions(+), 22 deletions(-)
+
+deec134 - Tygo de Vries, 7 weeks ago : Added camera folllowing
+ objects/ob_camera/Create_0.gml                     |  11 +++++++++-
+ objects/ob_camera/Step_0.gml                       |  17 +++++++--------
+ objects/ob_player/Create_0.gml                     |   5 ++++-
+ objects/ob_player/Step_0.gml                       |  11 +++++++++-
+ rooms/lv_test/lv_test.yy                           |  23 ++++++++++++++-------
+ .../dca3201f-7bfc-4583-bb84-b903a8719700.png       | Bin 2226 -> 2271 bytes
+ .../81ba9ed0-f178-4c3d-8145-3d77339a1440.png       | Bin 2226 -> 2271 bytes
+ sprites/sp_tileset/sp_tileset.yy                   |   6 +++---
+ tilesets/ts_main/output_tileset.png                | Bin 2534 -> 2570 bytes
+ 9 files changed, 49 insertions(+), 24 deletions(-)
+
+596725e - Tygo de Vries, 7 weeks ago : Added Debug camera
+ objects/ob_camera/Create_0.gml |  5 ++++-
+ objects/ob_camera/Step_0.gml   | 15 ++++++++++++++-
+ 2 files changed, 18 insertions(+), 2 deletions(-)
+
+69746d4 - Tygo de Vries, 7 weeks ago : Created player controlls
+ Block2.yyp                                         |  17 ++--
+ objects/Camera/Create_0.gml                        |   4 -
+ objects/Player/Create_0.gml                        |   3 -
+ objects/Player/Step_0.gml                          |   0
+ objects/ob_camera/Create_0.gml                     |   4 +
+ objects/{Camera => ob_camera}/Step_0.gml           |   0
+ .../{Camera/Camera.yy => ob_camera/ob_camera.yy}   |  11 ++-
+ objects/ob_input/Create_0.gml                      |  30 +++++++
+ objects/ob_input/Step_1.gml                        |   7 ++
+ objects/ob_input/ob_input.yy                       |  39 +++++++++
+ objects/ob_player/Create_0.gml                     |   6 ++
+ objects/ob_player/Step_0.gml                       |  40 +++++++++
+ .../{Player/Player.yy => ob_player/ob_player.yy}   |  14 ++--
+ .../{TestLevel/TestLevel.yy => lv_test/lv_test.yy} |  37 +++++----
+ sprites/Sprite3/Sprite3.yy                         |  90 +++++++++++++++++++++
+ .../fdc48a98-a6e0-437e-99f0-8e4a9f87162d.png       | Bin 0 -> 545 bytes
+ .../ac59e819-7b47-44f6-9c73-5d1e42452029.png       | Bin 0 -> 545 bytes
+ .../736e0f44-c667-40d1-8ca3-142fee68e79e.png       | Bin 0 -> 586 bytes
+ sprites/Sprite4/Sprite4.yy                         |  90 +++++++++++++++++++++
+ .../a319832f-fb0f-4b8e-9d83-5a46fc99133d.png       | Bin 0 -> 586 bytes
+ .../08cec23d-7ceb-4801-bc27-de3da1c56f5d.png       | Bin
+ .../fc4761f5-67d1-4085-8028-cc93daba38f2.png       | Bin
+ .../PlayerSprite.yy => sp_player/sp_player.yy}     |  10 +--
+ .../dca3201f-7bfc-4583-bb84-b903a8719700.png       | Bin 2103 -> 2226 bytes
+ .../81ba9ed0-f178-4c3d-8145-3d77339a1440.png       | Bin 2103 -> 2226 bytes
+ .../sp_tileset.yy}                                 |  22 ++---
+ .../{TestTileset => ts_main}/output_tileset.png    | Bin 2415 -> 2534 bytes
+ .../TestTileset.yy => ts_main/ts_main.yy}          |   8 +-
+ 28 files changed, 368 insertions(+), 64 deletions(-)
+
+7c969bc - Tygo de Vries, 7 weeks ago : Started with camera rotation
+ Block2.yyp                   |  1 +
+ objects/Camera/Camera.yy     | 36 ++++++++++++++++++++++++++++
+ objects/Camera/Create_0.gml  |  4 ++++
+ objects/Camera/Step_0.gml    | 19 +++++++++++++++
+ objects/Player/Step_0.gml    | 56 --------------------------------------------
+ rooms/TestLevel/TestLevel.yy | 12 ++++++----
+ 6 files changed, 67 insertions(+), 61 deletions(-)
+
+38fefaa - Tygo de Vries, 7 weeks ago : Added second player
+ objects/Player/Player.yy                |   4 +++-
+ objects/Player/Step_0.gml               |  28 +++++++++++++++-------------
+ rooms/TestLevel/TestLevel.yy            |  21 +++++++++++++++------
+ tilesets/TestTileset/output_tileset.png | Bin 2415 -> 2415 bytes
+ 4 files changed, 33 insertions(+), 20 deletions(-)
+
+6a34d58 - Tygo de Vries, 7 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+5767b7c - Tygo de Vries, 7 weeks ago : Added collision
+ Block2.yyp                                         |   2 +-
+ objects/Player/Create_0.gml                        |   1 -
+ objects/Player/Player.yy                           |   3 +-
+ objects/Player/Step_0.gml                          |  46 ++++++++++++++-------
+ rooms/TestLevel/TestLevel.yy                       |  14 ++-----
+ sprites/TestTilesetSprite/TestTilesetSprite.yy     |  10 ++---
+ .../dca3201f-7bfc-4583-bb84-b903a8719700.png       | Bin 452 -> 2103 bytes
+ .../81ba9ed0-f178-4c3d-8145-3d77339a1440.png       | Bin 452 -> 2103 bytes
+ tilesets/TestTileset/TestTileset.yy                |   8 ++--
+ tilesets/TestTileset/output_tileset.png            | Bin 508 -> 2415 bytes
+ 10 files changed, 48 insertions(+), 36 deletions(-)
+
+de12bde - yunchangzhang, 7 weeks ago : Change level
+ Block2.yyp                   |  2 +-
+ rooms/TestLevel/TestLevel.yy | 19 +++++++++++--------
+ 2 files changed, 12 insertions(+), 9 deletions(-)
+
+b3a9d6b - Tygo de Vries, 7 weeks ago : Merge branch 'main' of https://github.com/TygodeVries/block-2
+4094b71 - Tygo de Vries, 7 weeks ago : Simple gravity
+ Block2.yyp                                         |   2 +
+ objects/Player/Create_0.gml                        |   4 +
+ objects/Player/Player.yy                           |  46 +++++++++++
+ objects/Player/Step_0.gml                          |  36 +++++++++
+ rooms/TestLevel/TestLevel.yy                       |  10 ++-
+ .../08cec23d-7ceb-4801-bc27-de3da1c56f5d.png       | Bin 0 -> 729 bytes
+ sprites/PlayerSprite/PlayerSprite.yy               |  90 +++++++++++++++++++++
+ .../fc4761f5-67d1-4085-8028-cc93daba38f2.png       | Bin 0 -> 729 bytes
+ 8 files changed, 185 insertions(+), 3 deletions(-)
+
+283e58a - yunchangzhang, 7 weeks ago : create banana
+ Block2.yyp               |  1 +
+ objects/banana/banana.yy | 33 +++++++++++++++++++++++++++++++++
+ 2 files changed, 34 insertions(+)
+
+3033571 - Tygo de Vries, 7 weeks ago : Made a simple test tileset
+ Block2.yyp                                         |   6 +-
+ rooms/{Room1/Room1.yy => TestLevel/TestLevel.yy}   |  18 ++++-
+ sprites/TestTilesetSprite/TestTilesetSprite.yy     |  90 +++++++++++++++++++++
+ .../dca3201f-7bfc-4583-bb84-b903a8719700.png       | Bin 0 -> 452 bytes
+ .../81ba9ed0-f178-4c3d-8145-3d77339a1440.png       | Bin 0 -> 452 bytes
+ tilesets/TestTileset/TestTileset.yy                |  38 +++++++++
+ tilesets/TestTileset/output_tileset.png            | Bin 0 -> 508 bytes
+ 7 files changed, 146 insertions(+), 6 deletions(-)
+
+a1b5ca1 - Tygo de Vries, 7 weeks ago : created-project
+ .gitignore                         | 59 +++++++++++++++++++++++++++
+ Block2.yyp                         | 48 ++++++++++++++++++++++
+ options/android/options_android.yy | 81 ++++++++++++++++++++++++++++++++++++++
+ options/html5/options_html5.yy     | 35 ++++++++++++++++
+ options/ios/options_ios.yy         | 49 +++++++++++++++++++++++
+ options/linux/options_linux.yy     | 26 ++++++++++++
+ options/mac/options_mac.yy         | 38 ++++++++++++++++++
+ options/main/options_main.yy       | 23 +++++++++++
+ options/operagx/options_operagx.yy | 29 ++++++++++++++
+ options/tvos/options_tvos.yy       | 31 +++++++++++++++
+ options/windows/options_windows.yy | 36 +++++++++++++++++
+ rooms/Room1/Room1.yy               | 53 +++++++++++++++++++++++++
+ 12 files changed, 508 insertions(+)
+
+be3eb63 - Tygo de Vries, 7 weeks ago : Initial commit
+ .gitattributes | 2 ++
+ README.md      | 2 ++
+ 2 files changed, 4 insertions(+)
