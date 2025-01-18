@@ -276,18 +276,18 @@ else {
 	
 // Make sure to move in the right order
 
-if(!global.freezemotion)
-{
-	move_on_x();
-	jump();
-}
-else
-{
-	move_stop();
-}
+	if(!global.freezemotion)
+	{
+		move_on_x();
+		jump();
+	}
+	else
+	{
+		move_stop();
+	}
 
 
-move_on_y();
+	move_on_y();
 
 	if(on_ground)
 	{
@@ -298,7 +298,7 @@ move_on_y();
 		time_since_ground += delta_time / 1000000;
 	}
 
-	if(!on_ground)
+	if(time_since_ground > 0.1)
 	{
 		time_since_air = 0;
 	}
@@ -312,18 +312,30 @@ move_on_y();
 
 //Animations
 //idle
-if velocity_x == 0 && time_since_ground<0.1 { sprite_index = spr_player_idle; };
 
-if time_since_air < 1 && time_since_air > 0.01 
-	{
-		sprite_index = spr_player_fall;
-		image_index = 3;	
-	}
+GetAirSprite();
 
-GetAirSprite()
+
+
+if velocity_x == 0 && time_since_ground < 0.1 
+{ 
+	sprite_index = spr_player_idle; 
+	image_speed = 1;
+}
+
+if time_since_air > 0.1 && time_since_air < 1
+{
+	sprite_index = spr_player_fall;
+	image_index = 3;	
+	image_speed = 0;
+}
+
+
+show_debug_message(time_since_air);
+
 function GetAirSprite()
 {
-	if time_since_ground>0.1 
+	if (time_since_ground > 0.1) 
 	{
 		if(velocity_y<0)
 		{
@@ -341,23 +353,18 @@ function GetAirSprite()
 		
 		if (velocity_y>0)
 		{
-		sprite_index = spr_player_fall;
-		image_speed = 1
-		if(image_index == 3)
-		{
-			image_index = 0
-		}
+			sprite_index = spr_player_fall;
+			image_speed = 1
+			if(image_index == 3)
+			{
+				image_index = 0
+			}
 		
 		}
 	
 	}
 	
-	else
-	{
-		sprite_index=spr_player_idle;
-		image_speed=1;
-	}
-	
+
 }
 
 
