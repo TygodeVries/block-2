@@ -305,7 +305,7 @@ else
 //idle
 if velocity_x == 0 && time_since_ground<0.1 { sprite_index = spr_player_idle; };
 
-if time_since_ground<1 && time_since_ground>0.01 
+if time_since_air < 1 && time_since_air > 0.01 
 	{
 		sprite_index = spr_player_fall;
 		image_index = 3;	
