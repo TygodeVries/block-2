@@ -142,6 +142,7 @@ function move_on_y()
 	// Move
 	_collided_with_ground = step_and_handle_collide(0, velocity_y);
 	
+	
 	// Check if we are colliding with anything
 	if(_collided_with_ground)
 	{		
@@ -167,6 +168,8 @@ function move_on_y()
 		// If we are not colliding with anything, we set onground to false
 		on_ground = false;
 	}
+	
+	
 }
 
 // Make the characher jump.
@@ -177,9 +180,46 @@ function jump()
 	{
 		time_since_ground = 1000;
 		// This one is pretty simple, we just overwrite the velocity of the player.
-		velocity_y = -jump_power;
+		velocity_y = -jump_power;	
+	}
+	
+	//If jump key pressed AND onground = false then jump animation
+	
+}
+
+
+/*	
+function GetAirSprite()
+{
+	if on_ground = false 
+	{
+		if(sign(velocity_y)<0)
+		{
+			sprite_index = spr_player_jump;
+			if(sprite_index == spr_player_jump) && (image_index == 1)
+			{
+				image_speed=0;
+			}
+		}
+		
+		else if (sign(velocity_y)>0)
+		{
+		sprite_index = spr_player_fall; 
+		}
+	
+	}
+	
+	else
+	{
+		sprite_index=spr_player_idle;
+		image_speed=1
 	}
 }
+*/
+
+
+
+
 
 /// Restart funtion(press R)
 if keyboard_check_pressed(ord("R"))
