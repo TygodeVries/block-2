@@ -2,7 +2,7 @@ global.freezemotion = false;
 
 // This code is ran at the beginning of every level
 time_since_ground = 0;
-
+time_since_air = 0;
 // Set the depth level (for the ordering of the sprites) of the player. -100 meaning always in front.
 depth = -100;
 
