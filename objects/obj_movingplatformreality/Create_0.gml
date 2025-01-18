@@ -1,12 +1,7 @@
-trigger_defined = true;
-last_effected = noone;
+platformSpeed = 1;
+currentSpeed = 1;
+moveX = 0;
+moveY = 0;
 
-is_going_left = false;
-
-// This code gets run when a player touches us
-function on_trigger(player)
-{
-	last_effected = player;
-	player.wind_effect = wind_speed;
-	show_debug_message("Trigger");
-}
+goingToStart = false;
+waitTime = 60;
