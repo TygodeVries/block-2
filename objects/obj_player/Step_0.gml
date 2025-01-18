@@ -183,39 +183,8 @@ function jump()
 		velocity_y = -jump_power;	
 	}
 	
-	//If jump key pressed AND onground = false then jump animation
 	
 }
-
-
-/*	
-function GetAirSprite()
-{
-	if on_ground = false 
-	{
-		if(sign(velocity_y)<0)
-		{
-			sprite_index = spr_player_jump;
-			if(sprite_index == spr_player_jump) && (image_index == 1)
-			{
-				image_speed=0;
-			}
-		}
-		
-		else if (sign(velocity_y)>0)
-		{
-		sprite_index = spr_player_fall; 
-		}
-	
-	}
-	
-	else
-	{
-		sprite_index=spr_player_idle;
-		image_speed=1
-	}
-}
-*/
 
 
 
@@ -341,19 +310,55 @@ else
 
 //Animations
 //idle
-if velocity_x == 0 { sprite_index = spr_player_idle; };
+if velocity_x == 0 && on_ground==true { sprite_index = spr_player_idle; };
 
-///////////////moving platform collision //////////////////
-//var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
 
-//if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
-//	if(vspeed > 0) {
-//		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
-//			y += sign(vspeed);
-//		}
-//		vspeed = 0;
-//	}
-//	x += _movingPlatform.hspeed;
-//	y += _movingPlatform.vspeed;
-//}
-////////////////////////////////////////////////////////////////
+
+GetAirSprite()
+function GetAirSprite()
+{
+	if on_ground == false 
+	{
+		if(velocity_y<0)
+		{
+			sprite_index = spr_player_jump;
+			image_index = 1;
+			image_speed = 0;
+		}
+		
+		if(velocity_y<-5)
+		{
+			sprite_index = spr_player_jump;
+			image_index = 2;
+			//image_speed = 0;	
+		}
+		
+		if (velocity_y>0)
+		{
+		sprite_index = spr_player_fall; 
+		}
+	
+	}
+	
+	/*else
+	{
+		sprite_index=spr_player_idle;
+		image_speed=1;
+	}
+	*/
+}
+
+
+//moving platform collision 
+var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
+
+if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
+	if(vspeed > 0) {
+		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
+			y += sign(vspeed);
+		}
+		vspeed = 0;
+	}
+	x += _movingPlatform.hspeed;
+	y += _movingPlatform.vspeed;
+}
