@@ -303,14 +303,18 @@ else
 
 //Animations
 //idle
-if velocity_x == 0 && on_ground==true { sprite_index = spr_player_idle; };
+if velocity_x == 0 && time_since_ground<0.1 { sprite_index = spr_player_idle; };
 
-
+if time_since_ground<1 && time_since_ground>0.01 
+	{
+		sprite_index = spr_player_fall;
+		image_index = 3;	
+	}
 
 GetAirSprite()
 function GetAirSprite()
 {
-	if on_ground == false 
+	if time_since_ground>0.1 
 	{
 		if(velocity_y<0)
 		{
@@ -323,22 +327,28 @@ function GetAirSprite()
 		{
 			sprite_index = spr_player_jump;
 			image_index = 2;
-			//image_speed = 0;	
+			image_speed = 1;	
 		}
 		
 		if (velocity_y>0)
 		{
-		sprite_index = spr_player_fall; 
+		sprite_index = spr_player_fall;
+		image_speed = 1
+		if(image_index == 3)
+		{
+			image_index = 0
+		}
+		
 		}
 	
 	}
 	
-	/*else
+	else
 	{
 		sprite_index=spr_player_idle;
 		image_speed=1;
 	}
-	*/
+	
 }
 
 
