@@ -10,7 +10,6 @@
     {"name":"inst_7C6B6FDF","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_1BA93F3_1","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_AAFF92_1","path":"rooms/lv_room1/lv_room1.yy",},
-    {"name":"inst_5C21FF4","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_73EE73B2","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_34E0E526","path":"rooms/lv_room1/lv_room1.yy",},
     {"name":"inst_16E9CA62","path":"rooms/lv_room1/lv_room1.yy",},
@@ -42,7 +41,6 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":128.0,},
         {"$GMRInstance":"v1","%Name":"inst_1BA93F3_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BA93F3_1","objectId":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.75,"scaleY":0.75,"x":32.0,"y":384.0,},
         {"$GMRInstance":"v1","%Name":"inst_AAFF92_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_AAFF92_1","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":320.0,},
-        {"$GMRInstance":"v1","%Name":"inst_5C21FF4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C21FF4","objectId":{"name":"obj_move_detect","path":"objects/obj_move_detect/obj_move_detect.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":320.0,},
         {"$GMRInstance":"v1","%Name":"inst_6DF251AC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6DF251AC","objectId":{"name":"obj_bgm1","path":"objects/obj_bgm1/obj_bgm1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":448.0,},
       ],"layers":[],"name":"Funtions","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Level","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Level","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":32,"SerialiseWidth":157,"TileCompressedData":[
