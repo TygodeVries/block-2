@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"Sprite89",
     "path":"sprites/Sprite89/Sprite89.yy",

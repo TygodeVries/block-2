@@ -193,14 +193,7 @@ function jump()
 /// Restart funtion(press R)
 if keyboard_check_pressed(ord("R"))
 {
-    with (obj_player) {
-        if (is_player_one) {
-            // Effect to player one
-        } else {
-            // Effect to player two
-        }
-        murder_and_kill(); // Make 2 players both die
-    }
+room_restart();
 }
 
 
@@ -362,3 +355,17 @@ if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
 	x += _movingPlatform.hspeed;
 	y += _movingPlatform.vspeed;
 }
+//moving platform collision 
+var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
+
+if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
+	if(vspeed > 0) {
+		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
+			y += sign(vspeed);
+		}
+		vspeed = 0;
+	}
+	x += _movingPlatform.hspeed;
+	y += _movingPlatform.vspeed;
+}
+
