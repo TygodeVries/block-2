@@ -303,16 +303,17 @@ else
 //idle
 if velocity_x == 0 { sprite_index = spr_player_idle; };
 
-//moving platform collision 
-var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
+///////////////moving platform collision //////////////////
+//var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
 
-if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
-	if(vspeed > 0) {
-		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
-			y += sign(vspeed);
-		}
-		vspeed = 0;
-	}
-	x += _movingPlatform.hspeed;
-	y += _movingPlatform.vspeed;
-}
+//if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
+//	if(vspeed > 0) {
+//		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
+//			y += sign(vspeed);
+//		}
+//		vspeed = 0;
+//	}
+//	x += _movingPlatform.hspeed;
+//	y += _movingPlatform.vspeed;
+//}
+////////////////////////////////////////////////////////////////
