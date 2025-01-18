@@ -289,15 +289,24 @@ else
 
 move_on_y();
 
-if(on_ground)
-{
-	time_since_ground = 0;
-}
+	if(on_ground)
+	{
+		time_since_ground = 0;
+	}
+	else
+	{
+		time_since_ground += delta_time / 1000000;
+	}
 
-else
-{
-	time_since_ground += delta_time / 1000000;
-}
+	if(!on_ground)
+	{
+		time_since_air = 0;
+	}
+	else
+	{
+		time_since_air += delta_time / 1000000;
+	}
+
 
 }
 
