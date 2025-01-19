@@ -66,9 +66,21 @@
     {"name":"inst_523912C","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_22C9AF33","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_50665340","path":"rooms/lv_new_intro/lv_new_intro.yy",},
+    {"name":"inst_3899EE78","path":"rooms/lv_new_intro/lv_new_intro.yy",},
+    {"name":"inst_26626D42","path":"rooms/lv_new_intro/lv_new_intro.yy",},
   ],
   "isDnd":false,
   "layers":[
+    {"$GMRInstanceLayer":"","%Name":"Instances_2","depth":-500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_3899EE78","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3899EE78","objectId":{"name":"obj_breaking_bad","path":"objects/obj_breaking_bad/obj_breaking_bad.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":480.0,},
+      ],"layers":[],"name":"Instances_2","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMREffectLayer":"","%Name":"Breaking_Bad","depth":-400,"effectEnabled":true,"effectType":"_filter_distort","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Breaking_Bad","properties":[
+        {"name":"g_DistortScale","type":0,"value":"1.8",},
+        {"name":"g_DistortAmount","type":0,"value":"35",},
+        {"name":"g_DistortOffset","type":0,"value":"0.2",},
+        {"name":"g_DistortOffset","type":0,"value":"0",},
+        {"name":"g_DistortTexture","type":2,"value":"cracks_1",},
+      ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"Effect_2","depth":-300,"effectEnabled":true,"effectType":"_filter_contrast","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_2","properties":[
         {"name":"g_ContrastIntensity","type":0,"value":"0.95",},
         {"name":"g_ContrastBrightness","type":0,"value":"0.9",},
@@ -208,6 +220,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"propertyId":{"name":"cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"resource":{"name":"cut_look_mirror","path":"timelines/cut_look_mirror/cut_look_mirror.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"cut_look_mirror",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":592.0,"y":128.0,},
         {"$GMRInstance":"v1","%Name":"inst_1EFE1AF7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1EFE1AF7","objectId":{"name":"obj_cut_vid","path":"objects/obj_cut_vid/obj_cut_vid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":272.0,"y":176.0,},
+        {"$GMRInstance":"v1","%Name":"inst_26626D42","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_26626D42","objectId":{"name":"obj_cracks","path":"objects/obj_cracks/obj_cracks.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":256.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"insideroom","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"insideroom","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":313,"TileCompressedData":[
           -3875,-2147483648,4,150,151,152,153,-309,-2147483648,4,214,215,216,217,-268,-2147483648,2,140,141,-26,
