@@ -40,5 +40,5 @@
     "path":"sprites/spr_wind/spr_wind.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

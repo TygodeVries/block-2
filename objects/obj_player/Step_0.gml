@@ -317,13 +317,14 @@ else {
 
 
 
-
+//time_since_ground<0.1 = da quanto tempo non tocchi più il terreno, e se velocità orizz è zero allora idle
 if velocity_x == 0 && time_since_ground < 0.1 
 { 
 	sprite_index = spr_player_idle; 
 	image_speed = 1;
 }
 
+//da quando non sei più in aria fa il crunch 
 if time_since_air > 0.1 && time_since_air < 0.4
 {
 	sprite_index = spr_player_fall;
@@ -336,20 +337,15 @@ show_debug_message(time_since_air);
 
 function GetAirSprite()
 {
-	if (time_since_ground > 0.1) 
-	{
-		
+	if (time_since_ground > 0.1)  //quando sei in aria
+	{		
 		sprite_index = spr_player_fall;
 		image_speed = 1
-		if(image_index == 3)
+		if(image_index == 3) //non fare il crunch in aria
 		{
 			image_index = 0
-		}
-		
-	
+		}	
 	}
-	
-
 }
 
 

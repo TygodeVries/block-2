@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_tmp_phone",
-    "path":"sprites/spr_tmp_phone/spr_tmp_phone.yy",
+    "name":"spr_phone",
+    "path":"sprites/spr_phone/spr_phone.yy",
   },
   "spriteMaskId":null,
   "visible":true,
