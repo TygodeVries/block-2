@@ -247,6 +247,7 @@
     {"id":{"name":"spr_new_notification","path":"sprites/spr_new_notification/spr_new_notification.yy",},},
     {"id":{"name":"spr_particle","path":"sprites/spr_particle/spr_particle.yy",},},
     {"id":{"name":"spr_phone_placeholder","path":"sprites/spr_phone_placeholder/spr_phone_placeholder.yy",},},
+    {"id":{"name":"spr_phone","path":"sprites/spr_phone/spr_phone.yy",},},
     {"id":{"name":"spr_pillar_grayworld","path":"sprites/spr_pillar_grayworld/spr_pillar_grayworld.yy",},},
     {"id":{"name":"spr_pillar","path":"sprites/spr_pillar/spr_pillar.yy",},},
     {"id":{"name":"spr_placeholder","path":"sprites/spr_placeholder/spr_placeholder.yy",},},
