@@ -9,7 +9,10 @@
     "name":"Obstacle",
     "path":"folders/Objects/Level/Obstacle.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_spike",
+    "path":"objects/obj_spike/obj_spike.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_spikes",
     "path":"sprites/spr_spikes/spr_spikes.yy",
