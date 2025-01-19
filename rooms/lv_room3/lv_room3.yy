@@ -104,7 +104,7 @@
           -2147483648,-100,0,-213,-2147483648,-100,0,-213,-2147483648,-100,0,-213,-2147483648,-100,0,-213,-2147483648,
           -100,0,-213,-2147483648,-100,0,-213,-2147483648,-100,0,-213,-2147483648,-100,0,-213,-2147483648,-100,
           0,-213,-2147483648,-100,0,-2706,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_cable","path":"tilesets/ts_cable/ts_cable.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_cable","path":"tilesets/ts_cable/ts_cable.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Level_1","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Level_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":32,"SerialiseWidth":157,"TileCompressedData":[
           -4,-2147483648,1,0,-6,-2147483648,-5,0,4,-2147483648,0,0,-2147483648,-3,0,-22,-2147483648,1,0,-111,-2147483648,
           -60,0,-97,-2147483648,-60,0,-97,-2147483648,-60,0,-97,-2147483648,-60,0,-14,-2147483648,-2,0,-81,-2147483648,
@@ -152,7 +152,7 @@
         {"$GMRInstance":"v1","%Name":"inst_6FA521BC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6FA521BC","objectId":{"name":"obj_sharks","path":"objects/obj_sharks/obj_sharks.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":-0.25,"x":1216.0,"y":448.0,},
         {"$GMRInstance":"v1","%Name":"inst_5E72F6F5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5E72F6F5","objectId":{"name":"obj_sharks","path":"objects/obj_sharks/obj_sharks.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":-0.25,"x":1632.0,"y":480.0,},
         {"$GMRInstance":"v1","%Name":"inst_1BB98483","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BB98483","objectId":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1568.0,"y":480.0,},
-      ],"layers":[],"name":"obstacle","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
+      ],"layers":[],"name":"obstacle","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Level","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Level","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":32,"SerialiseWidth":157,"TileCompressedData":[
           -13,-2147483648,1,0,-4,-2147483648,1,0,-3,-2147483648,1,0,-134,-2147483648,-60,0,-97,-2147483648,-58,
           31,-2,0,-97,-2147483648,-30,0,2,29,30,-5,0,-2,31,-18,0,3,31,0,0,-97,-2147483648,-29,0,-4,24,-4,0,-2,
@@ -175,7 +175,7 @@
           0,-12,-2147483648,-2,0,-83,-2147483648,-60,0,-12,-2147483648,-2,0,-83,-2147483648,-60,0,-97,-2147483648,
           -60,0,-97,-2147483648,-60,0,-97,-2147483648,-41,0,-4,-2147483648,1,0,-111,-2147483648,-41,0,-116,-2147483648,
           -41,0,-116,-2147483648,-41,0,-116,-2147483648,-41,0,-273,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tst_outside_realworld","path":"tilesets/tst_outside_realworld/tst_outside_realworld.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tst_outside_realworld","path":"tilesets/tst_outside_realworld/tst_outside_realworld.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "name":"lv_room3",
   "parent":{

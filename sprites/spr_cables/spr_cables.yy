@@ -2,8 +2,8 @@
   "$GMSprite":"",
   "%Name":"spr_cables",
   "bboxMode":0,
-  "bbox_bottom":31,
-  "bbox_left":22,
+  "bbox_bottom":74,
+  "bbox_left":6,
   "bbox_right":63,
   "bbox_top":5,
   "collisionKind":1,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":128,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"894cbfcb-7dc2-45fe-87ad-d7a60757c05a","blendMode":0,"displayName":"default","isLocked":false,"name":"894cbfcb-7dc2-45fe-87ad-d7a60757c05a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":128,
 }

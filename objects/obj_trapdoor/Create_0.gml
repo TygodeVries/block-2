@@ -32,7 +32,7 @@ function open()
 	if(is_open) return;
 	is_open_animation = true;
 	// Start the animation
-	image_speed = 0.4;
+	image_speed = 1;
 	
 	// Make it so the player can walk through the door
 	solid = false;
@@ -43,7 +43,7 @@ function close()
 {
 	if(!is_open) return;
 	is_open_animation = false;
-	image_speed = -0.4;
+	image_speed = -1;
 	solid = true;
 	is_open = false;
 }
