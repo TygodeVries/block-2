@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pillar",
+  "%Name":"obj__void_dreamworld_one_color",
   "eventList":[],
   "managed":true,
-  "name":"obj_pillar",
+  "name":"obj__void_dreamworld_one_color",
   "overriddenProperties":[],
   "parent":{
     "name":"inside funurture",
@@ -26,10 +26,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_pillar",
-    "path":"sprites/spr_pillar/spr_pillar.yy",
+    "name":"spr_foreground_1",
+    "path":"sprites/spr_foreground_1/spr_foreground_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

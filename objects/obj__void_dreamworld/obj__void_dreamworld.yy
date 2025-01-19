@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Object47",
+  "%Name":"obj__void_dreamworld",
   "eventList":[],
   "managed":true,
-  "name":"Object47",
+  "name":"obj__void_dreamworld",
   "overriddenProperties":[],
   "parent":{
     "name":"inside funurture",
