@@ -76,6 +76,7 @@ function move_left()
 	
 	//Update sprite
 	sprite_index = spr_player_walk;
+	image_speed = 1;
 	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
@@ -93,6 +94,7 @@ function move_right()
 	
 	// Update sprite 
 	sprite_index = spr_player_walk;
+	image_speed = 1;
 	
 	// We need to check wich player we have as one is upside down.
 	if(is_player_one)
@@ -183,39 +185,8 @@ function jump()
 		velocity_y = -jump_power;	
 	}
 	
-	//If jump key pressed AND onground = false then jump animation
 	
 }
-
-
-/*	
-function GetAirSprite()
-{
-	if on_ground = false 
-	{
-		if(sign(velocity_y)<0)
-		{
-			sprite_index = spr_player_jump;
-			if(sprite_index == spr_player_jump) && (image_index == 1)
-			{
-				image_speed=0;
-			}
-		}
-		
-		else if (sign(velocity_y)>0)
-		{
-		sprite_index = spr_player_fall; 
-		}
-	
-	}
-	
-	else
-	{
-		sprite_index=spr_player_idle;
-		image_speed=1
-	}
-}
-*/
 
 
 
@@ -307,35 +278,94 @@ else {
 	
 // Make sure to move in the right order
 
-if(!global.freezemotion)
-{
-	move_on_x();
-	jump();
-}
-else
-{
-	move_stop();
-}
+	if(!global.freezemotion)
+	{
+		move_on_x();
+		jump();
+	}
+	else
+	{
+		move_stop();
+	}
 
 
-move_on_y();
+	move_on_y();
 
-if(on_ground)
-{
-	time_since_ground = 0;
-}
+	if(on_ground)
+	{
+		time_since_ground = 0;
+	}
+	else
+	{
+		time_since_ground += delta_time / 1000000;
+	}
 
-else
-{
-	time_since_ground += delta_time / 1000000;
-}
+	if(time_since_ground > 0.1)
+	{
+		time_since_air = 0;
+	}
+	else
+	{
+		time_since_air += delta_time / 1000000;
+	}
+
 
 }
 
 //Animations
 //idle
-if velocity_x == 0 { sprite_index = spr_player_idle; };
 
+
+
+
+if velocity_x == 0 && time_since_ground < 0.1 
+{ 
+	sprite_index = spr_player_idle; 
+	image_speed = 1;
+}
+
+if time_since_air > 0.1 && time_since_air < 0.4
+{
+	sprite_index = spr_player_fall;
+	image_index = 3;	
+	image_speed = 0;
+}
+
+GetAirSprite();
+show_debug_message(time_since_air);
+
+function GetAirSprite()
+{
+	if (time_since_ground > 0.1) 
+	{
+		
+		sprite_index = spr_player_fall;
+		image_speed = 1
+		if(image_index == 3)
+		{
+			image_index = 0
+		}
+		
+	
+	}
+	
+
+}
+
+
+//moving platform collision 
+var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
+
+if(_movingPlatform && bbox_bottom <= _movingPlatform.bbox_top) {
+	if(vspeed > 0) {
+		while (!place_meeting(x, y + sign(vspeed), obj_movingplatformdream)) || (!place_meeting(x, y + sign(vspeed), obj_movingplatformreality)) {
+			y += sign(vspeed);
+		}
+		vspeed = 0;
+	}
+	x += _movingPlatform.hspeed;
+	y += _movingPlatform.vspeed;
+}
 //moving platform collision 
 var _movingPlatform = instance_place(x, y + max(1, vspeed), obj_movingplatformdream) || instance_place(x, y + max(1, vspeed), obj_movingplatformreality);
 

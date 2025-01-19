@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"tmp_onphone",
-    "path":"sprites/tmp_onphone/tmp_onphone.yy",
+    "name":"spr_player_phone",
+    "path":"sprites/spr_player_phone/spr_player_phone.yy",
   },
   "spriteMaskId":null,
   "visible":true,
