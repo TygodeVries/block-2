@@ -1,0 +1,25 @@
+{
+  "$GMParticleSystem":"",
+  "%Name":"ps_star1",
+  "backdropHeight":768,
+  "backdropImageOpacity":0.0,
+  "backdropImagePath":"",
+  "backdropWidth":1366,
+  "backdropXOffset":0.0,
+  "backdropYOffset":0.0,
+  "drawOrder":0,
+  "emitters":[
+    {"$GMPSEmitter":"","%Name":"Emitter","additiveBlend":false,"directionIncrease":0.0,"directionMax":127.0,"directionMin":32.0,"directionWiggle":0.0,"distribution":0,"editorColour":1090519039,"editorDrawShape":true,"emitCount":8,"emitDelayMax":0.0,"emitDelayMin":0.0,"emitDelayUnits":0,"emitIntervalMax":5.0,"emitIntervalMin":2.0,"emitIntervalUnits":0,"enabled":true,"endColour":4286611584,"GMPresetName":null,"gravityDirection":77.0,"gravityForce":0.3,"headPosition":0.0,"lifetimeMax":300.0,"lifetimeMin":200.0,"linkedEmitter":null,"locked":false,"midColour":4291611852,"mode":0,"name":"Emitter","orientationIncrease":0.0,"orientationMax":90.0,"orientationMin":90.0,"orientationRelative":false,"orientationWiggle":0.0,"regionH":79.5282,"regionW":3548.123,"regionX":193.0,"regionY":0.0,"resourceType":"GMPSEmitter","resourceVersion":"2.0","scaleX":2.5,"scaleY":1.0,"shape":0,"sizeIncrease":0.0,"sizeMax":1.0,"sizeMin":1.0,"sizeWiggle":0.0,"spawnOnDeathCount":1,"spawnOnDeathGMPreset":null,"spawnOnDeathId":null,"spawnOnUpdateCount":1,"spawnOnUpdateGMPreset":null,"spawnOnUpdateId":null,"speedIncrease":-0.3,"speedMax":1.0,"speedMin":1.0,"speedWiggle":0.0,"spriteAnimate":false,"spriteId":{"name":"spr_background_stars_dw_1","path":"sprites/spr_background_stars_dw_1/spr_background_stars_dw_1.yy",},"spriteRandom":false,"spriteStretch":true,"startColour":4294967295,"texture":-1,},
+  ],
+  "name":"ps_star1",
+  "parent":{
+    "name":"Particle Systems",
+    "path":"folders/Particle Systems.yy",
+  },
+  "resourceType":"GMParticleSystem",
+  "resourceVersion":"2.0",
+  "showBackdrop":true,
+  "showBackdropImage":false,
+  "xorigin":0,
+  "yorigin":0,
+}
