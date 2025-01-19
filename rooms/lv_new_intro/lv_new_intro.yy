@@ -65,6 +65,7 @@
     {"name":"inst_523912C","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_22C9AF33","path":"rooms/lv_new_intro/lv_new_intro.yy",},
     {"name":"inst_50665340","path":"rooms/lv_new_intro/lv_new_intro.yy",},
+    {"name":"inst_54ECC3F7","path":"rooms/lv_new_intro/lv_new_intro.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -144,7 +145,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":368.0,"y":256.0,},
         {"$GMRInstance":"v1","%Name":"inst_30D81FD0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30D81FD0","objectId":{"name":"trigger","path":"objects/trigger/trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigger","path":"objects/trigger/trigger.yy",},"propertyId":{"name":"signal","path":"objects/trigger/trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"look_in_mirror",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":11.0,"x":832.0,"y":144.0,},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":11.0,"x":752.0,"y":144.0,},
         {"$GMRInstance":"v1","%Name":"inst_4B055D21","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4B055D21","objectId":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"propertyId":{"name":"start_signal","path":"objects/obj_cutscene/obj_cutscene.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"player_woke_up",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"propertyId":{"name":"cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"resource":{"name":"cut_player_woke_up","path":"timelines/cut_player_woke_up/cut_player_woke_up.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"cut_player_woke_up",},
@@ -206,6 +207,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"propertyId":{"name":"cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},"resource":{"name":"cut_look_mirror","path":"timelines/cut_look_mirror/cut_look_mirror.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"cut_look_mirror",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":592.0,"y":128.0,},
         {"$GMRInstance":"v1","%Name":"inst_1EFE1AF7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1EFE1AF7","objectId":{"name":"obj_cut_vid","path":"objects/obj_cut_vid/obj_cut_vid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":272.0,"y":176.0,},
+        {"$GMRInstance":"v1","%Name":"inst_54ECC3F7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_54ECC3F7","objectId":{"name":"obj_mirror","path":"objects/obj_mirror/obj_mirror.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":752.0,"y":240.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"insideroom","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"insideroom","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":313,"TileCompressedData":[
           -3875,-2147483648,4,150,151,152,153,-309,-2147483648,4,214,215,216,217,-268,-2147483648,2,140,141,-26,
