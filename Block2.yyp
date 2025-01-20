@@ -138,6 +138,7 @@
     {"id":{"name":"obj_pillar","path":"objects/obj_pillar/obj_pillar.yy",},},
     {"id":{"name":"obj_platformpoint","path":"objects/obj_platformpoint/obj_platformpoint.yy",},},
     {"id":{"name":"obJ_play_button","path":"objects/obJ_play_button/obJ_play_button.yy",},},
+    {"id":{"name":"obj_player_dw","path":"objects/obj_player_dw/obj_player_dw.yy",},},
     {"id":{"name":"obj_player_overlay","path":"objects/obj_player_overlay/obj_player_overlay.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
