@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_red_key",
-    "path":"sprites/spr_red_key/spr_red_key.yy",
+    "name":"spr_key_red",
+    "path":"sprites/spr_key_red/spr_key_red.yy",
   },
   "spriteMaskId":null,
   "visible":true,
