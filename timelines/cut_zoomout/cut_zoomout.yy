@@ -1,11 +1,10 @@
 {
   "$GMTimeline":"",
-  "%Name":"cut_room1",
+  "%Name":"cut_zoomout",
   "momentList":[
     {"$GMMoment":"","%Name":"","evnt":{"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},"moment":0,"name":"","resourceType":"GMMoment","resourceVersion":"2.0",},
-    {"$GMMoment":"","%Name":"","evnt":{"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":3,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},"moment":3,"name":"","resourceType":"GMMoment","resourceVersion":"2.0",},
   ],
-  "name":"cut_room1",
+  "name":"cut_zoomout",
   "parent":{
     "name":"Cutscenes",
     "path":"folders/Cutscenes.yy",

@@ -1,0 +1,1 @@
+obj_camera.zoom(0.95);
