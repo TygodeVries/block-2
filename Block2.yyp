@@ -145,6 +145,7 @@
     {"id":{"name":"obj_player_dw","path":"objects/obj_player_dw/obj_player_dw.yy",},},
     {"id":{"name":"obj_player_overlay","path":"objects/obj_player_overlay/obj_player_overlay.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_portal_for_room2","path":"objects/obj_portal_for_room2/obj_portal_for_room2.yy",},},
     {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
     {"id":{"name":"obj_press_button","path":"objects/obj_press_button/obj_press_button.yy",},},
     {"id":{"name":"obj_program_start","path":"objects/obj_program_start/obj_program_start.yy",},},

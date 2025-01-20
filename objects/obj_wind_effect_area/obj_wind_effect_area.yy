@@ -35,5 +35,5 @@
     "path":"sprites/spr_wind_effect_area/spr_wind_effect_area.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
