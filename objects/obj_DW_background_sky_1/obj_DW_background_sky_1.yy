@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_RW_background_sky_1",
+  "%Name":"obj_DW_background_sky_1",
   "eventList":[],
   "managed":true,
-  "name":"obj_RW_background_sky_1",
+  "name":"obj_DW_background_sky_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Background",
