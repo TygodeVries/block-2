@@ -289,6 +289,7 @@
     {"id":{"name":"spr_foreground_1","path":"sprites/spr_foreground_1/spr_foreground_1.yy",},},
     {"id":{"name":"spr_foreground_roof","path":"sprites/spr_foreground_roof/spr_foreground_roof.yy",},},
     {"id":{"name":"spr_foreground","path":"sprites/spr_foreground/spr_foreground.yy",},},
+    {"id":{"name":"spr_ghost_death","path":"sprites/spr_ghost_death/spr_ghost_death.yy",},},
     {"id":{"name":"spr_ghost","path":"sprites/spr_ghost/spr_ghost.yy",},},
     {"id":{"name":"spr_inside_dreamworld_1","path":"sprites/spr_inside_dreamworld_1/spr_inside_dreamworld_1.yy",},},
     {"id":{"name":"spr_inside_dreamworld","path":"sprites/spr_inside_dreamworld/spr_inside_dreamworld.yy",},},
