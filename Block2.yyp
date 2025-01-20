@@ -215,6 +215,7 @@
     {"id":{"name":"notice_spike","path":"sprites/notice_spike/notice_spike.yy",},},
     {"id":{"name":"notice_wind","path":"sprites/notice_wind/notice_wind.yy",},},
     {"id":{"name":"obj_border","path":"sprites/obj_border/obj_border.yy",},},
+    {"id":{"name":"Reflection_game_cover_final","path":"sprites/Reflection_game_cover_final/Reflection_game_cover_final.yy",},},
     {"id":{"name":"sp_demon1_down","path":"sprites/sp_demon1_down/sp_demon1_down.yy",},},
     {"id":{"name":"sp_demon1_left","path":"sprites/sp_demon1_left/sp_demon1_left.yy",},},
     {"id":{"name":"sp_demon1_right","path":"sprites/sp_demon1_right/sp_demon1_right.yy",},},
