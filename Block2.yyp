@@ -77,6 +77,7 @@
     {"id":{"name":"Extension1","path":"extensions/Extension1/Extension1.yy",},},
     {"id":{"name":"fnt_arial","path":"fonts/fnt_arial/fnt_arial.yy",},},
     {"id":{"name":"boss","path":"objects/boss/boss.yy",},},
+    {"id":{"name":"ending_animation","path":"objects/ending_animation/ending_animation.yy",},},
     {"id":{"name":"Nuke","path":"objects/Nuke/Nuke.yy",},},
     {"id":{"name":"ob_wall","path":"objects/ob_wall/ob_wall.yy",},},
     {"id":{"name":"obj__void_dreamworld_one_color","path":"objects/obj__void_dreamworld_one_color/obj__void_dreamworld_one_color.yy",},},
