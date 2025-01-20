@@ -245,10 +245,15 @@ if(death_cooldown > 0)
 	var _x = cos(((death_cooldown / 5) * 2) * pi);
 	var _y = sin(((death_cooldown / 5) * 2) * pi);
 	
-	x = death_location.x + (_x * 30);
-	y = death_location.y + (_y * 30);
+	x = death_location.x
+	y = death_location.y
 	
-	var ob = instance_create_layer(x, y, "Instances", obj_trail);
+	sprite_index = spr_player_death;
+	
+	var ob = instance_create_layer(x + (_x * 48) - 32, (y + _y * 48), "Instances", obj_trail);
+	show_debug_message("Particle!")
+	
+	
 	array_push(particles, ob);
 	if(speedup_time > 0)
 	{
@@ -287,6 +292,7 @@ else {
 	{
 		move_stop();
 	}
+	
 
 
 	move_on_y();
@@ -315,6 +321,11 @@ else {
 //Animations
 //idle
 
+
+if(is_dead)
+{
+	return;
+}
 
 
 //time_since_ground<0.1 = da quanto tempo non tocchi più il terreno, e se velocità orizz è zero allora idle

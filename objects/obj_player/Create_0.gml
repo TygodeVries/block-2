@@ -71,7 +71,7 @@ function murder_and_kill()
 	sprite_index = spr_player_death;
 	death_cooldown = 5;
 	death_location.x = x;
-	death_location.y = y;
+	death_location.y = y + 30;
 }
 
 death_location = {x: 0, y: 0}

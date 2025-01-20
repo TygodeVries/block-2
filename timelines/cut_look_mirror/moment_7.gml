@@ -1,1 +1,1 @@
-obj_cut_vid.trans = 0;
+obj_cut_vid.trans = 1;
