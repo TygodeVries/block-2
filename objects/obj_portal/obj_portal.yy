@@ -30,7 +30,7 @@
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_portal",
     "path":"sprites/spr_portal/spr_portal.yy",
