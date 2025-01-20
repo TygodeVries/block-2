@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_background_sky_DW",
-    "path":"sprites/spr_background_sky_DW/spr_background_sky_DW.yy",
+    "name":"spr_background_sky_RW",
+    "path":"sprites/spr_background_sky_RW/spr_background_sky_RW.yy",
   },
   "spriteMaskId":null,
   "visible":true,
