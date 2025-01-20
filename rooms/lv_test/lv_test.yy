@@ -14,9 +14,7 @@
     {"name":"inst_35537656_2","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_35B6102F_1","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_7F02873E","path":"rooms/lv_test/lv_test.yy",},
-    {"name":"inst_6237ABAD","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_442B7DB2","path":"rooms/lv_test/lv_test.yy",},
-    {"name":"inst_77A92DFE","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_35BF44C9","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_1FEF8D85","path":"rooms/lv_test/lv_test.yy",},
     {"name":"inst_5544293E","path":"rooms/lv_test/lv_test.yy",},
@@ -56,15 +54,9 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_phone","path":"objects/obj_phone/obj_phone.yy",},"propertyId":{"name":"swap_time_lenght","path":"objects/obj_phone/obj_phone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_phone","path":"objects/obj_phone/obj_phone.yy",},"propertyId":{"name":"swap_offset","path":"objects/obj_phone/obj_phone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"132",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":192.0,},
-        {"$GMRInstance":"v1","%Name":"inst_6237ABAD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6237ABAD","objectId":{"name":"obj_floor_button","path":"objects/obj_floor_button/obj_floor_button.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_floor_button","path":"objects/obj_floor_button/obj_floor_button.yy",},"propertyId":{"name":"signal","path":"objects/obj_floor_button/obj_floor_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"test_button",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-180.0,"scaleX":1.0,"scaleY":1.0,"x":304.0,"y":320.0,},
         {"$GMRInstance":"v1","%Name":"inst_442B7DB2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_442B7DB2","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"propertyId":{"name":"signal","path":"objects/obj_door/obj_door.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"test_button",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":160.0,},
-        {"$GMRInstance":"v1","%Name":"inst_77A92DFE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77A92DFE","objectId":{"name":"obj_floor_button","path":"objects/obj_floor_button/obj_floor_button.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_floor_button","path":"objects/obj_floor_button/obj_floor_button.yy",},"propertyId":{"name":"signal","path":"objects/obj_floor_button/obj_floor_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"test_button_2",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-360.0,"scaleX":1.0,"scaleY":1.0,"x":368.0,"y":160.0,},
         {"$GMRInstance":"v1","%Name":"inst_35BF44C9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35BF44C9","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"propertyId":{"name":"signal","path":"objects/obj_door/obj_door.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"test_button_2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":400.0,"y":320.0,},

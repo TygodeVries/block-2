@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_finish",
+  "%Name":"obj_portal",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_finish",
+  "name":"obj_portal",
   "overriddenProperties":[],
   "parent":{
     "name":"Level",
@@ -25,10 +25,12 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"room","filters":[],"listItems":[],"multiselect":false,"name":"room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_portal",
     "path":"sprites/spr_portal/spr_portal.yy",

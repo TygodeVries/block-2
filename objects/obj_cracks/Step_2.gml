@@ -4,11 +4,11 @@ if(signal != "none")
 {
 	if(array_contains(global.signal, signal))
 	{
-		
+		crack();	
+		show_debug_message("Crack!");
 	}	
 }
 
-crack();
 function crack()
 {
 	var _fx_struct = layer_get_fx("Breaking_Bad");
@@ -21,8 +21,8 @@ function crack()
 		gamepad_set_vibration(_h, 1, 1)
 		stop_shake_in = 0.3;
 	}	
+	
 	fx_set_parameters(_fx_struct, _params);
-
 }
 
 stop_shake_in -= delta_time / 1000000;

@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_floor_button_1",
+  "%Name":"obj_button_rw",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_floor_button_1",
+  "name":"obj_button_rw",
   "overriddenProperties":[],
   "parent":{
     "name":"Pressure",
@@ -31,10 +30,10 @@
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_button_placeholder_1",
-    "path":"sprites/spr_button_placeholder_1/spr_button_placeholder_1.yy",
+    "name":"spr_plate_rw",
+    "path":"sprites/spr_plate_rw/spr_plate_rw.yy",
   },
   "spriteMaskId":null,
   "visible":true,
