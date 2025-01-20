@@ -6,8 +6,8 @@ collision_defined = true;
 // This code gets run when a player touches us
 function on_collision(player)
 {
-	player.checkpoint.x = player.x;
-	player.checkpoint.y = player.y;
+	player.checkpoint.x = x;
+	player.checkpoint.y = y;
 	
 	solid = false;
 	sprite_index = spr_checkpoint;
