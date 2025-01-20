@@ -298,6 +298,7 @@
     {"id":{"name":"spr_inside_tileset","path":"sprites/spr_inside_tileset/spr_inside_tileset.yy",},},
     {"id":{"name":"spr_key_music","path":"sprites/spr_key_music/spr_key_music.yy",},},
     {"id":{"name":"spr_key_purple","path":"sprites/spr_key_purple/spr_key_purple.yy",},},
+    {"id":{"name":"spr_key_red","path":"sprites/spr_key_red/spr_key_red.yy",},},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},},
     {"id":{"name":"spr_menu_button","path":"sprites/spr_menu_button/spr_menu_button.yy",},},
     {"id":{"name":"spr_mirror","path":"sprites/spr_mirror/spr_mirror.yy",},},
