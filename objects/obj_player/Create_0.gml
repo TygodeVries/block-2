@@ -2,7 +2,7 @@ animation_walk = noone;
 animation_idel = noone;
 animation_falling = noone;
 
-
+global.cutscene_moveable = false;
 
 global.freezemotion = false;
 

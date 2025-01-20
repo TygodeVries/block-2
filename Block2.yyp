@@ -366,6 +366,8 @@
     {"id":{"name":"tst_outside_realworld","path":"tilesets/tst_outside_realworld/tst_outside_realworld.yy",},},
     {"id":{"name":"cut_boss_intro","path":"timelines/cut_boss_intro/cut_boss_intro.yy",},},
     {"id":{"name":"cut_door_button","path":"timelines/cut_door_button/cut_door_button.yy",},},
+    {"id":{"name":"cut_good_ending","path":"timelines/cut_good_ending/cut_good_ending.yy",},},
+    {"id":{"name":"cut_important_part","path":"timelines/cut_important_part/cut_important_part.yy",},},
     {"id":{"name":"cut_intro","path":"timelines/cut_intro/cut_intro.yy",},},
     {"id":{"name":"cut_look_mirror","path":"timelines/cut_look_mirror/cut_look_mirror.yy",},},
     {"id":{"name":"cut_player_woke_up","path":"timelines/cut_player_woke_up/cut_player_woke_up.yy",},},

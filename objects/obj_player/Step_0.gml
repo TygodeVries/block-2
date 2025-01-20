@@ -131,8 +131,10 @@ function move_on_x()
 		move_stop();
 	}
 	
-	_collided_with_wall = step_and_handle_collide(velocity_x, 0);
+	
 }
+
+_collided_with_wall = step_and_handle_collide(velocity_x, 0);
 
 // Move on the Y axis
 // This function will handle falling
@@ -284,7 +286,10 @@ else {
 	}
 	else
 	{
-		move_stop();
+		if(!global.cutscene_moveable)
+		{
+			move_stop();
+		}
 	}
 
 
