@@ -231,13 +231,6 @@ if(delta_time / 1000000 > 0.1)
 	return;
 }
 
-
-if(global.player_one.is_dead && global.player_two.is_dead)
-{
-	game_over();
-}
-		
-
 if(death_cooldown > 0)
 {
 	// Death
