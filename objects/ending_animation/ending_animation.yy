@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_DW_player_idle",
-    "path":"sprites/spr_DW_player_idle/spr_DW_player_idle.yy",
+    "name":"spr_OUTRO",
+    "path":"sprites/spr_OUTRO/spr_OUTRO.yy",
   },
   "spriteMaskId":null,
   "visible":false,
