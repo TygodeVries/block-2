@@ -71,6 +71,11 @@ if(global.selected_button == button_id)
 			room_goto(lv_room2);
 		}
 		
+		if(run_function == "menu_room_test_marta")
+		{
+			room_goto(lv_room_test_marta);
+		}
+		
 		if(run_function == "menu_select_character")
 		{
 			room_goto(menu_select_character);
@@ -100,6 +105,8 @@ if(global.selected_button == button_id)
 		{
 			room_goto(menu_main);
 		}
+		
+		
 		
 		if(string_starts_with(run_function, "keybind:"))
 		{
